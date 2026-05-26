@@ -6,14 +6,11 @@ interface GoldDividerProps {
 export default function GoldDivider({ className = '', symbol = '✦' }: GoldDividerProps) {
   return (
     <div className={`flex items-center gap-4 ${className}`}>
-      <div className="flex-1 h-px bg-gradient-to-r from-transparent to-[#CCC6B1]/40" />
-      <span
-        className="text-[#CCC6B1]/60 text-sm"
-        style={{ fontFamily: 'var(--font-cormorant)' }}
-      >
+      <div className="flex-1 h-px bg-gradient-to-r from-transparent to-[#8A7560]" />
+      <span className="text-[#8A7560] text-sm font-medium" style={{ fontFamily: 'var(--font-cormorant)' }}>
         {symbol}
       </span>
-      <div className="flex-1 h-px bg-gradient-to-l from-transparent to-[#CCC6B1]/40" />
+      <div className="flex-1 h-px bg-gradient-to-l from-transparent to-[#8A7560]" />
     </div>
   )
 }

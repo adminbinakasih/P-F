@@ -87,17 +87,17 @@
 
   /* Glass — light version */
   .glass {
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(204, 198, 177, 0.4);
+    border: 1px solid rgba(138, 117, 96, 0.3);
   }
 
   .glass-dark {
-    background: rgba(237, 232, 220, 0.85);
+    background: rgba(237, 232, 220, 0.90);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(204, 198, 177, 0.5);
+    border: 1px solid rgba(138, 117, 96, 0.4);
   }
 
   .glow-gold {
@@ -114,7 +114,7 @@
   }
 
   .text-gradient-gold {
-    background: linear-gradient(135deg, #A8A090 0%, #CCC6B1 50%, #8A8070 100%);
+    background: linear-gradient(135deg, #6B5040 0%, #8A7560 50%, #5A4535 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
