@@ -1,73 +1,45 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { AtSign, Heart } from 'lucide-react'
+import { Heart } from 'lucide-react'
 import SectionReveal from '@/components/ui/SectionReveal'
 import GoldDivider from '@/components/ui/GoldDivider'
 import type { Couple } from '@/lib/types'
 
-interface CoupleSectionProps {
-  couple: Couple
-}
+interface CoupleSectionProps { couple: Couple }
 
 export default function CoupleSection({ couple }: CoupleSectionProps) {
   return (
     <section className="section-padding relative overflow-hidden bg-[#F5F0E8]">
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
-          style={{
-            background: 'radial-gradient(circle, rgba(201,168,76,0.03) 0%, transparent 70%)',
-          }}
-        />
-      </div>
-
       <div className="container-luxury relative z-10">
-        {/* Section header */}
         <SectionReveal className="text-center mb-16">
-          <p
-            className="text-[#6B5E4E] text-xs tracking-[0.5em] uppercase mb-4"
-            style={{ fontFamily: 'var(--font-poppins)' }}
-          >
+          <p className="text-[#6B5040] text-xs tracking-[0.5em] uppercase mb-4 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
             Dengan Penuh Cinta
           </p>
-          <h2
-            className="text-5xl md:text-6xl text-[#2C2416] mb-6"
-            style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}
-          >
+          <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
             Mempelai
           </h2>
           <GoldDivider />
         </SectionReveal>
 
-        {/* Couple cards — Pria dulu */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 max-w-3xl mx-auto">
-          {/* Groom */}
           <SectionReveal delay={0.1} direction="left">
             <PersonCard person={couple.groom} role="Mempelai Pria" />
           </SectionReveal>
-
-          {/* Bride */}
           <SectionReveal delay={0.2} direction="right">
             <PersonCard person={couple.bride} role="Mempelai Wanita" />
           </SectionReveal>
         </div>
 
-        {/* Hashtag */}
         <SectionReveal className="text-center mt-16" delay={0.3}>
           <div className="inline-flex items-center gap-3">
-            <div className="h-px w-12 bg-[#CCC6B1]/30" />
+            <div className="h-px w-12 bg-[#CCC6B1]/50" />
             <Heart size={14} className="text-[#B76E79]" fill="#B76E79" />
-            <p
-              className="text-[#CCC6B1] text-lg tracking-wider"
-              style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}
-            >
+            <p className="text-[#8A7560] text-lg tracking-wider" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
               {couple.hashtag}
             </p>
             <Heart size={14} className="text-[#B76E79]" fill="#B76E79" />
-            <div className="h-px w-12 bg-[#CCC6B1]/30" />
+            <div className="h-px w-12 bg-[#CCC6B1]/50" />
           </div>
         </SectionReveal>
       </div>
@@ -75,81 +47,41 @@ export default function CoupleSection({ couple }: CoupleSectionProps) {
   )
 }
 
-function PersonCard({
-  person,
-  role,
-}: {
-  person: Couple['bride'] | Couple['groom']
-  role: string
-}) {
+function PersonCard({ person, role }: { person: Couple['bride'] | Couple['groom']; role: string }) {
   return (
     <div className="flex flex-col items-center text-center group">
-      {/* Photo */}
       <div className="relative mb-8">
         <div className="relative w-56 h-72 overflow-hidden">
-          {/* Decorative frame */}
-          <div className="absolute -inset-2 border border-[#CCC6B1]/20 z-10 pointer-events-none" />
-          <div className="absolute -inset-4 border border-[#CCC6B1]/10 z-10 pointer-events-none" />
-
-          <Image
-            src={person.photo}
-            alt={person.fullName}
-            fill
-            className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
-            sizes="(max-width: 768px) 224px, 224px"
-          />
-          {/* Photo overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#F5F0E8]/50 to-transparent" />
+          <div className="absolute -inset-2 border border-[#CCC6B1]/30 z-10 pointer-events-none" />
+          <div className="absolute -inset-4 border border-[#CCC6B1]/15 z-10 pointer-events-none" />
+          <Image src={person.photo} alt={person.fullName} fill className="object-cover object-top transition-transform duration-700 group-hover:scale-105" sizes="224px" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#F5F0E8]/40 to-transparent" />
         </div>
-
-        {/* Role badge */}
         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 glass px-4 py-1 whitespace-nowrap">
-          <span
-            className="text-[#CCC6B1] text-xs tracking-[0.3em] uppercase"
-            style={{ fontFamily: 'var(--font-poppins)' }}
-          >
+          <span className="text-[#6B5040] text-xs tracking-[0.3em] uppercase font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
             {role}
           </span>
         </div>
       </div>
 
-      {/* Name — nickname besar, fullname kecil di bawah */}
-      <h3
-        className="text-4xl sm:text-5xl text-[#2C2416] mt-2 mb-1"
-        style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}
-      >
+      <h3 className="text-4xl sm:text-5xl text-[#2C2416] mt-2 mb-1" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}>
         {person.name}
       </h3>
-      <p
-        className="text-[#6B5E4E] text-xs tracking-wide mb-4 px-2"
-        style={{ fontFamily: 'var(--font-poppins)' }}
-      >
+      <p className="text-[#5A4535] text-xs tracking-wide mb-4 px-2" style={{ fontFamily: 'var(--font-poppins)' }}>
         {person.fullName}
       </p>
 
-      {/* Parents */}
       <div className="mb-4">
-        <p
-          className="text-[#6B5E4E] text-xs tracking-wider mb-1"
-          style={{ fontFamily: 'var(--font-poppins)' }}
-        >
+        <p className="text-[#8A7560] text-xs tracking-wider mb-2 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
           Putra/Putri dari
         </p>
-        <p
-          className="text-[#2C2416]/80 text-sm"
-          style={{ fontFamily: 'var(--font-poppins)' }}
-        >
+        <p className="text-[#3D2E1E] text-sm font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
           {person.father}
         </p>
-        <p
-          className="text-[#2C2416]/80 text-sm"
-          style={{ fontFamily: 'var(--font-poppins)' }}
-        >
+        <p className="text-[#3D2E1E] text-sm font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
           & {person.mother}
         </p>
       </div>
-
-      {/* Instagram dihapus */}
     </div>
   )
 }

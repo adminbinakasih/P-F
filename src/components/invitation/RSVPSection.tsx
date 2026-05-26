@@ -28,12 +28,7 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
   const [submitted, setSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm<RSVPFormValues>({
+  const { register, handleSubmit, watch, formState: { errors } } = useForm<RSVPFormValues>({
     resolver: zodResolver(rsvpSchema),
     defaultValues: {
       name: guestName && guestName !== 'Tamu Undangan' ? guestName : '',
@@ -47,17 +42,10 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
   const onSubmit = async (data: RSVPFormValues) => {
     setIsLoading(true)
     try {
-      await fetch('/api/rsvp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, invitationSlug }),
-      })
+      await fetch('/api/rsvp', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...data, invitationSlug }) })
       setSubmitted(true)
-    } catch {
-      setSubmitted(true)
-    } finally {
-      setIsLoading(false)
-    }
+    } catch { setSubmitted(true) }
+    finally { setIsLoading(false) }
   }
 
   const attendanceOptions = [
@@ -66,22 +54,20 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
     { value: 'mungkin', label: 'Mungkin', emoji: '?' },
   ]
 
+  const inputClass = "w-full bg-white/70 border border-[#CCC6B1]/60 focus:border-[#8A7560] text-[#2C2416] px-4 py-3 outline-none transition-colors text-sm placeholder:text-[#8A7560]"
+
   return (
     <section className="section-padding relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #F5F0E8 0%, #EDE8DC 50%, #F5F0E8 100%)' }}>
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.04) 0%, transparent 70%)' }} />
-      </div>
-
       <div className="container-luxury relative z-10">
         <SectionReveal className="text-center mb-16">
-          <p className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-[#6B5040] text-xs tracking-[0.5em] uppercase mb-4 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
             Konfirmasi Kehadiran
           </p>
           <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
             RSVP
           </h2>
           <GoldDivider />
-          <p className="text-[#2C2416]/40 text-sm mt-6 max-w-md mx-auto" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-[#3D2E1E] text-sm mt-6 max-w-md mx-auto" style={{ fontFamily: 'var(--font-poppins)' }}>
             Kehadiran Anda adalah kehormatan terbesar bagi kami. Mohon konfirmasi kehadiran Anda.
           </p>
         </SectionReveal>
@@ -89,82 +75,40 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
         <div className="max-w-lg mx-auto">
           <AnimatePresence mode="wait">
             {submitted ? (
-              <motion.div
-                key="success"
-                className="text-center py-16"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-              >
-                <div className="w-20 h-20 rounded-full border border-[#CCC6B1]/30 flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle size={32} className="text-[#CCC6B1]" />
+              <motion.div key="success" className="text-center py-16" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }}>
+                <div className="w-20 h-20 rounded-full border-2 border-[#CCC6B1] flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle size={32} className="text-[#8A7560]" />
                 </div>
-                <h3 className="text-3xl text-[#2C2416] mb-4" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
-                  Terima Kasih
-                </h3>
-                <p className="text-[#2C2416]/50 text-sm" style={{ fontFamily: 'var(--font-poppins)' }}>
+                <h3 className="text-3xl text-[#2C2416] mb-4" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>Terima Kasih</h3>
+                <p className="text-[#3D2E1E] text-sm" style={{ fontFamily: 'var(--font-poppins)' }}>
                   Konfirmasi kehadiran Anda telah kami terima. Kami sangat menantikan kehadiran Anda.
                 </p>
               </motion.div>
             ) : (
-              <motion.form
-                key="form"
-                onSubmit={handleSubmit(onSubmit)}
-                className="space-y-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                {/* Nama */}
+              <motion.form key="form" onSubmit={handleSubmit(onSubmit)} className="space-y-6" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
                 <div>
-                  <label className="block text-[#CCC6B1]/60 text-xs tracking-[0.3em] uppercase mb-2" style={{ fontFamily: 'var(--font-poppins)' }}>
-                    Nama Lengkap
-                  </label>
-                  <input
-                    {...register('name')}
-                    className="w-full bg-[#2C2416]/5 border border-[#2C2416]/15 focus:border-[#CCC6B1]/50 text-[#2C2416]/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-[#2C2416]/20"
-                    style={{ fontFamily: 'var(--font-poppins)' }}
-                    placeholder="Nama lengkap Anda"
-                  />
-                  {errors.name && (
-                    <p className="text-red-400/70 text-xs mt-1" style={{ fontFamily: 'var(--font-poppins)' }}>{errors.name.message}</p>
-                  )}
+                  <label className="block text-[#5A4535] text-xs tracking-[0.3em] uppercase mb-2 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>Nama Lengkap</label>
+                  <input {...register('name')} className={inputClass} style={{ fontFamily: 'var(--font-poppins)' }} placeholder="Nama lengkap Anda" />
+                  {errors.name && <p className="text-red-600 text-xs mt-1" style={{ fontFamily: 'var(--font-poppins)' }}>{errors.name.message}</p>}
                 </div>
 
-                {/* No. HP */}
                 <div>
-                  <label className="block text-[#CCC6B1]/60 text-xs tracking-[0.3em] uppercase mb-2" style={{ fontFamily: 'var(--font-poppins)' }}>
-                    No. WhatsApp <span className="text-[#2C2416]/20 normal-case tracking-normal">(opsional)</span>
+                  <label className="block text-[#5A4535] text-xs tracking-[0.3em] uppercase mb-2 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+                    No. WhatsApp <span className="text-[#8A7560] normal-case tracking-normal font-normal">(opsional)</span>
                   </label>
-                  <input
-                    {...register('phone')}
-                    className="w-full bg-[#2C2416]/5 border border-[#2C2416]/15 focus:border-[#CCC6B1]/50 text-[#2C2416]/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-[#2C2416]/20"
-                    style={{ fontFamily: 'var(--font-poppins)' }}
-                    placeholder="08xx xxxx xxxx"
-                  />
+                  <input {...register('phone')} className={inputClass} style={{ fontFamily: 'var(--font-poppins)' }} placeholder="08xx xxxx xxxx" />
                 </div>
 
-                {/* Kehadiran */}
                 <div>
-                  <label className="block text-[#CCC6B1]/60 text-xs tracking-[0.3em] uppercase mb-3" style={{ fontFamily: 'var(--font-poppins)' }}>
-                    Konfirmasi Kehadiran
-                  </label>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <label className="block text-[#5A4535] text-xs tracking-[0.3em] uppercase mb-3 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>Konfirmasi Kehadiran</label>
+                  <div className="grid grid-cols-3 gap-3">
                     {attendanceOptions.map((opt) => (
-                      <label
-                        key={opt.value}
-                        className={`relative cursor-pointer flex flex-col items-center gap-2 py-4 border transition-all duration-300 ${
-                          attendance === opt.value
-                            ? 'border-[#CCC6B1]/60 bg-[#CCC6B1]/10'
-                            : 'border-[#2C2416]/15 hover:border-[#2C2416]/20'
-                        }`}
-                      >
+                      <label key={opt.value} className={`relative cursor-pointer flex flex-col items-center gap-2 py-4 border-2 transition-all duration-300 ${
+                        attendance === opt.value ? 'border-[#8A7560] bg-[#CCC6B1]/20' : 'border-[#CCC6B1]/50 bg-white/50 hover:border-[#8A7560]/50'
+                      }`}>
                         <input type="radio" value={opt.value} {...register('attendance')} className="sr-only" />
                         <span className="text-lg">{opt.emoji}</span>
-                        <span
-                          className={`text-xs tracking-wider ${attendance === opt.value ? 'text-[#CCC6B1]' : 'text-[#2C2416]/50'}`}
-                          style={{ fontFamily: 'var(--font-poppins)' }}
-                        >
+                        <span className={`text-xs tracking-wider font-medium ${attendance === opt.value ? 'text-[#5A4535]' : 'text-[#6B5040]'}`} style={{ fontFamily: 'var(--font-poppins)' }}>
                           {opt.label}
                         </span>
                       </label>
@@ -172,47 +116,28 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
                   </div>
                 </div>
 
-                {/* Jumlah tamu */}
                 {attendance === 'hadir' && (
                   <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}>
-                    <label className="block text-[#CCC6B1]/60 text-xs tracking-[0.3em] uppercase mb-2" style={{ fontFamily: 'var(--font-poppins)' }}>
-                      <Users size={12} className="inline mr-2" />
-                      Jumlah Tamu
+                    <label className="block text-[#5A4535] text-xs tracking-[0.3em] uppercase mb-2 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+                      <Users size={12} className="inline mr-2" />Jumlah Tamu
                     </label>
-                    <select
-                      {...register('guestCount', { valueAsNumber: true })}
-                      className="w-full bg-[#2C2416]/5 border border-[#2C2416]/15 focus:border-[#CCC6B1]/50 text-[#2C2416]/80 px-4 py-3 outline-none transition-colors text-sm"
-                      style={{ fontFamily: 'var(--font-poppins)' }}
-                    >
+                    <select {...register('guestCount', { valueAsNumber: true })} className={inputClass} style={{ fontFamily: 'var(--font-poppins)' }}>
                       {[1, 2, 3, 4, 5].map((n) => (
-                        <option key={n} value={n} className="bg-[#F5F0E8]">
-                          {n} {n === 1 ? 'orang' : 'orang'}
-                        </option>
+                        <option key={n} value={n} className="bg-[#F5F0E8]">{n} orang</option>
                       ))}
                     </select>
                   </motion.div>
                 )}
 
-                {/* Pesan */}
                 <div>
-                  <label className="block text-[#CCC6B1]/60 text-xs tracking-[0.3em] uppercase mb-2" style={{ fontFamily: 'var(--font-poppins)' }}>
+                  <label className="block text-[#5A4535] text-xs tracking-[0.3em] uppercase mb-2 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
                     <MessageSquare size={12} className="inline mr-2" />
-                    Pesan <span className="text-[#2C2416]/20 normal-case tracking-normal">(opsional)</span>
+                    Pesan <span className="text-[#8A7560] normal-case tracking-normal font-normal">(opsional)</span>
                   </label>
-                  <textarea
-                    {...register('message')}
-                    rows={3}
-                    className="w-full bg-[#2C2416]/5 border border-[#2C2416]/15 focus:border-[#CCC6B1]/50 text-[#2C2416]/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-[#2C2416]/20 resize-none"
-                    style={{ fontFamily: 'var(--font-poppins)' }}
-                    placeholder="Tulis pesan untuk kedua mempelai..."
-                  />
+                  <textarea {...register('message')} rows={3} className={`${inputClass} resize-none`} style={{ fontFamily: 'var(--font-poppins)' }} placeholder="Tulis pesan untuk kedua mempelai..." />
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="btn-luxury w-full flex items-center justify-center gap-3 disabled:opacity-50"
-                >
+                <button type="submit" disabled={isLoading} className="btn-luxury w-full flex items-center justify-center gap-3 disabled:opacity-50">
                   {isLoading && <Loader2 size={16} className="animate-spin" />}
                   {isLoading ? 'Mengirim...' : 'Konfirmasi Kehadiran'}
                 </button>

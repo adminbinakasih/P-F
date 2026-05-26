@@ -7,15 +7,10 @@ import SectionReveal from '@/components/ui/SectionReveal'
 import GoldDivider from '@/components/ui/GoldDivider'
 import type { Wish } from '@/lib/types'
 
-interface WishesSectionProps {
-  wishes: Wish[]
-  invitationSlug: string
-}
+interface WishesSectionProps { wishes: Wish[]; invitationSlug: string }
 
 function timeAgo(dateStr: string): string {
-  const now = new Date()
-  const date = new Date(dateStr)
-  const diff = Math.floor((now.getTime() - date.getTime()) / 1000)
+  const diff = Math.floor((Date.now() - new Date(dateStr).getTime()) / 1000)
   if (diff < 60) return 'baru saja'
   if (diff < 3600) return `${Math.floor(diff / 60)} menit lalu`
   if (diff < 86400) return `${Math.floor(diff / 3600)} jam lalu`
@@ -39,18 +34,9 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
     e.preventDefault()
     if (!name.trim() || !message.trim()) return
     setIsLoading(true)
-    const newWish: Wish = {
-      id: Date.now().toString(),
-      name: name.trim(),
-      message: message.trim(),
-      createdAt: new Date().toISOString(),
-    }
+    const newWish: Wish = { id: Date.now().toString(), name: name.trim(), message: message.trim(), createdAt: new Date().toISOString() }
     try {
-      await fetch('/api/wishes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, message, invitationSlug }),
-      })
+      await fetch('/api/wishes', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, message, invitationSlug }) })
     } catch { /* demo mode */ }
     setWishes((prev) => [newWish, ...prev])
     setName('')
@@ -58,55 +44,32 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
     setIsLoading(false)
   }
 
+  const inputClass = "w-full bg-white/70 border border-[#CCC6B1]/60 focus:border-[#8A7560] text-[#2C2416] px-4 py-3 outline-none transition-colors text-sm placeholder:text-[#8A7560]"
+
   return (
     <section className="section-padding relative overflow-hidden" style={{ background: '#EDE8DC' }}>
       <div className="container-luxury relative z-10">
         <SectionReveal className="text-center mb-16">
-          <p className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
-            Ucapan & Doa
-          </p>
-          <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
-            Buku Tamu
-          </h2>
+          <p className="text-[#6B5040] text-xs tracking-[0.5em] uppercase mb-4 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>Ucapan & Doa</p>
+          <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>Buku Tamu</h2>
           <GoldDivider />
         </SectionReveal>
 
         <div className="max-w-2xl mx-auto">
-          {/* Form kirim ucapan */}
           <SectionReveal delay={0.1}>
             <form onSubmit={handleSubmit} className="glass p-5 sm:p-8 mb-12 relative">
-              <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#CCC6B1]/30" />
-              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#CCC6B1]/30" />
-              <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/30" />
-              <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/30" />
+              <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#CCC6B1]/50" />
+              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#CCC6B1]/50" />
+              <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/50" />
+              <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/50" />
 
-              <h3 className="text-xl text-[#2C2416] mb-6 text-center" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
+              <h3 className="text-xl text-[#2C2416] mb-6 text-center font-medium" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
                 Tulis Ucapan & Doa
               </h3>
-
               <div className="space-y-4">
-                <input
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="w-full bg-[#2C2416]/5 border border-[#2C2416]/15 focus:border-[#CCC6B1]/50 text-[#2C2416]/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-[#2C2416]/20"
-                  style={{ fontFamily: 'var(--font-poppins)' }}
-                  placeholder="Nama Anda"
-                  required
-                />
-                <textarea
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  rows={4}
-                  className="w-full bg-[#2C2416]/5 border border-[#2C2416]/15 focus:border-[#CCC6B1]/50 text-[#2C2416]/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-[#2C2416]/20 resize-none"
-                  style={{ fontFamily: 'var(--font-poppins)' }}
-                  placeholder="Tulis ucapan dan doa tulus untuk kedua mempelai..."
-                  required
-                />
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="btn-luxury w-full flex items-center justify-center gap-3 disabled:opacity-50"
-                >
+                <input value={name} onChange={(e) => setName(e.target.value)} className={inputClass} style={{ fontFamily: 'var(--font-poppins)' }} placeholder="Nama Anda" required />
+                <textarea value={message} onChange={(e) => setMessage(e.target.value)} rows={4} className={`${inputClass} resize-none`} style={{ fontFamily: 'var(--font-poppins)' }} placeholder="Tulis ucapan dan doa tulus untuk kedua mempelai..." required />
+                <button type="submit" disabled={isLoading} className="btn-luxury w-full flex items-center justify-center gap-3 disabled:opacity-50">
                   {isLoading ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
                   {isLoading ? 'Mengirim...' : 'Kirim Ucapan'}
                 </button>
@@ -114,39 +77,25 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
             </form>
           </SectionReveal>
 
-          {/* Daftar ucapan */}
           <div className="space-y-4">
             <AnimatePresence>
               {displayedWishes.map((wish, index) => (
-                <motion.div
-                  key={wish.id}
-                  className="glass p-6 relative"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                >
+                <motion.div key={wish.id} className="glass p-6 relative" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4, delay: index * 0.05 }}>
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#CCC6B1]/30 to-[#B76E79]/30 border border-[#CCC6B1]/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-[#CCC6B1] text-xs font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
-                        {getInitials(wish.name)}
-                      </span>
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#CCC6B1]/50 to-[#B76E79]/30 border border-[#CCC6B1]/40 flex items-center justify-center flex-shrink-0">
+                      <span className="text-[#5A4535] text-xs font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>{getInitials(wish.name)}</span>
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between mb-2">
-                        <h4 className="text-[#2C2416]/80 text-sm font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
-                          {wish.name}
-                        </h4>
-                        <span className="text-[#2C2416]/30 text-xs" style={{ fontFamily: 'var(--font-poppins)' }}>
-                          {timeAgo(wish.createdAt)}
-                        </span>
+                        <h4 className="text-[#2C2416] text-sm font-semibold" style={{ fontFamily: 'var(--font-poppins)' }}>{wish.name}</h4>
+                        <span className="text-[#8A7560] text-xs" style={{ fontFamily: 'var(--font-poppins)' }}>{timeAgo(wish.createdAt)}</span>
                       </div>
-                      <p className="text-[#2C2416]/50 leading-relaxed" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontSize: '1rem' }}>
+                      <p className="text-[#3D2E1E] leading-relaxed" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontSize: '1rem' }}>
                         "{wish.message}"
                       </p>
                     </div>
                   </div>
-                  <Heart size={10} className="absolute bottom-3 right-4 text-[#B76E79]/30" fill="currentColor" />
+                  <Heart size={10} className="absolute bottom-3 right-4 text-[#B76E79]/50" fill="currentColor" />
                 </motion.div>
               ))}
             </AnimatePresence>
