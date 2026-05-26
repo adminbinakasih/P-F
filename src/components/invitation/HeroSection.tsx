@@ -146,20 +146,30 @@ export default function HeroSection({ couple, guestName, onOpen }: HeroSectionPr
         {/* Guest name */}
         {guestName && guestName !== 'Tamu Undangan' && (
           <motion.div
-            className="mb-8 glass px-8 py-3 rounded-sm"
+            className="mb-8 px-8 py-4 rounded-sm"
+            style={{
+              background: 'rgba(26,16,8,0.75)',
+              border: '1px solid rgba(204,198,177,0.6)',
+              backdropFilter: 'blur(8px)',
+              WebkitBackdropFilter: 'blur(8px)',
+            }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.1 }}
           >
             <p
-              className="text-white/50 text-xs tracking-[0.3em] uppercase mb-1"
-              style={{ fontFamily: 'var(--font-poppins)' }}
+              className="text-[#CCC6B1] text-xs tracking-[0.4em] uppercase mb-1 font-semibold"
+              style={{ fontFamily: 'var(--font-poppins)', textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}
             >
               Kepada Yth.
             </p>
             <p
-              className="text-[#E8D5A3] text-lg"
-              style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}
+              className="text-white text-xl font-medium"
+              style={{
+                fontFamily: 'var(--font-cormorant)',
+                fontStyle: 'italic',
+                textShadow: '0 1px 8px rgba(0,0,0,0.6)',
+              }}
             >
               {guestName}
             </p>
