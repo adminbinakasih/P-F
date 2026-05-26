@@ -160,7 +160,7 @@ export default function InvitationWrapper({ data }: InvitationWrapperProps) {
 
       {/* Music player */}
       {isOpened && (
-        <MusicPlayer title="A Thousand Years" artist="Christina Perri" />
+        <MusicPlayer src="/music.mp3" title="I Wanna Grow Old with You" artist="Westlife" />
       )}
     </>
   )
