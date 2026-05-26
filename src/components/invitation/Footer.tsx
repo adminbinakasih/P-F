@@ -75,8 +75,8 @@ export default function Footer({ coupleName, hashtag }: FooterProps) {
           className="text-white/20 text-xs"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
-          Dibuat dengan penuh cinta oleh{' '}
-          <span className="text-[#C9A84C]/40">Developer SMA Unggul Bina Kasih Nusantara</span>
+          Dibuat oleh{' '}
+          <span className="text-[#C9A84C]/40">Developer BKN</span>
         </p>
       </div>
     </footer>
