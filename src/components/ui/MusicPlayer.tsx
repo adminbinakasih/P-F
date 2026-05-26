@@ -35,6 +35,35 @@ export default function MusicPlayer({
     return () => audio.removeEventListener('timeupdate', updateProgress)
   }, [])
 
+  // Autoplay saat komponen mount (setelah user klik "Buka Undangan")
+  useEffect(() => {
+    const audio = audioRef.current
+    if (!audio || !src) return
+
+    // Mulai dengan volume 0, fade in perlahan
+    audio.volume = 0
+    const playPromise = audio.play()
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          setIsPlaying(true)
+          setIsExpanded(true)
+          // Fade in volume selama 2 detik
+          let vol = 0
+          const fadeIn = setInterval(() => {
+            vol = Math.min(vol + 0.05, 0.8)
+            audio.volume = vol
+            if (vol >= 0.8) clearInterval(fadeIn)
+          }, 100)
+          // Tutup expanded setelah 3 detik
+          setTimeout(() => setIsExpanded(false), 3000)
+        })
+        .catch(() => {
+          // Browser blokir autoplay — biarkan user klik manual
+        })
+    }
+  }, [src])
+
   const togglePlay = () => {
     const audio = audioRef.current
     if (!audio) return
@@ -56,7 +85,7 @@ export default function MusicPlayer({
 
   return (
     <div className="fixed bottom-[calc(1.5rem+env(safe-area-inset-bottom,0px))] left-[calc(1.5rem+env(safe-area-inset-left,0px))] z-50">
-      {src && <audio ref={audioRef} src={src} loop preload="none" />}
+      {src && <audio ref={audioRef} src={src} loop preload="auto" />}
 
       <motion.div
         className="glass-dark rounded-full overflow-hidden"
