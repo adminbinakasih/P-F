@@ -69,7 +69,6 @@ export default function LandingPage() {
           <span className="text-2xl text-gradient-gold" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
             Eternal Vows
           </span>
-          <div className="hidden md:flex items-center gap-8">
             {[
               { label: 'Fitur', anchor: 'features' },
               { label: 'Demo', anchor: 'demo' },
@@ -204,7 +203,7 @@ export default function LandingPage() {
             </h2>
             <GoldDivider />
             <p className="text-white/40 text-sm mt-6 max-w-lg mx-auto" style={{ fontFamily: 'var(--font-poppins)' }}>
-              Undangan pernikahan Pieter & Febriyanti — dibuat dengan Eternal Vows
+              Undangan pernikahan Pieter & Febriyanti — dibuat dengan Developer SMA Unggul Bina Kasih Nusantara
             </p>
           </SectionReveal>
 
@@ -393,7 +392,7 @@ export default function LandingPage() {
               <span className="text-gradient-gold">Undangan Anda?</span>
             </h2>
             <p className="text-white/40 text-sm max-w-md mx-auto mb-10" style={{ fontFamily: 'var(--font-poppins)' }}>
-              Bergabunglah dengan ribuan pasangan yang telah mempercayakan kisah cinta mereka kepada Eternal Vows.
+              Bergabunglah dengan ribuan pasangan yang telah mempercayakan kisah cinta mereka kepada Developer SMA Unggul Bina Kasih Nusantara.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href={`/invite/${DEMO_SLUG}`} className="btn-luxury inline-flex items-center gap-3">
@@ -412,14 +411,14 @@ export default function LandingPage() {
       <footer className="py-12 border-t border-white/5">
         <div className="container-luxury text-center">
           <p className="text-3xl text-white/60 mb-2" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
-            Eternal Vows
+            Developer SMA Unggul Bina Kasih Nusantara
           </p>
           <p className="text-[#C9A84C]/30 text-xs tracking-[0.3em] uppercase mb-6" style={{ fontFamily: 'var(--font-poppins)' }}>
             Platform Undangan Pernikahan Digital Premium
           </p>
           <div className="h-px bg-gradient-to-r from-transparent via-[#C9A84C]/10 to-transparent mb-6" />
           <p className="text-white/20 text-xs" style={{ fontFamily: 'var(--font-poppins)' }}>
-            © 2025 Eternal Vows. Dibuat dengan penuh cinta.
+            © 2026 Developer SMA Unggul Bina Kasih Nusantara. Dibuat dengan penuh cinta.
           </p>
         </div>
       </footer>
