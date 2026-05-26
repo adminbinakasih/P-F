@@ -68,11 +68,23 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
             transition={{ delay: i * 0.1 + 0.3 }}
           >
             <div className="relative">
-              <div className="glass w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center rounded-sm">
+              <div
+                className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center rounded-sm"
+                style={{
+                  background: 'rgba(255,255,255,0.15)',
+                  backdropFilter: 'blur(12px)',
+                  WebkitBackdropFilter: 'blur(12px)',
+                  border: '1px solid rgba(204,198,177,0.5)',
+                }}
+              >
                 <motion.span
                   key={unit.value}
-                  className="text-xl sm:text-2xl md:text-3xl text-gradient-gold"
-                  style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 600 }}
+                  className="text-xl sm:text-2xl md:text-3xl text-white"
+                  style={{
+                    fontFamily: 'var(--font-cormorant)',
+                    fontWeight: 600,
+                    textShadow: '0 1px 8px rgba(0,0,0,0.5)',
+                  }}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
@@ -81,14 +93,14 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
                 </motion.span>
               </div>
               {/* Corner accents */}
-              <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#CCC6B1]/50" />
-              <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#CCC6B1]/50" />
-              <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#CCC6B1]/50" />
-              <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-[#CCC6B1]/50" />
+              <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#CCC6B1]/70" />
+              <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#CCC6B1]/70" />
+              <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#CCC6B1]/70" />
+              <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-[#CCC6B1]/70" />
             </div>
             <span
-              className="text-[9px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] text-[#CCC6B1]/60 uppercase mt-2"
-              style={{ fontFamily: 'var(--font-poppins)' }}
+              className="text-[9px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] text-white/80 uppercase mt-2"
+              style={{ fontFamily: 'var(--font-poppins)', textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}
             >
               {unit.label}
             </span>
@@ -96,8 +108,8 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
 
           {i < units.length - 1 && (
             <span
-              className="text-[#CCC6B1]/40 text-xl md:text-2xl mb-4"
-              style={{ fontFamily: 'var(--font-cormorant)' }}
+              className="text-white/60 text-xl md:text-2xl mb-4"
+              style={{ fontFamily: 'var(--font-cormorant)', textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}
             >
               :
             </span>

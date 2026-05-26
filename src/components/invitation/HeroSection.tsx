@@ -29,15 +29,19 @@ export default function HeroSection({ couple, guestName, onOpen }: HeroSectionPr
             backgroundImage: 'url(/EL_06256.png)',
           }}
         />
-        {/* Multi-layer overlay for cinematic feel */}
-        <div className="absolute inset-0 bg-[#0A0A0A]/60" />
-        <div className="absolute inset-0 gradient-hero" />
+        {/* Overlay lebih gelap agar teks terbaca */}
+        <div className="absolute inset-0 bg-[#1A1008]/50" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(180deg, rgba(26,16,8,0.3) 0%, rgba(26,16,8,0.2) 40%, rgba(26,16,8,0.55) 80%, rgba(26,16,8,0.75) 100%)',
+          }}
+        />
         {/* Vignette */}
         <div
           className="absolute inset-0"
           style={{
-            background:
-              'radial-gradient(ellipse at center, transparent 40%, rgba(10,10,10,0.7) 100%)',
+            background: 'radial-gradient(ellipse at center, transparent 30%, rgba(26,16,8,0.4) 100%)',
           }}
         />
       </div>
@@ -60,7 +64,7 @@ export default function HeroSection({ couple, guestName, onOpen }: HeroSectionPr
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl mx-auto">
         {/* Pre-title */}
         <motion.p
-          className="text-[#CCC6B1]/70 text-xs tracking-[0.5em] uppercase mb-6"
+          className="text-[#CCC6B1]/80 text-xs tracking-[0.5em] uppercase mb-6"
           style={{ fontFamily: 'var(--font-poppins)' }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -78,7 +82,7 @@ export default function HeroSection({ couple, guestName, onOpen }: HeroSectionPr
         >
           <h1
             className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl text-white leading-none"
-            style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}
+            style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300, textShadow: '0 2px 20px rgba(0,0,0,0.4)' }}
           >
             {couple.groom.name}
           </h1>
@@ -90,14 +94,14 @@ export default function HeroSection({ couple, guestName, onOpen }: HeroSectionPr
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <div className="h-px w-10 md:w-16 bg-gradient-to-r from-transparent to-[#CCC6B1]/60" />
+          <div className="h-px w-10 md:w-16 bg-gradient-to-r from-transparent to-[#CCC6B1]/70" />
           <span
             className="text-[#CCC6B1] text-2xl md:text-4xl"
             style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}
           >
             &
           </span>
-          <div className="h-px w-10 md:w-16 bg-gradient-to-l from-transparent to-[#CCC6B1]/60" />
+          <div className="h-px w-10 md:w-16 bg-gradient-to-l from-transparent to-[#CCC6B1]/70" />
         </motion.div>
 
         <motion.div
@@ -108,7 +112,7 @@ export default function HeroSection({ couple, guestName, onOpen }: HeroSectionPr
         >
           <h1
             className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl text-white leading-none"
-            style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}
+            style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300, textShadow: '0 2px 20px rgba(0,0,0,0.4)' }}
           >
             {couple.bride.name}
           </h1>
@@ -122,17 +126,17 @@ export default function HeroSection({ couple, guestName, onOpen }: HeroSectionPr
           transition={{ duration: 0.8, delay: 1 }}
         >
           <div className="flex items-center gap-4 justify-center mb-2">
-            <div className="h-px w-8 bg-[#CCC6B1]/40" />
+            <div className="h-px w-8 bg-[#CCC6B1]/50" />
             <p
-              className="text-[#CCC6B1]/80 text-sm tracking-[0.3em] uppercase"
+              className="text-[#CCC6B1] text-sm tracking-[0.3em] uppercase"
               style={{ fontFamily: 'var(--font-poppins)' }}
             >
               {weddingDateFormatted}
             </p>
-            <div className="h-px w-8 bg-[#CCC6B1]/40" />
+            <div className="h-px w-8 bg-[#CCC6B1]/50" />
           </div>
           <p
-            className="text-white/40 text-xs tracking-[0.2em]"
+            className="text-white/60 text-xs tracking-[0.2em]"
             style={{ fontFamily: 'var(--font-poppins)' }}
           >
             {couple.venue.name} · {couple.venue.city}
@@ -194,7 +198,7 @@ export default function HeroSection({ couple, guestName, onOpen }: HeroSectionPr
         transition={{ delay: 2 }}
       >
         <p
-          className="text-white/30 text-[10px] tracking-[0.3em] uppercase"
+          className="text-white/40 text-[10px] tracking-[0.3em] uppercase"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           Scroll
@@ -203,7 +207,7 @@ export default function HeroSection({ couple, guestName, onOpen }: HeroSectionPr
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <ChevronDown size={16} className="text-[#CCC6B1]/50" />
+          <ChevronDown size={16} className="text-[#CCC6B1]/70" />
         </motion.div>
       </motion.div>
     </section>
