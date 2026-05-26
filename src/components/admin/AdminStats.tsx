@@ -27,7 +27,7 @@ interface WishItem {
 const statusBadge = {
   hadir: 'bg-green-500/10 text-green-400/70 border-green-500/20',
   tidak_hadir: 'bg-red-500/10 text-red-400/70 border-red-500/20',
-  mungkin: 'bg-[#C9A84C]/10 text-[#C9A84C]/70 border-[#C9A84C]/20',
+  mungkin: 'bg-[#CCC6B1]/10 text-[#CCC6B1]/70 border-[#CCC6B1]/20',
 }
 const statusLabel = { hadir: 'Hadir', tidak_hadir: 'Tidak Hadir', mungkin: 'Mungkin' }
 
@@ -70,7 +70,7 @@ export default function AdminStats() {
   const mungkinPct = rsvps.length ? Math.round((mungkin.length / rsvps.length) * 100) : 0
 
   const stats = [
-    { label: 'Total RSVP', value: rsvps.length.toString(), change: `${hadir.length} konfirmasi hadir`, icon: Mail, color: '#C9A84C' },
+    { label: 'Total RSVP', value: rsvps.length.toString(), change: `${hadir.length} konfirmasi hadir`, icon: Mail, color: '#CCC6B1' },
     { label: 'Total Tamu', value: totalTamu.toString(), change: 'dari RSVP hadir', icon: Users, color: '#B76E79' },
     { label: 'Konfirmasi Hadir', value: hadir.length.toString(), change: `Tingkat ${hadirPct}%`, icon: CheckCircle, color: '#4CAF50' },
     { label: 'Ucapan Masuk', value: wishes.length.toString(), change: 'dari buku tamu', icon: TrendingUp, color: '#64B5F6' },
@@ -87,7 +87,7 @@ export default function AdminStats() {
           <p className="text-white/40 text-xs">Undangan Pernikahan Pieter & Febriyanti — 15 Juni 2026</p>
         </div>
         <div className="flex items-center gap-3">
-          <button onClick={fetchData} className="text-white/40 hover:text-[#C9A84C] transition-colors" title="Refresh">
+          <button onClick={fetchData} className="text-white/40 hover:text-[#CCC6B1] transition-colors" title="Refresh">
             <RefreshCw size={14} className={loading ? 'animate-spin' : ''} />
           </button>
           <Link href="/invite/pieter-febriyanti" target="_blank"
@@ -128,7 +128,7 @@ export default function AdminStats() {
         {/* RSVP breakdown */}
         <motion.div className="glass p-5" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
           <h3 className="text-white/70 text-sm mb-4 flex items-center gap-2">
-            <BarChart3 size={14} className="text-[#C9A84C]/60" />
+            <BarChart3 size={14} className="text-[#CCC6B1]/60" />
             Rekap RSVP
           </h3>
           {rsvps.length === 0 ? (
@@ -138,7 +138,7 @@ export default function AdminStats() {
               {[
                 { label: 'Hadir', value: hadirPct, count: hadir.length, color: '#4CAF50' },
                 { label: 'Tidak Hadir', value: tidakHadirPct, count: tidakHadir.length, color: '#EF5350' },
-                { label: 'Mungkin', value: mungkinPct, count: mungkin.length, color: '#C9A84C' },
+                { label: 'Mungkin', value: mungkinPct, count: mungkin.length, color: '#CCC6B1' },
               ].map((item) => (
                 <div key={item.label}>
                   <div className="flex justify-between text-xs mb-1">
@@ -159,7 +159,7 @@ export default function AdminStats() {
         {/* Recent RSVPs */}
         <motion.div className="glass p-5 lg:col-span-2" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
           <h3 className="text-white/70 text-sm mb-4 flex items-center gap-2">
-            <Users size={14} className="text-[#C9A84C]/60" />
+            <Users size={14} className="text-[#CCC6B1]/60" />
             RSVP Terbaru
           </h3>
           {rsvps.length === 0 ? (
@@ -169,8 +169,8 @@ export default function AdminStats() {
               {rsvps.slice(0, 5).map((rsvp, i) => (
                 <div key={i} className="flex items-center justify-between py-2 border-b border-white/5 last:border-0">
                   <div className="flex items-center gap-3">
-                    <div className="w-7 h-7 rounded-full bg-[#C9A84C]/10 border border-[#C9A84C]/20 flex items-center justify-center">
-                      <span className="text-[#C9A84C] text-xs">{rsvp.name[0]}</span>
+                    <div className="w-7 h-7 rounded-full bg-[#CCC6B1]/10 border border-[#CCC6B1]/20 flex items-center justify-center">
+                      <span className="text-[#CCC6B1] text-xs">{rsvp.name[0]}</span>
                     </div>
                     <div>
                       <p className="text-white/70 text-xs font-medium">{rsvp.name}</p>
@@ -196,11 +196,11 @@ export default function AdminStats() {
       <motion.div className="glass p-5" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-white/70 text-sm flex items-center gap-2">
-            <Mail size={14} className="text-[#C9A84C]/60" />
+            <Mail size={14} className="text-[#CCC6B1]/60" />
             Info Undangan
           </h3>
           <Link href="/invite/pieter-febriyanti" target="_blank"
-            className="text-[#C9A84C]/60 hover:text-[#C9A84C] text-xs transition-colors">
+            className="text-[#CCC6B1]/60 hover:text-[#CCC6B1] text-xs transition-colors">
             Buka ↗
           </Link>
         </div>

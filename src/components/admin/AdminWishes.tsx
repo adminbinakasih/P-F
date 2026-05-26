@@ -49,14 +49,14 @@ export default function AdminWishes() {
           </h1>
           <p className="text-white/40 text-xs">{wishes.length} ucapan diterima</p>
         </div>
-        <button onClick={fetchWishes} className="text-white/40 hover:text-[#C9A84C] transition-colors p-2" title="Refresh">
+        <button onClick={fetchWishes} className="text-white/40 hover:text-[#CCC6B1] transition-colors p-2" title="Refresh">
           <RefreshCw size={14} className={loading ? 'animate-spin' : ''} />
         </button>
       </div>
 
       {loading ? (
         <div className="text-center py-16">
-          <RefreshCw size={24} className="text-[#C9A84C]/30 mx-auto mb-3 animate-spin" />
+          <RefreshCw size={24} className="text-[#CCC6B1]/30 mx-auto mb-3 animate-spin" />
           <p className="text-white/30 text-xs">Memuat ucapan...</p>
         </div>
       ) : wishes.length === 0 ? (
@@ -72,8 +72,8 @@ export default function AdminWishes() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05 }}>
-              <div className="w-9 h-9 rounded-full bg-[#C9A84C]/10 border border-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                <span className="text-[#C9A84C] text-xs">{wish.name[0]}</span>
+              <div className="w-9 h-9 rounded-full bg-[#CCC6B1]/10 border border-[#CCC6B1]/20 flex items-center justify-center flex-shrink-0">
+                <span className="text-[#CCC6B1] text-xs">{wish.name[0]}</span>
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between mb-1">

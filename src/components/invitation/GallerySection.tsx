@@ -35,7 +35,7 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
       <div className="container-luxury relative z-10">
         {/* Header */}
         <SectionReveal className="text-center mb-16">
-          <p className="text-[#C9A84C]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
             Kenangan Indah
           </p>
           <h2 className="text-5xl md:text-6xl text-white mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
@@ -66,10 +66,10 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
               />
 
               {/* Gold corner accents on hover */}
-              <div className="absolute top-0 left-0 w-0 h-0 border-t-2 border-l-2 border-[#C9A84C]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#C9A84C]/80 transition-all duration-500 z-10" />
-              <div className="absolute top-0 right-0 w-0 h-0 border-t-2 border-r-2 border-[#C9A84C]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#C9A84C]/80 transition-all duration-500 z-10" />
-              <div className="absolute bottom-0 left-0 w-0 h-0 border-b-2 border-l-2 border-[#C9A84C]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#C9A84C]/80 transition-all duration-500 z-10" />
-              <div className="absolute bottom-0 right-0 w-0 h-0 border-b-2 border-r-2 border-[#C9A84C]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#C9A84C]/80 transition-all duration-500 z-10" />
+              <div className="absolute top-0 left-0 w-0 h-0 border-t-2 border-l-2 border-[#CCC6B1]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#CCC6B1]/80 transition-all duration-500 z-10" />
+              <div className="absolute top-0 right-0 w-0 h-0 border-t-2 border-r-2 border-[#CCC6B1]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#CCC6B1]/80 transition-all duration-500 z-10" />
+              <div className="absolute bottom-0 left-0 w-0 h-0 border-b-2 border-l-2 border-[#CCC6B1]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#CCC6B1]/80 transition-all duration-500 z-10" />
+              <div className="absolute bottom-0 right-0 w-0 h-0 border-b-2 border-r-2 border-[#CCC6B1]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#CCC6B1]/80 transition-all duration-500 z-10" />
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-[#0A0A0A]/0 group-hover:bg-[#0A0A0A]/30 transition-all duration-500 z-10" />
@@ -105,10 +105,10 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
               transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
               {/* Gold corner frame */}
-              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-[#C9A84C]/60 z-20" />
-              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-[#C9A84C]/60 z-20" />
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-[#C9A84C]/60 z-20" />
-              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-[#C9A84C]/60 z-20" />
+              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-[#CCC6B1]/60 z-20" />
+              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-[#CCC6B1]/60 z-20" />
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-[#CCC6B1]/60 z-20" />
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-[#CCC6B1]/60 z-20" />
 
               <div className="relative w-full h-[65vh] sm:h-[75vh]">
                 <Image
@@ -121,19 +121,19 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
               </div>
 
               {gallery[lightboxIndex].caption && (
-                <p className="text-center text-[#C9A84C]/60 text-xs mt-4 tracking-[0.3em] uppercase" style={{ fontFamily: 'var(--font-poppins)' }}>
+                <p className="text-center text-[#CCC6B1]/60 text-xs mt-4 tracking-[0.3em] uppercase" style={{ fontFamily: 'var(--font-poppins)' }}>
                   {gallery[lightboxIndex].caption}
                 </p>
               )}
             </motion.div>
 
-            <button onClick={closeLightbox} className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 w-10 h-10 glass flex items-center justify-center text-white/50 hover:text-[#C9A84C] transition-colors">
+            <button onClick={closeLightbox} className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 w-10 h-10 glass flex items-center justify-center text-white/50 hover:text-[#CCC6B1] transition-colors">
               <X size={16} />
             </button>
-            <button onClick={prev} className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 glass flex items-center justify-center text-white/50 hover:text-[#C9A84C] transition-colors">
+            <button onClick={prev} className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 glass flex items-center justify-center text-white/50 hover:text-[#CCC6B1] transition-colors">
               <ChevronLeft size={18} />
             </button>
-            <button onClick={next} className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 glass flex items-center justify-center text-white/50 hover:text-[#C9A84C] transition-colors">
+            <button onClick={next} className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 glass flex items-center justify-center text-white/50 hover:text-[#CCC6B1] transition-colors">
               <ChevronRight size={18} />
             </button>
 
@@ -142,7 +142,7 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
                 <button
                   key={i}
                   onClick={() => setLightboxIndex(i)}
-                  className={`transition-all duration-300 rounded-full ${i === lightboxIndex ? 'w-4 h-1.5 bg-[#C9A84C]' : 'w-1.5 h-1.5 bg-white/20 hover:bg-white/40'}`}
+                  className={`transition-all duration-300 rounded-full ${i === lightboxIndex ? 'w-4 h-1.5 bg-[#CCC6B1]' : 'w-1.5 h-1.5 bg-white/20 hover:bg-white/40'}`}
                 />
               ))}
             </div>

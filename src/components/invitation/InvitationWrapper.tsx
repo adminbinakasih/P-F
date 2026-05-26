@@ -66,21 +66,21 @@ export default function InvitationWrapper({ data }: InvitationWrapperProps) {
 
           {/* Corner ornaments */}
           <div className="absolute top-8 left-8 z-10 opacity-30">
-            <div className="w-12 h-12 border-t border-l border-[#C9A84C]" />
+            <div className="w-12 h-12 border-t border-l border-[#CCC6B1]" />
           </div>
           <div className="absolute top-8 right-8 z-10 opacity-30">
-            <div className="w-12 h-12 border-t border-r border-[#C9A84C]" />
+            <div className="w-12 h-12 border-t border-r border-[#CCC6B1]" />
           </div>
           <div className="absolute bottom-8 left-8 z-10 opacity-30">
-            <div className="w-12 h-12 border-b border-l border-[#C9A84C]" />
+            <div className="w-12 h-12 border-b border-l border-[#CCC6B1]" />
           </div>
           <div className="absolute bottom-8 right-8 z-10 opacity-30">
-            <div className="w-12 h-12 border-b border-r border-[#C9A84C]" />
+            <div className="w-12 h-12 border-b border-r border-[#CCC6B1]" />
           </div>
 
           <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
             <motion.p
-              className="text-[#C9A84C]/60 text-xs tracking-[0.5em] uppercase mb-6"
+              className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-6"
               style={{ fontFamily: 'var(--font-poppins)' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isOpened ? 1 : 0, y: isOpened ? 0 : 20 }}
@@ -106,9 +106,9 @@ export default function InvitationWrapper({ data }: InvitationWrapperProps) {
               animate={{ opacity: isOpened ? 1 : 0 }}
               transition={{ delay: 0.75 }}
             >
-              <div className="h-px w-10 md:w-16 bg-gradient-to-r from-transparent to-[#C9A84C]/60" />
-              <span className="text-[#C9A84C] text-3xl md:text-4xl" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>&</span>
-              <div className="h-px w-10 md:w-16 bg-gradient-to-l from-transparent to-[#C9A84C]/60" />
+              <div className="h-px w-10 md:w-16 bg-gradient-to-r from-transparent to-[#CCC6B1]/60" />
+              <span className="text-[#CCC6B1] text-3xl md:text-4xl" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>&</span>
+              <div className="h-px w-10 md:w-16 bg-gradient-to-l from-transparent to-[#CCC6B1]/60" />
             </motion.div>
 
             {/* Bride */}

@@ -96,14 +96,14 @@ export default function MusicPlayer({
           {/* Play button */}
           <motion.button
             onClick={togglePlay}
-            className="w-8 h-8 rounded-full bg-[#C9A84C]/20 border border-[#C9A84C]/30 flex items-center justify-center flex-shrink-0 hover:bg-[#C9A84C]/30 transition-colors"
+            className="w-8 h-8 rounded-full bg-[#CCC6B1]/20 border border-[#CCC6B1]/30 flex items-center justify-center flex-shrink-0 hover:bg-[#CCC6B1]/30 transition-colors"
             whileTap={{ scale: 0.9 }}
             onHoverStart={() => setIsExpanded(true)}
           >
             {isPlaying ? (
-              <Pause size={12} className="text-[#C9A84C]" />
+              <Pause size={12} className="text-[#CCC6B1]" />
             ) : (
-              <Play size={12} className="text-[#C9A84C] ml-0.5" />
+              <Play size={12} className="text-[#CCC6B1] ml-0.5" />
             )}
           </motion.button>
 
@@ -126,7 +126,7 @@ export default function MusicPlayer({
                     {title}
                   </p>
                   <p
-                    className="text-[#C9A84C]/60 text-[10px] truncate"
+                    className="text-[#CCC6B1]/60 text-[10px] truncate"
                     style={{ fontFamily: 'var(--font-poppins)' }}
                   >
                     {artist}
@@ -136,7 +136,7 @@ export default function MusicPlayer({
                 {/* Mute button */}
                 <button
                   onClick={toggleMute}
-                  className="flex-shrink-0 text-white/40 hover:text-[#C9A84C] transition-colors"
+                  className="flex-shrink-0 text-white/40 hover:text-[#CCC6B1] transition-colors"
                 >
                   {isMuted ? <VolumeX size={12} /> : <Volume2 size={12} />}
                 </button>
@@ -149,7 +149,7 @@ export default function MusicPlayer({
         {isPlaying && (
           <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/10">
             <div
-              className="h-full bg-[#C9A84C]"
+              className="h-full bg-[#CCC6B1]"
               style={{ width: `${progress}%`, transition: 'width 1s linear' }}
             />
           </div>
@@ -162,7 +162,7 @@ export default function MusicPlayer({
           {[1, 2, 3].map((i) => (
             <motion.div
               key={i}
-              className="w-0.5 bg-[#C9A84C] rounded-full"
+              className="w-0.5 bg-[#CCC6B1] rounded-full"
               animate={{ height: ['4px', '12px', '6px', '14px', '4px'] }}
               transition={{
                 duration: 0.8,

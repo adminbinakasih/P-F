@@ -81,13 +81,13 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
                 </motion.span>
               </div>
               {/* Corner accents */}
-              <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#C9A84C]/50" />
-              <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#C9A84C]/50" />
-              <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#C9A84C]/50" />
-              <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-[#C9A84C]/50" />
+              <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#CCC6B1]/50" />
+              <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#CCC6B1]/50" />
+              <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#CCC6B1]/50" />
+              <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-[#CCC6B1]/50" />
             </div>
             <span
-              className="text-[9px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] text-[#C9A84C]/60 uppercase mt-2"
+              className="text-[9px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] text-[#CCC6B1]/60 uppercase mt-2"
               style={{ fontFamily: 'var(--font-poppins)' }}
             >
               {unit.label}
@@ -96,7 +96,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
 
           {i < units.length - 1 && (
             <span
-              className="text-[#C9A84C]/40 text-xl md:text-2xl mb-4"
+              className="text-[#CCC6B1]/40 text-xl md:text-2xl mb-4"
               style={{ fontFamily: 'var(--font-cormorant)' }}
             >
               :

@@ -28,7 +28,7 @@ export default function CoupleSection({ couple }: CoupleSectionProps) {
         {/* Section header */}
         <SectionReveal className="text-center mb-16">
           <p
-            className="text-[#C9A84C]/60 text-xs tracking-[0.5em] uppercase mb-4"
+            className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4"
             style={{ fontFamily: 'var(--font-poppins)' }}
           >
             Dengan Penuh Cinta
@@ -58,16 +58,16 @@ export default function CoupleSection({ couple }: CoupleSectionProps) {
         {/* Hashtag */}
         <SectionReveal className="text-center mt-16" delay={0.3}>
           <div className="inline-flex items-center gap-3">
-            <div className="h-px w-12 bg-[#C9A84C]/30" />
+            <div className="h-px w-12 bg-[#CCC6B1]/30" />
             <Heart size={14} className="text-[#B76E79]" fill="#B76E79" />
             <p
-              className="text-[#C9A84C] text-lg tracking-wider"
+              className="text-[#CCC6B1] text-lg tracking-wider"
               style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}
             >
               {couple.hashtag}
             </p>
             <Heart size={14} className="text-[#B76E79]" fill="#B76E79" />
-            <div className="h-px w-12 bg-[#C9A84C]/30" />
+            <div className="h-px w-12 bg-[#CCC6B1]/30" />
           </div>
         </SectionReveal>
       </div>
@@ -88,8 +88,8 @@ function PersonCard({
       <div className="relative mb-8">
         <div className="relative w-56 h-72 overflow-hidden">
           {/* Decorative frame */}
-          <div className="absolute -inset-2 border border-[#C9A84C]/20 z-10 pointer-events-none" />
-          <div className="absolute -inset-4 border border-[#C9A84C]/10 z-10 pointer-events-none" />
+          <div className="absolute -inset-2 border border-[#CCC6B1]/20 z-10 pointer-events-none" />
+          <div className="absolute -inset-4 border border-[#CCC6B1]/10 z-10 pointer-events-none" />
 
           <Image
             src={person.photo}
@@ -105,7 +105,7 @@ function PersonCard({
         {/* Role badge */}
         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 glass px-4 py-1 whitespace-nowrap">
           <span
-            className="text-[#C9A84C] text-xs tracking-[0.3em] uppercase"
+            className="text-[#CCC6B1] text-xs tracking-[0.3em] uppercase"
             style={{ fontFamily: 'var(--font-poppins)' }}
           >
             {role}

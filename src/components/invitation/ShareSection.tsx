@@ -52,7 +52,7 @@ export default function ShareSection({ slug, coupleName, weddingDate }: ShareSec
     <section className="section-padding relative overflow-hidden" style={{ background: '#0D0D0D' }}>
       <div className="container-luxury relative z-10">
         <SectionReveal className="text-center mb-16">
-          <p className="text-[#C9A84C]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
             Sebarkan Kebahagiaan
           </p>
           <h2 className="text-5xl md:text-6xl text-white mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
@@ -63,10 +63,10 @@ export default function ShareSection({ slug, coupleName, weddingDate }: ShareSec
 
         <SectionReveal className="max-w-lg mx-auto" delay={0.1}>
           <div className="glass p-8 text-center relative">
-            <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#C9A84C]/30" />
-            <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#C9A84C]/30" />
-            <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#C9A84C]/30" />
-            <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#C9A84C]/30" />
+            <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#CCC6B1]/30" />
+            <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#CCC6B1]/30" />
+            <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/30" />
+            <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/30" />
 
             <p className="text-white/40 text-xs mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
               Link Undangan
@@ -76,7 +76,7 @@ export default function ShareSection({ slug, coupleName, weddingDate }: ShareSec
               <p className="text-white/60 text-sm flex-1 truncate text-left" style={{ fontFamily: 'var(--font-poppins)' }}>
                 {url}
               </p>
-              <motion.button onClick={handleCopy} className="flex-shrink-0 text-[#C9A84C]/60 hover:text-[#C9A84C] transition-colors" whileTap={{ scale: 0.9 }}>
+              <motion.button onClick={handleCopy} className="flex-shrink-0 text-[#CCC6B1]/60 hover:text-[#CCC6B1] transition-colors" whileTap={{ scale: 0.9 }}>
                 {copied ? <Check size={14} /> : <Copy size={14} />}
               </motion.button>
             </div>
@@ -95,7 +95,7 @@ export default function ShareSection({ slug, coupleName, weddingDate }: ShareSec
 
               <motion.button
                 onClick={handleShare}
-                className="flex items-center gap-2 px-6 py-3 border border-[#C9A84C]/30 text-[#C9A84C]/60 hover:text-[#C9A84C] hover:bg-[#C9A84C]/10 transition-all text-xs tracking-wider uppercase"
+                className="flex items-center gap-2 px-6 py-3 border border-[#CCC6B1]/30 text-[#CCC6B1]/60 hover:text-[#CCC6B1] hover:bg-[#CCC6B1]/10 transition-all text-xs tracking-wider uppercase"
                 style={{ fontFamily: 'var(--font-poppins)' }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

@@ -37,8 +37,8 @@ export default function AdminDashboard() {
       >
         {/* Logo */}
         <div className="flex items-center gap-3 px-4 h-16 border-b border-white/5">
-          <div className="w-8 h-8 rounded-full bg-[#C9A84C]/10 border border-[#C9A84C]/30 flex items-center justify-center flex-shrink-0">
-            <span className="text-[#C9A84C] text-sm" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>EV</span>
+          <div className="w-8 h-8 rounded-full bg-[#CCC6B1]/10 border border-[#CCC6B1]/30 flex items-center justify-center flex-shrink-0">
+            <span className="text-[#CCC6B1] text-sm" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>EV</span>
           </div>
           {sidebarOpen && (
             <span className="text-white/80 text-sm font-medium truncate">Eternal Vows</span>
@@ -56,7 +56,7 @@ export default function AdminDashboard() {
                 onClick={() => { setActiveTab(item.id); setMobileOpen(false) }}
                 className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-sm transition-all duration-200 ${
                   isActive
-                    ? 'bg-[#C9A84C]/10 text-[#C9A84C]'
+                    ? 'bg-[#CCC6B1]/10 text-[#CCC6B1]'
                     : 'text-white/40 hover:text-white/70 hover:bg-white/5'
                 }`}
               >
@@ -65,7 +65,7 @@ export default function AdminDashboard() {
                   <span className="text-xs tracking-wide truncate">{item.label}</span>
                 )}
                 {isActive && sidebarOpen && (
-                  <div className="ml-auto w-1 h-4 bg-[#C9A84C] rounded-full" />
+                  <div className="ml-auto w-1 h-4 bg-[#CCC6B1] rounded-full" />
                 )}
               </button>
             )
@@ -108,10 +108,10 @@ export default function AdminDashboard() {
           <div className="flex items-center gap-3">
             <button className="relative text-white/40 hover:text-white/70 transition-colors">
               <Bell size={16} />
-              <span className="absolute -top-1 -right-1 w-2 h-2 bg-[#C9A84C] rounded-full" />
+              <span className="absolute -top-1 -right-1 w-2 h-2 bg-[#CCC6B1] rounded-full" />
             </button>
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#C9A84C]/30 to-[#B76E79]/30 border border-[#C9A84C]/20 flex items-center justify-center">
-              <span className="text-[#C9A84C] text-xs font-medium">A</span>
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#CCC6B1]/30 to-[#B76E79]/30 border border-[#CCC6B1]/20 flex items-center justify-center">
+              <span className="text-[#CCC6B1] text-xs font-medium">A</span>
             </div>
           </div>
         </header>
@@ -143,7 +143,7 @@ export default function AdminDashboard() {
 function AdminGalleryPlaceholder() {
   return (
     <div className="text-center py-20">
-      <Image size={40} className="text-[#C9A84C]/30 mx-auto mb-4" />
+      <Image size={40} className="text-[#CCC6B1]/30 mx-auto mb-4" />
       <p className="text-white/40 text-sm">Gallery management coming soon</p>
     </div>
   )
@@ -152,7 +152,7 @@ function AdminGalleryPlaceholder() {
 function AdminSettingsPlaceholder() {
   return (
     <div className="text-center py-20">
-      <Settings size={40} className="text-[#C9A84C]/30 mx-auto mb-4" />
+      <Settings size={40} className="text-[#CCC6B1]/30 mx-auto mb-4" />
       <p className="text-white/40 text-sm">Settings panel coming soon</p>
     </div>
   )

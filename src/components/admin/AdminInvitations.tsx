@@ -33,8 +33,8 @@ export default function AdminInvitations() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
           >
-            <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#C9A84C]/20 group-hover:border-[#C9A84C]/50 transition-colors" />
-            <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-[#C9A84C]/20 group-hover:border-[#C9A84C]/50 transition-colors" />
+            <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#CCC6B1]/20 group-hover:border-[#CCC6B1]/50 transition-colors" />
+            <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-[#CCC6B1]/20 group-hover:border-[#CCC6B1]/50 transition-colors" />
 
             <div className="flex items-start justify-between mb-3">
               <div>
@@ -54,7 +54,7 @@ export default function AdminInvitations() {
               </span>
             </div>
 
-            <div className="h-px bg-gradient-to-r from-transparent via-[#C9A84C]/15 to-transparent mb-3" />
+            <div className="h-px bg-gradient-to-r from-transparent via-[#CCC6B1]/15 to-transparent mb-3" />
 
             <div className="flex items-center gap-6 mb-4">
               <div>
@@ -63,7 +63,7 @@ export default function AdminInvitations() {
               </div>
               <div>
                 <p className="text-white/30 text-[10px] uppercase tracking-wider">RSVP</p>
-                <p className="text-[#C9A84C]/70 text-sm font-medium">{inv.rsvp}</p>
+                <p className="text-[#CCC6B1]/70 text-sm font-medium">{inv.rsvp}</p>
               </div>
               <div>
                 <p className="text-white/30 text-[10px] uppercase tracking-wider">URL</p>
@@ -75,7 +75,7 @@ export default function AdminInvitations() {
               <Link
                 href={`/invite/${inv.slug}`}
                 target="_blank"
-                className="flex items-center gap-1.5 text-[10px] px-3 py-1.5 border border-[#C9A84C]/30 text-[#C9A84C]/60 hover:text-[#C9A84C] hover:border-[#C9A84C]/60 transition-all"
+                className="flex items-center gap-1.5 text-[10px] px-3 py-1.5 border border-[#CCC6B1]/30 text-[#CCC6B1]/60 hover:text-[#CCC6B1] hover:border-[#CCC6B1]/60 transition-all"
               >
                 <ExternalLink size={10} />
                 Open

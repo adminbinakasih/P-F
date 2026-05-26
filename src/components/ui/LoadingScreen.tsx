@@ -42,17 +42,17 @@ export default function LoadingScreen({
           {/* Rotating rings */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <motion.div
-              className="w-[600px] h-[600px] rounded-full border border-[#C9A84C]/5"
+              className="w-[600px] h-[600px] rounded-full border border-[#CCC6B1]/5"
               animate={{ rotate: 360 }}
               transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
             />
             <motion.div
-              className="absolute w-[400px] h-[400px] rounded-full border border-[#C9A84C]/8"
+              className="absolute w-[400px] h-[400px] rounded-full border border-[#CCC6B1]/8"
               animate={{ rotate: -360 }}
               transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
             />
             <motion.div
-              className="absolute w-[200px] h-[200px] rounded-full border border-[#C9A84C]/12"
+              className="absolute w-[200px] h-[200px] rounded-full border border-[#CCC6B1]/12"
               animate={{ rotate: 360 }}
               transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
             />
@@ -66,7 +66,7 @@ export default function LoadingScreen({
           >
             {/* Monogram */}
             <motion.div
-              className="w-24 h-24 rounded-full border border-[#C9A84C]/30 flex items-center justify-center"
+              className="w-24 h-24 rounded-full border border-[#CCC6B1]/30 flex items-center justify-center"
               animate={{
                 boxShadow: [
                   '0 0 0 0 rgba(201,168,76,0)',
@@ -87,7 +87,7 @@ export default function LoadingScreen({
             {/* Names */}
             <div className="text-center">
               <motion.p
-                className="text-[#C9A84C]/50 text-xs tracking-[0.5em] uppercase mb-3"
+                className="text-[#CCC6B1]/50 text-xs tracking-[0.5em] uppercase mb-3"
                 style={{ fontFamily: 'var(--font-poppins)' }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -105,7 +105,7 @@ export default function LoadingScreen({
                 {groomName} & {brideName}
               </motion.h1>
               <motion.p
-                className="text-[#C9A84C]/40 text-xs tracking-[0.3em] mt-2"
+                className="text-[#CCC6B1]/40 text-xs tracking-[0.3em] mt-2"
                 style={{ fontFamily: 'var(--font-poppins)' }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -118,7 +118,7 @@ export default function LoadingScreen({
             {/* Progress bar */}
             <div className="w-40 sm:w-56 h-px bg-white/10 relative overflow-hidden">
               <motion.div
-                className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#C9A84C] to-[#E8D5A3]"
+                className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#CCC6B1] to-[#E8D5A3]"
                 style={{ width: `${Math.min(progress, 100)}%` }}
                 transition={{ duration: 0.1 }}
               />

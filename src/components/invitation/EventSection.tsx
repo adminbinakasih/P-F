@@ -48,7 +48,7 @@ export default function EventSection({ couple }: EventSectionProps) {
         {/* Header */}
         <SectionReveal className="text-center mb-16">
           <p
-            className="text-[#C9A84C]/60 text-xs tracking-[0.5em] uppercase mb-4"
+            className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4"
             style={{ fontFamily: 'var(--font-poppins)' }}
           >
             Catat Tanggalnya
@@ -65,12 +65,12 @@ export default function EventSection({ couple }: EventSectionProps) {
         {/* Date banner */}
         <SectionReveal className="text-center mb-16" delay={0.1}>
           <div className="inline-block glass px-6 sm:px-10 py-5 sm:py-6 relative max-w-full">
-            <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#C9A84C]/50" />
-            <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#C9A84C]/50" />
-            <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#C9A84C]/50" />
-            <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#C9A84C]/50" />
+            <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#CCC6B1]/50" />
+            <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#CCC6B1]/50" />
+            <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/50" />
+            <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/50" />
             <p
-              className="text-[#C9A84C]/60 text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase mb-2"
+              className="text-[#CCC6B1]/60 text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase mb-2"
               style={{ fontFamily: 'var(--font-poppins)' }}
             >
               {weddingDateFormatted}
@@ -111,10 +111,10 @@ export default function EventSection({ couple }: EventSectionProps) {
         {couple.venue.dresscode && (
           <SectionReveal className="text-center mb-12" delay={0.4}>
             <div className="inline-flex items-center gap-4 glass px-8 py-4">
-              <Shirt size={16} className="text-[#C9A84C]/60" />
+              <Shirt size={16} className="text-[#CCC6B1]/60" />
               <div>
                 <p
-                  className="text-[#C9A84C]/60 text-xs tracking-[0.3em] uppercase"
+                  className="text-[#CCC6B1]/60 text-xs tracking-[0.3em] uppercase"
                   style={{ fontFamily: 'var(--font-poppins)' }}
                 >
                   Dresscode
@@ -159,14 +159,14 @@ function EventCard({
   return (
     <div className="glass p-5 sm:p-8 relative group hover-lift">
       {/* Corner accents */}
-      <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-[#C9A84C]/30 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-[#C9A84C]/60" />
-      <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-[#C9A84C]/30 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-[#C9A84C]/60" />
-      <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-[#C9A84C]/30 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-[#C9A84C]/60" />
-      <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-[#C9A84C]/30 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-[#C9A84C]/60" />
+      <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-[#CCC6B1]/30 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-[#CCC6B1]/60" />
+      <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-[#CCC6B1]/30 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-[#CCC6B1]/60" />
+      <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-[#CCC6B1]/30 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-[#CCC6B1]/60" />
+      <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-[#CCC6B1]/30 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-[#CCC6B1]/60" />
 
       <div className="text-center">
         <span
-          className="text-[#C9A84C]/40 text-2xl block mb-4"
+          className="text-[#CCC6B1]/40 text-2xl block mb-4"
           style={{ fontFamily: 'var(--font-cormorant)' }}
         >
           {icon}
@@ -179,17 +179,17 @@ function EventCard({
           {title}
         </h3>
         <p
-          className="text-[#C9A84C]/50 text-xs tracking-[0.3em] uppercase mb-6"
+          className="text-[#CCC6B1]/50 text-xs tracking-[0.3em] uppercase mb-6"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           {subtitle}
         </p>
 
-        <div className="h-px bg-gradient-to-r from-transparent via-[#C9A84C]/30 to-transparent mb-6" />
+        <div className="h-px bg-gradient-to-r from-transparent via-[#CCC6B1]/30 to-transparent mb-6" />
 
         <div className="space-y-3 text-left">
           <div className="flex items-start gap-3">
-            <Clock size={14} className="text-[#C9A84C]/50 mt-0.5 flex-shrink-0" />
+            <Clock size={14} className="text-[#CCC6B1]/50 mt-0.5 flex-shrink-0" />
             <div>
               {venue.date && (
                 <p
@@ -208,7 +208,7 @@ function EventCard({
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <MapPin size={14} className="text-[#C9A84C]/50 mt-0.5 flex-shrink-0" />
+            <MapPin size={14} className="text-[#CCC6B1]/50 mt-0.5 flex-shrink-0" />
             <div>
               <p
                 className="text-white/80 text-sm font-medium"
@@ -230,7 +230,7 @@ function EventCard({
           href={venue.mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center gap-2 text-[#C9A84C]/60 hover:text-[#C9A84C] transition-colors text-xs tracking-wider uppercase"
+          className="mt-6 inline-flex items-center gap-2 text-[#CCC6B1]/60 hover:text-[#CCC6B1] transition-colors text-xs tracking-wider uppercase"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           <ExternalLink size={12} />

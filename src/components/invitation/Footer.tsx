@@ -13,7 +13,7 @@ export default function Footer({ coupleName, hashtag }: FooterProps) {
         {/* Ayat Alkitab */}
         <div className="max-w-2xl mx-auto mb-12">
           <p
-            className="text-[#C9A84C]/40 text-xs tracking-[0.4em] uppercase mb-6"
+            className="text-[#CCC6B1]/40 text-xs tracking-[0.4em] uppercase mb-6"
             style={{ fontFamily: 'var(--font-poppins)' }}
           >
             ✦ Firman Tuhan ✦
@@ -25,20 +25,20 @@ export default function Footer({ coupleName, hashtag }: FooterProps) {
             "Kasih itu sabar; kasih itu murah hati; ia tidak cemburu. Ia tidak memegahkan diri dan tidak sombong. Ia tidak melakukan yang tidak sopan dan tidak mencari keuntungan diri sendiri. Ia tidak pemarah dan tidak menyimpan kesalahan orang lain."
           </blockquote>
           <p
-            className="text-[#C9A84C]/50 text-xs tracking-[0.3em] uppercase"
+            className="text-[#CCC6B1]/50 text-xs tracking-[0.3em] uppercase"
             style={{ fontFamily: 'var(--font-poppins)' }}
           >
             1 Korintus 13 : 4–5
           </p>
         </div>
 
-        <div className="h-px bg-gradient-to-r from-transparent via-[#C9A84C]/15 to-transparent mb-12" />
+        <div className="h-px bg-gradient-to-r from-transparent via-[#CCC6B1]/15 to-transparent mb-12" />
 
         {/* Couple name */}
         <div className="flex items-center justify-center gap-3 mb-4">
-          <div className="h-px w-12 bg-[#C9A84C]/20" />
+          <div className="h-px w-12 bg-[#CCC6B1]/20" />
           <Heart size={12} className="text-[#B76E79]" fill="#B76E79" />
-          <div className="h-px w-12 bg-[#C9A84C]/20" />
+          <div className="h-px w-12 bg-[#CCC6B1]/20" />
         </div>
 
         <p
@@ -49,7 +49,7 @@ export default function Footer({ coupleName, hashtag }: FooterProps) {
         </p>
 
         <p
-          className="text-[#C9A84C]/50 text-xs tracking-[0.4em] uppercase mb-10"
+          className="text-[#CCC6B1]/50 text-xs tracking-[0.4em] uppercase mb-10"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           {hashtag}
@@ -69,14 +69,14 @@ export default function Footer({ coupleName, hashtag }: FooterProps) {
           apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
         </p>
 
-        <div className="h-px bg-gradient-to-r from-transparent via-[#C9A84C]/10 to-transparent mb-8" />
+        <div className="h-px bg-gradient-to-r from-transparent via-[#CCC6B1]/10 to-transparent mb-8" />
 
         <p
           className="text-white/20 text-xs"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           Dibuat oleh{' '}
-          <span className="text-[#C9A84C]/40">Developer BKN</span>
+          <span className="text-[#CCC6B1]/40">Developer BKN</span>
         </p>
       </div>
     </footer>

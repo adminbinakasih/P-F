@@ -74,7 +74,7 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
 
       <div className="container-luxury relative z-10">
         <SectionReveal className="text-center mb-16">
-          <p className="text-[#C9A84C]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
             Konfirmasi Kehadiran
           </p>
           <h2 className="text-5xl md:text-6xl text-white mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
@@ -96,8 +96,8 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
               >
-                <div className="w-20 h-20 rounded-full border border-[#C9A84C]/30 flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle size={32} className="text-[#C9A84C]" />
+                <div className="w-20 h-20 rounded-full border border-[#CCC6B1]/30 flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle size={32} className="text-[#CCC6B1]" />
                 </div>
                 <h3 className="text-3xl text-white mb-4" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
                   Terima Kasih
@@ -117,12 +117,12 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
               >
                 {/* Nama */}
                 <div>
-                  <label className="block text-[#C9A84C]/60 text-xs tracking-[0.3em] uppercase mb-2" style={{ fontFamily: 'var(--font-poppins)' }}>
+                  <label className="block text-[#CCC6B1]/60 text-xs tracking-[0.3em] uppercase mb-2" style={{ fontFamily: 'var(--font-poppins)' }}>
                     Nama Lengkap
                   </label>
                   <input
                     {...register('name')}
-                    className="w-full bg-white/5 border border-white/10 focus:border-[#C9A84C]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-white/20"
+                    className="w-full bg-white/5 border border-white/10 focus:border-[#CCC6B1]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-white/20"
                     style={{ fontFamily: 'var(--font-poppins)' }}
                     placeholder="Nama lengkap Anda"
                   />
@@ -133,12 +133,12 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
 
                 {/* No. HP */}
                 <div>
-                  <label className="block text-[#C9A84C]/60 text-xs tracking-[0.3em] uppercase mb-2" style={{ fontFamily: 'var(--font-poppins)' }}>
+                  <label className="block text-[#CCC6B1]/60 text-xs tracking-[0.3em] uppercase mb-2" style={{ fontFamily: 'var(--font-poppins)' }}>
                     No. WhatsApp <span className="text-white/20 normal-case tracking-normal">(opsional)</span>
                   </label>
                   <input
                     {...register('phone')}
-                    className="w-full bg-white/5 border border-white/10 focus:border-[#C9A84C]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-white/20"
+                    className="w-full bg-white/5 border border-white/10 focus:border-[#CCC6B1]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-white/20"
                     style={{ fontFamily: 'var(--font-poppins)' }}
                     placeholder="08xx xxxx xxxx"
                   />
@@ -146,7 +146,7 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
 
                 {/* Kehadiran */}
                 <div>
-                  <label className="block text-[#C9A84C]/60 text-xs tracking-[0.3em] uppercase mb-3" style={{ fontFamily: 'var(--font-poppins)' }}>
+                  <label className="block text-[#CCC6B1]/60 text-xs tracking-[0.3em] uppercase mb-3" style={{ fontFamily: 'var(--font-poppins)' }}>
                     Konfirmasi Kehadiran
                   </label>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -155,14 +155,14 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
                         key={opt.value}
                         className={`relative cursor-pointer flex flex-col items-center gap-2 py-4 border transition-all duration-300 ${
                           attendance === opt.value
-                            ? 'border-[#C9A84C]/60 bg-[#C9A84C]/10'
+                            ? 'border-[#CCC6B1]/60 bg-[#CCC6B1]/10'
                             : 'border-white/10 hover:border-white/20'
                         }`}
                       >
                         <input type="radio" value={opt.value} {...register('attendance')} className="sr-only" />
                         <span className="text-lg">{opt.emoji}</span>
                         <span
-                          className={`text-xs tracking-wider ${attendance === opt.value ? 'text-[#C9A84C]' : 'text-white/50'}`}
+                          className={`text-xs tracking-wider ${attendance === opt.value ? 'text-[#CCC6B1]' : 'text-white/50'}`}
                           style={{ fontFamily: 'var(--font-poppins)' }}
                         >
                           {opt.label}
@@ -175,13 +175,13 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
                 {/* Jumlah tamu */}
                 {attendance === 'hadir' && (
                   <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}>
-                    <label className="block text-[#C9A84C]/60 text-xs tracking-[0.3em] uppercase mb-2" style={{ fontFamily: 'var(--font-poppins)' }}>
+                    <label className="block text-[#CCC6B1]/60 text-xs tracking-[0.3em] uppercase mb-2" style={{ fontFamily: 'var(--font-poppins)' }}>
                       <Users size={12} className="inline mr-2" />
                       Jumlah Tamu
                     </label>
                     <select
                       {...register('guestCount', { valueAsNumber: true })}
-                      className="w-full bg-white/5 border border-white/10 focus:border-[#C9A84C]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm"
+                      className="w-full bg-white/5 border border-white/10 focus:border-[#CCC6B1]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm"
                       style={{ fontFamily: 'var(--font-poppins)' }}
                     >
                       {[1, 2, 3, 4, 5].map((n) => (
@@ -195,14 +195,14 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
 
                 {/* Pesan */}
                 <div>
-                  <label className="block text-[#C9A84C]/60 text-xs tracking-[0.3em] uppercase mb-2" style={{ fontFamily: 'var(--font-poppins)' }}>
+                  <label className="block text-[#CCC6B1]/60 text-xs tracking-[0.3em] uppercase mb-2" style={{ fontFamily: 'var(--font-poppins)' }}>
                     <MessageSquare size={12} className="inline mr-2" />
                     Pesan <span className="text-white/20 normal-case tracking-normal">(opsional)</span>
                   </label>
                   <textarea
                     {...register('message')}
                     rows={3}
-                    className="w-full bg-white/5 border border-white/10 focus:border-[#C9A84C]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-white/20 resize-none"
+                    className="w-full bg-white/5 border border-white/10 focus:border-[#CCC6B1]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-white/20 resize-none"
                     style={{ fontFamily: 'var(--font-poppins)' }}
                     placeholder="Tulis pesan untuk kedua mempelai..."
                   />

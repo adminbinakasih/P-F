@@ -24,12 +24,12 @@ export default function BibleVerseSection() {
       {/* Rotating ornament */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10">
         <motion.div
-          className="w-[500px] h-[500px] rounded-full border border-[#C9A84C]"
+          className="w-[500px] h-[500px] rounded-full border border-[#CCC6B1]"
           animate={{ rotate: 360 }}
           transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
         />
         <motion.div
-          className="absolute w-[350px] h-[350px] rounded-full border border-[#C9A84C]"
+          className="absolute w-[350px] h-[350px] rounded-full border border-[#CCC6B1]"
           animate={{ rotate: -360 }}
           transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
         />
@@ -44,7 +44,7 @@ export default function BibleVerseSection() {
           {/* Cross / symbol */}
           <div className="flex items-center justify-center mb-8">
             <span
-              className="text-[#C9A84C]/50 text-4xl"
+              className="text-[#CCC6B1]/50 text-4xl"
               style={{ fontFamily: 'var(--font-cormorant)' }}
             >
               ✝
@@ -67,7 +67,7 @@ export default function BibleVerseSection() {
           </motion.blockquote>
 
           <motion.p
-            className="text-[#C9A84C]/60 text-sm tracking-[0.4em] uppercase mb-12"
+            className="text-[#CCC6B1]/60 text-sm tracking-[0.4em] uppercase mb-12"
             style={{ fontFamily: 'var(--font-poppins)' }}
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
@@ -90,7 +90,7 @@ export default function BibleVerseSection() {
           </motion.blockquote>
 
           <motion.p
-            className="text-[#C9A84C]/40 text-xs tracking-[0.3em] uppercase"
+            className="text-[#CCC6B1]/40 text-xs tracking-[0.3em] uppercase"
             style={{ fontFamily: 'var(--font-poppins)' }}
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}

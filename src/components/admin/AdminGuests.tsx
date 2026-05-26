@@ -18,7 +18,7 @@ interface RSVPItem {
 const statusConfig = {
   hadir: { label: 'Hadir', icon: CheckCircle, color: '#4CAF50' },
   tidak_hadir: { label: 'Tidak Hadir', icon: XCircle, color: '#EF5350' },
-  mungkin: { label: 'Mungkin', icon: HelpCircle, color: '#C9A84C' },
+  mungkin: { label: 'Mungkin', icon: HelpCircle, color: '#CCC6B1' },
 }
 
 export default function AdminGuests() {
@@ -69,7 +69,7 @@ export default function AdminGuests() {
           <p className="text-white/40 text-xs">{guests.length} total RSVP masuk</p>
         </div>
         <div className="flex items-center gap-2">
-          <button onClick={fetchGuests} className="text-white/40 hover:text-[#C9A84C] transition-colors p-2" title="Refresh">
+          <button onClick={fetchGuests} className="text-white/40 hover:text-[#CCC6B1] transition-colors p-2" title="Refresh">
             <RefreshCw size={14} className={loading ? 'animate-spin' : ''} />
           </button>
           <button onClick={exportCSV} className="btn-outline-luxury text-xs py-2 px-4 inline-flex items-center gap-2">
@@ -95,7 +95,7 @@ export default function AdminGuests() {
             <button key={f} onClick={() => setFilter(f)}
               className={`px-3 py-2 text-xs transition-all ${
                 filter === f
-                  ? 'bg-[#C9A84C]/10 border border-[#C9A84C]/40 text-[#C9A84C]'
+                  ? 'bg-[#CCC6B1]/10 border border-[#CCC6B1]/40 text-[#CCC6B1]'
                   : 'border border-white/10 text-white/40 hover:text-white/60'
               }`}>
               {f === 'all' ? 'Semua' : f === 'hadir' ? 'Hadir' : f === 'tidak_hadir' ? 'Tidak Hadir' : 'Mungkin'}
@@ -108,7 +108,7 @@ export default function AdminGuests() {
       <div className="glass overflow-hidden">
         {loading ? (
           <div className="text-center py-16">
-            <RefreshCw size={24} className="text-[#C9A84C]/30 mx-auto mb-3 animate-spin" />
+            <RefreshCw size={24} className="text-[#CCC6B1]/30 mx-auto mb-3 animate-spin" />
             <p className="text-white/30 text-xs">Memuat data...</p>
           </div>
         ) : filtered.length === 0 ? (
@@ -139,8 +139,8 @@ export default function AdminGuests() {
                       transition={{ delay: i * 0.03 }}>
                       <td className="px-4 py-3">
                         <div className="flex items-center gap-3">
-                          <div className="w-7 h-7 rounded-full bg-[#C9A84C]/10 border border-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                            <span className="text-[#C9A84C] text-xs">{guest.name[0]}</span>
+                          <div className="w-7 h-7 rounded-full bg-[#CCC6B1]/10 border border-[#CCC6B1]/20 flex items-center justify-center flex-shrink-0">
+                            <span className="text-[#CCC6B1] text-xs">{guest.name[0]}</span>
                           </div>
                           <span className="text-white/70 text-xs font-medium">{guest.name}</span>
                         </div>

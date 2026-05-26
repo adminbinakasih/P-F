@@ -29,7 +29,7 @@ export default function StorySection({ story }: StorySectionProps) {
         {/* Header */}
         <SectionReveal className="text-center mb-20">
           <p
-            className="text-[#C9A84C]/60 text-xs tracking-[0.5em] uppercase mb-4"
+            className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4"
             style={{ fontFamily: 'var(--font-poppins)' }}
           >
             Our Journey
@@ -46,7 +46,7 @@ export default function StorySection({ story }: StorySectionProps) {
         {/* Timeline */}
         <div className="relative">
           {/* Center line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#C9A84C]/20 to-transparent hidden md:block" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#CCC6B1]/20 to-transparent hidden md:block" />
 
           <div className="space-y-16 md:space-y-24">
             {story.map((item, index) => (
@@ -78,7 +78,7 @@ function StoryCard({ item, index }: { item: StoryItem; index: number }) {
       <div className="w-full md:w-5/12">
         {item.image ? (
           <div className="relative aspect-[4/3] overflow-hidden group">
-            <div className="absolute -inset-1 border border-[#C9A84C]/15 z-10 pointer-events-none" />
+            <div className="absolute -inset-1 border border-[#CCC6B1]/15 z-10 pointer-events-none" />
             <Image
               src={item.image}
               alt={item.title}
@@ -91,7 +91,7 @@ function StoryCard({ item, index }: { item: StoryItem; index: number }) {
         ) : (
           <div className="aspect-[4/3] glass flex items-center justify-center">
             <span
-              className="text-[#C9A84C]/30 text-6xl"
+              className="text-[#CCC6B1]/30 text-6xl"
               style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}
             >
               ♡
@@ -103,15 +103,15 @@ function StoryCard({ item, index }: { item: StoryItem; index: number }) {
       {/* Center dot (desktop) */}
       <div className="hidden md:flex w-2/12 justify-center">
         <div className="relative">
-          <div className="w-3 h-3 rounded-full bg-[#C9A84C] animate-pulse-gold" />
-          <div className="absolute inset-0 rounded-full bg-[#C9A84C]/20 scale-150" />
+          <div className="w-3 h-3 rounded-full bg-[#CCC6B1] animate-pulse-gold" />
+          <div className="absolute inset-0 rounded-full bg-[#CCC6B1]/20 scale-150" />
         </div>
       </div>
 
       {/* Content */}
       <div className={`w-full md:w-5/12 ${isEven ? 'md:text-left' : 'md:text-right'} text-center`}>
         <p
-          className="text-[#C9A84C]/60 text-xs tracking-[0.4em] uppercase mb-3"
+          className="text-[#CCC6B1]/60 text-xs tracking-[0.4em] uppercase mb-3"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           {item.date}
@@ -122,7 +122,7 @@ function StoryCard({ item, index }: { item: StoryItem; index: number }) {
         >
           {item.title}
         </h3>
-        <div className={`h-px w-12 bg-[#C9A84C]/40 mb-4 ${isEven ? '' : 'md:ml-auto'} mx-auto md:mx-0`} />
+        <div className={`h-px w-12 bg-[#CCC6B1]/40 mb-4 ${isEven ? '' : 'md:ml-auto'} mx-auto md:mx-0`} />
         <p
           className="text-white/50 text-sm leading-relaxed"
           style={{ fontFamily: 'var(--font-poppins)' }}

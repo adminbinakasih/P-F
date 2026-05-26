@@ -44,23 +44,23 @@ export default function HeroSection({ couple, guestName, onOpen }: HeroSectionPr
 
       {/* Decorative corner ornaments */}
       <div className="absolute top-8 left-8 z-10 opacity-40">
-        <div className="w-12 h-12 border-t border-l border-[#C9A84C]" />
+        <div className="w-12 h-12 border-t border-l border-[#CCC6B1]" />
       </div>
       <div className="absolute top-8 right-8 z-10 opacity-40">
-        <div className="w-12 h-12 border-t border-r border-[#C9A84C]" />
+        <div className="w-12 h-12 border-t border-r border-[#CCC6B1]" />
       </div>
       <div className="absolute bottom-8 left-8 z-10 opacity-40">
-        <div className="w-12 h-12 border-b border-l border-[#C9A84C]" />
+        <div className="w-12 h-12 border-b border-l border-[#CCC6B1]" />
       </div>
       <div className="absolute bottom-8 right-8 z-10 opacity-40">
-        <div className="w-12 h-12 border-b border-r border-[#C9A84C]" />
+        <div className="w-12 h-12 border-b border-r border-[#CCC6B1]" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl mx-auto">
         {/* Pre-title */}
         <motion.p
-          className="text-[#C9A84C]/70 text-xs tracking-[0.5em] uppercase mb-6"
+          className="text-[#CCC6B1]/70 text-xs tracking-[0.5em] uppercase mb-6"
           style={{ fontFamily: 'var(--font-poppins)' }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -90,14 +90,14 @@ export default function HeroSection({ couple, guestName, onOpen }: HeroSectionPr
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <div className="h-px w-10 md:w-16 bg-gradient-to-r from-transparent to-[#C9A84C]/60" />
+          <div className="h-px w-10 md:w-16 bg-gradient-to-r from-transparent to-[#CCC6B1]/60" />
           <span
-            className="text-[#C9A84C] text-2xl md:text-4xl"
+            className="text-[#CCC6B1] text-2xl md:text-4xl"
             style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}
           >
             &
           </span>
-          <div className="h-px w-10 md:w-16 bg-gradient-to-l from-transparent to-[#C9A84C]/60" />
+          <div className="h-px w-10 md:w-16 bg-gradient-to-l from-transparent to-[#CCC6B1]/60" />
         </motion.div>
 
         <motion.div
@@ -122,14 +122,14 @@ export default function HeroSection({ couple, guestName, onOpen }: HeroSectionPr
           transition={{ duration: 0.8, delay: 1 }}
         >
           <div className="flex items-center gap-4 justify-center mb-2">
-            <div className="h-px w-8 bg-[#C9A84C]/40" />
+            <div className="h-px w-8 bg-[#CCC6B1]/40" />
             <p
-              className="text-[#C9A84C]/80 text-sm tracking-[0.3em] uppercase"
+              className="text-[#CCC6B1]/80 text-sm tracking-[0.3em] uppercase"
               style={{ fontFamily: 'var(--font-poppins)' }}
             >
               {weddingDateFormatted}
             </p>
-            <div className="h-px w-8 bg-[#C9A84C]/40" />
+            <div className="h-px w-8 bg-[#CCC6B1]/40" />
           </div>
           <p
             className="text-white/40 text-xs tracking-[0.2em]"
@@ -203,7 +203,7 @@ export default function HeroSection({ couple, guestName, onOpen }: HeroSectionPr
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <ChevronDown size={16} className="text-[#C9A84C]/50" />
+          <ChevronDown size={16} className="text-[#CCC6B1]/50" />
         </motion.div>
       </motion.div>
     </section>

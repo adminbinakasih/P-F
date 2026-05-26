@@ -62,7 +62,7 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
     <section className="section-padding relative overflow-hidden" style={{ background: '#0D0D0D' }}>
       <div className="container-luxury relative z-10">
         <SectionReveal className="text-center mb-16">
-          <p className="text-[#C9A84C]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
             Ucapan & Doa
           </p>
           <h2 className="text-5xl md:text-6xl text-white mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
@@ -75,10 +75,10 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
           {/* Form kirim ucapan */}
           <SectionReveal delay={0.1}>
             <form onSubmit={handleSubmit} className="glass p-5 sm:p-8 mb-12 relative">
-              <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#C9A84C]/30" />
-              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#C9A84C]/30" />
-              <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#C9A84C]/30" />
-              <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#C9A84C]/30" />
+              <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#CCC6B1]/30" />
+              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#CCC6B1]/30" />
+              <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/30" />
+              <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/30" />
 
               <h3 className="text-xl text-white mb-6 text-center" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
                 Tulis Ucapan & Doa
@@ -88,7 +88,7 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
                 <input
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full bg-white/5 border border-white/10 focus:border-[#C9A84C]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-white/20"
+                  className="w-full bg-white/5 border border-white/10 focus:border-[#CCC6B1]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-white/20"
                   style={{ fontFamily: 'var(--font-poppins)' }}
                   placeholder="Nama Anda"
                   required
@@ -97,7 +97,7 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   rows={4}
-                  className="w-full bg-white/5 border border-white/10 focus:border-[#C9A84C]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-white/20 resize-none"
+                  className="w-full bg-white/5 border border-white/10 focus:border-[#CCC6B1]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-white/20 resize-none"
                   style={{ fontFamily: 'var(--font-poppins)' }}
                   placeholder="Tulis ucapan dan doa tulus untuk kedua mempelai..."
                   required
@@ -127,8 +127,8 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C9A84C]/30 to-[#B76E79]/30 border border-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-[#C9A84C] text-xs font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#CCC6B1]/30 to-[#B76E79]/30 border border-[#CCC6B1]/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-[#CCC6B1] text-xs font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
                         {getInitials(wish.name)}
                       </span>
                     </div>

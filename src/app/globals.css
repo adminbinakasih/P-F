@@ -6,9 +6,9 @@
   --font-body: var(--font-poppins), 'Poppins', sans-serif;
   --font-sans: var(--font-inter), 'Inter', sans-serif;
 
-  --color-gold: #C9A84C;
-  --color-gold-light: #E8D5A3;
-  --color-gold-dark: #A07830;
+  --color-gold: #CCC6B1;
+  --color-gold-light: #E8E2D0;
+  --color-gold-dark: #A8A090;
   --color-rose-gold: #B76E79;
   --color-rose-gold-light: #D4A0A8;
   --color-ivory: #FFFFF0;
@@ -40,7 +40,7 @@
   }
 
   ::selection {
-    background-color: #C9A84C;
+    background-color: #CCC6B1;
     color: #0A0A0A;
   }
 
@@ -53,7 +53,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #C9A84C;
+    background: #CCC6B1;
     border-radius: 2px;
   }
 }
@@ -72,7 +72,7 @@
   }
 
   .text-gold {
-    color: #C9A84C;
+    color: #CCC6B1;
   }
 
   .text-rose-gold {
@@ -88,7 +88,7 @@
   }
 
   .bg-gold {
-    background-color: #C9A84C;
+    background-color: #CCC6B1;
   }
 
   .bg-matte-black {
@@ -100,11 +100,11 @@
   }
 
   .border-gold {
-    border-color: #C9A84C;
+    border-color: #CCC6B1;
   }
 
   .gradient-gold {
-    background: linear-gradient(135deg, #C9A84C 0%, #E8D5A3 50%, #A07830 100%);
+    background: linear-gradient(135deg, #CCC6B1 0%, #E8D5A3 50%, #A07830 100%);
   }
 
   .gradient-dark {
@@ -149,7 +149,7 @@
 
   .divider-gold {
     height: 1px;
-    background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+    background: linear-gradient(90deg, transparent, #CCC6B1, transparent);
   }
 
   .ornament-line {
@@ -163,15 +163,15 @@
     content: '';
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #C9A84C);
+    background: linear-gradient(90deg, transparent, #CCC6B1);
   }
 
   .ornament-line::after {
-    background: linear-gradient(90deg, #C9A84C, transparent);
+    background: linear-gradient(90deg, #CCC6B1, transparent);
   }
 
   .text-gradient-gold {
-    background: linear-gradient(135deg, #C9A84C 0%, #E8D5A3 50%, #A07830 100%);
+    background: linear-gradient(135deg, #CCC6B1 0%, #E8D5A3 50%, #A07830 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -190,7 +190,7 @@
   .btn-luxury {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #C9A84C 0%, #E8D5A3 50%, #A07830 100%);
+    background: linear-gradient(135deg, #CCC6B1 0%, #E8D5A3 50%, #A07830 100%);
     color: #0A0A0A;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -227,14 +227,14 @@
     position: relative;
     overflow: hidden;
     background: transparent;
-    color: #C9A84C;
+    color: #CCC6B1;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     font-size: 0.75rem;
     padding: 1rem 2.5rem;
-    border: 1px solid #C9A84C;
+    border: 1px solid #CCC6B1;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
@@ -384,7 +384,7 @@
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, #C9A84C 0%, #E8D5A3 50%, #C9A84C 100%);
+  background: linear-gradient(90deg, #CCC6B1 0%, #E8D5A3 50%, #CCC6B1 100%);
   background-size: 200% auto;
   animation: shimmer 3s linear infinite;
 }
