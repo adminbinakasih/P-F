@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Admin Dashboard — Eternal Vows',
+  title: 'Admin Dashboard — Pieter & Febriyanti',
   description: 'Manage your wedding invitations',
   robots: { index: false, follow: false },
 }

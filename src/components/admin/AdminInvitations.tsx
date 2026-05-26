@@ -5,10 +5,7 @@ import Link from 'next/link'
 import { Eye, Edit, Trash2, Plus, ExternalLink } from 'lucide-react'
 
 const invitations = [
-  { slug: 'pieter-febriyanti', groom: 'Pieter Nero Ginting Suka', bride: 'Febriyanti Br. Surbakti', date: '22 Nov 2025', views: 1240, rsvp: 89, status: 'active' },
-  { slug: 'sarah-dimas', groom: 'Dimas Pratama', bride: 'Sarah Indah', date: '5 Okt 2025', views: 876, rsvp: 54, status: 'active' },
-  { slug: 'putri-andi', groom: 'Andi Wijaya', bride: 'Putri Maharani', date: '12 Nov 2025', views: 432, rsvp: 28, status: 'draft' },
-  { slug: 'lisa-budi', groom: 'Budi Santoso', bride: 'Lisa Permata', date: '1 Des 2025', views: 0, rsvp: 0, status: 'draft' },
+  { slug: 'pieter-febriyanti', groom: 'Pieter Nero Ginting Suka', bride: 'Febriyanti Br. Surbakti', date: '15 Juni 2026', views: 0, rsvp: 0, status: 'active' },
 ]
 
 export default function AdminInvitations() {

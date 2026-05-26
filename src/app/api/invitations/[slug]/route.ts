@@ -1,7 +1,11 @@
 import { getInvitationBySlug } from '@/lib/data'
 
-export async function GET(_req: Request, ctx: RouteContext<'/api/invitations/[slug]'>) {
-  const { slug } = await ctx.params
+interface Props {
+  params: Promise<{ slug: string }>
+}
+
+export async function GET(_req: Request, { params }: Props) {
+  const { slug } = await params
   const data = getInvitationBySlug(slug)
   return Response.json({ success: true, data })
 }
