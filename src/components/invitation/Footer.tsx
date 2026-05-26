@@ -1,4 +1,6 @@
-import { Heart } from 'lucide-react'
+import { Heart, MessageCircle } from 'lucide-react'
+
+const WA_NUMBER = '6283197679315'
 
 interface FooterProps {
   coupleName: string
@@ -6,6 +8,9 @@ interface FooterProps {
 }
 
 export default function Footer({ coupleName, hashtag }: FooterProps) {
+  const waMessage = `Halo, saya ingin mengkonfirmasi kehadiran saya di pernikahan ${coupleName}. 🙏`
+  const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMessage)}`
+
   return (
     <footer className="py-12 md:py-20 border-t border-[#CCC6B1]/20" style={{ background: '#F5F0E8' }}>
       <div className="container-luxury text-center">
@@ -68,6 +73,26 @@ export default function Footer({ coupleName, hashtag }: FooterProps) {
         >
           apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
         </p>
+
+        {/* Tombol WhatsApp */}
+        <div className="mb-10">
+          <p
+            className="text-[#2C2416]/30 text-xs tracking-[0.3em] uppercase mb-4"
+            style={{ fontFamily: 'var(--font-poppins)' }}
+          >
+            Hubungi Kami
+          </p>
+          <a
+            href={waUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-3 bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366]/80 hover:text-[#25D366] hover:bg-[#25D366]/20 transition-all text-xs tracking-wider uppercase"
+            style={{ fontFamily: 'var(--font-poppins)' }}
+          >
+            <MessageCircle size={14} />
+            +62 831-9767-9315
+          </a>
+        </div>
 
         <div className="h-px bg-gradient-to-r from-transparent via-[#CCC6B1]/10 to-transparent mb-8" />
 

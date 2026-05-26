@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Share2, Copy, Check, MessageCircle } from 'lucide-react'
+import { Share2, Copy, Check, MessageCircle, Phone } from 'lucide-react'
 import SectionReveal from '@/components/ui/SectionReveal'
 import GoldDivider from '@/components/ui/GoldDivider'
+
+const WA_NUMBER = '6283197679315'
 
 interface ShareSectionProps {
   slug: string
@@ -24,7 +26,9 @@ export default function ShareSection({ slug, coupleName, weddingDate }: ShareSec
     weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
   })
 
-  const message = `Kepada Yth. Bapak/Ibu/Saudara/i,\n\nDengan penuh sukacita kami mengundang Anda untuk hadir dalam pernikahan\n\n✨ ${coupleName} ✨\n\n📅 ${tanggal}\n\nBuka undangan digital kami di:\n${url}\n\n#PieterFebry2026`
+  const shareMessage = `Kepada Yth. Bapak/Ibu/Saudara/i,\n\nDengan penuh sukacita kami mengundang Anda untuk hadir dalam pernikahan\n\n✨ ${coupleName} ✨\n\n📅 ${tanggal}\n\nBuka undangan digital kami di:\n${url}\n\n#PieterFebry2026`
+
+  const confirmMessage = `Halo Pieter & Febry, saya ingin mengkonfirmasi kehadiran saya di pernikahan kalian pada ${tanggal}. 🙏`
 
   const handleCopy = async () => {
     try {
@@ -34,14 +38,18 @@ export default function ShareSection({ slug, coupleName, weddingDate }: ShareSec
     } catch { /* fallback */ }
   }
 
-  const handleWhatsApp = () => {
-    window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank')
+  const handleWhatsAppShare = () => {
+    window.open(`https://wa.me/?text=${encodeURIComponent(shareMessage)}`, '_blank')
+  }
+
+  const handleWhatsAppConfirm = () => {
+    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(confirmMessage)}`, '_blank')
   }
 
   const handleShare = async () => {
     if (navigator.share) {
       try {
-        await navigator.share({ title: `Undangan Pernikahan ${coupleName}`, text: message, url })
+        await navigator.share({ title: `Undangan Pernikahan ${coupleName}`, text: shareMessage, url })
       } catch { /* cancelled */ }
     } else {
       handleCopy()
@@ -61,51 +69,84 @@ export default function ShareSection({ slug, coupleName, weddingDate }: ShareSec
           <GoldDivider />
         </SectionReveal>
 
-        <SectionReveal className="max-w-lg mx-auto" delay={0.1}>
-          <div className="glass p-8 text-center relative">
-            <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#CCC6B1]/30" />
-            <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#CCC6B1]/30" />
-            <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/30" />
-            <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/30" />
+        <div className="max-w-lg mx-auto space-y-4">
+          {/* Card bagikan link */}
+          <SectionReveal delay={0.1}>
+            <div className="glass p-8 text-center relative">
+              <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#CCC6B1]/30" />
+              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#CCC6B1]/30" />
+              <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/30" />
+              <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/30" />
 
-            <p className="text-[#2C2416]/40 text-xs mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
-              Link Undangan
-            </p>
-
-            <div className="flex items-center gap-2 bg-[#2C2416]/5 border border-[#2C2416]/15 px-4 py-3 mb-6">
-              <p className="text-[#2C2416]/60 text-sm flex-1 truncate text-left" style={{ fontFamily: 'var(--font-poppins)' }}>
-                {url}
+              <p className="text-[#2C2416]/40 text-xs mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+                Link Undangan
               </p>
-              <motion.button onClick={handleCopy} className="flex-shrink-0 text-[#CCC6B1]/60 hover:text-[#CCC6B1] transition-colors" whileTap={{ scale: 0.9 }}>
-                {copied ? <Check size={14} /> : <Copy size={14} />}
-              </motion.button>
-            </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <motion.button
-                onClick={handleWhatsApp}
-                className="flex items-center gap-2 px-6 py-3 bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366]/80 hover:text-[#25D366] hover:bg-[#25D366]/20 transition-all text-xs tracking-wider uppercase"
+              <div className="flex items-center gap-2 bg-[#2C2416]/5 border border-[#2C2416]/15 px-4 py-3 mb-6">
+                <p className="text-[#2C2416]/60 text-sm flex-1 truncate text-left" style={{ fontFamily: 'var(--font-poppins)' }}>
+                  {url}
+                </p>
+                <motion.button onClick={handleCopy} className="flex-shrink-0 text-[#CCC6B1]/60 hover:text-[#CCC6B1] transition-colors" whileTap={{ scale: 0.9 }}>
+                  {copied ? <Check size={14} /> : <Copy size={14} />}
+                </motion.button>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <motion.button
+                  onClick={handleWhatsAppShare}
+                  className="flex items-center justify-center gap-2 px-6 py-3 bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366]/80 hover:text-[#25D366] hover:bg-[#25D366]/20 transition-all text-xs tracking-wider uppercase"
+                  style={{ fontFamily: 'var(--font-poppins)' }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <MessageCircle size={14} />
+                  WhatsApp
+                </motion.button>
+
+                <motion.button
+                  onClick={handleShare}
+                  className="flex items-center justify-center gap-2 px-6 py-3 border border-[#CCC6B1]/30 text-[#CCC6B1]/60 hover:text-[#CCC6B1] hover:bg-[#CCC6B1]/10 transition-all text-xs tracking-wider uppercase"
+                  style={{ fontFamily: 'var(--font-poppins)' }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Share2 size={14} />
+                  Bagikan
+                </motion.button>
+              </div>
+            </div>
+          </SectionReveal>
+
+          {/* Card konfirmasi langsung ke mempelai */}
+          <SectionReveal delay={0.2}>
+            <div className="glass p-6 text-center relative">
+              <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#25D366]/20" />
+              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#25D366]/20" />
+              <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#25D366]/20" />
+              <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#25D366]/20" />
+
+              <p className="text-[#2C2416]/40 text-xs tracking-[0.3em] uppercase mb-1" style={{ fontFamily: 'var(--font-poppins)' }}>
+                Konfirmasi Langsung
+              </p>
+              <p className="text-[#2C2416]/30 text-xs mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+                Hubungi mempelai via WhatsApp
+              </p>
+
+              <motion.a
+                href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(confirmMessage)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-3 bg-[#25D366]/15 border border-[#25D366]/40 text-[#25D366]/90 hover:text-[#25D366] hover:bg-[#25D366]/25 transition-all text-sm"
                 style={{ fontFamily: 'var(--font-poppins)' }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <MessageCircle size={14} />
-                WhatsApp
-              </motion.button>
-
-              <motion.button
-                onClick={handleShare}
-                className="flex items-center gap-2 px-6 py-3 border border-[#CCC6B1]/30 text-[#CCC6B1]/60 hover:text-[#CCC6B1] hover:bg-[#CCC6B1]/10 transition-all text-xs tracking-wider uppercase"
-                style={{ fontFamily: 'var(--font-poppins)' }}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Share2 size={14} />
-                Bagikan
-              </motion.button>
+                <Phone size={14} />
+                +62 831-9767-9315
+              </motion.a>
             </div>
-          </div>
-        </SectionReveal>
+          </SectionReveal>
+        </div>
       </div>
     </section>
   )
