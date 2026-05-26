@@ -69,6 +69,7 @@ export default function LandingPage() {
           <span className="text-2xl text-gradient-gold" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
             Eternal Vows
           </span>
+          <div className="hidden md:flex items-center gap-8">
             {[
               { label: 'Fitur', anchor: 'features' },
               { label: 'Demo', anchor: 'demo' },
