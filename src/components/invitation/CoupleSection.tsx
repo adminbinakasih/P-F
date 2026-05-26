@@ -149,19 +149,7 @@ function PersonCard({
         </p>
       </div>
 
-      {/* Instagram */}
-      {person.instagram && (
-        <a
-          href={`https://instagram.com/${person.instagram.replace('@', '')}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-[#C9A84C]/60 hover:text-[#C9A84C] transition-colors text-xs"
-          style={{ fontFamily: 'var(--font-poppins)' }}
-        >
-          <AtSign size={12} />
-          {person.instagram}
-        </a>
-      )}
+      {/* Instagram dihapus */}
     </div>
   )
 }
