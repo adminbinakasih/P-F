@@ -17,13 +17,13 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
   const next = () => lightboxIndex !== null && setLightboxIndex((lightboxIndex + 1) % gallery.length)
 
   return (
-    <section className="section-padding relative overflow-hidden" style={{ background: '#F0EBE0' }}>
+    <section className="section-padding relative overflow-hidden" style={{ background: '#D4CDB8' }}>
       <div className="container-luxury relative z-10">
         <SectionReveal className="text-center mb-16">
-          <p className="text-[#6B5040] text-xs tracking-[0.5em] uppercase mb-4 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-[#1A1410] text-xs tracking-[0.5em] uppercase mb-4 font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>
             Kenangan Indah
           </p>
-          <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
+          <h2 className="text-5xl md:text-6xl text-[#1A1410] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}>
             Galeri Foto
           </h2>
           <GoldDivider />
@@ -48,7 +48,7 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
         </div>
 
         <SectionReveal className="text-center mt-8" delay={0.2}>
-          <p className="text-[#6B5040] text-xs tracking-[0.3em] uppercase font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-[#1A1410] text-xs tracking-[0.3em] uppercase font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>
             Ketuk foto untuk memperbesar
           </p>
         </SectionReveal>

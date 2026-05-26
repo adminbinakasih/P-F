@@ -11,13 +11,13 @@ interface StorySectionProps { story: StoryItem[] }
 
 export default function StorySection({ story }: StorySectionProps) {
   return (
-    <section className="section-padding relative overflow-hidden" style={{ background: '#EDE8DC' }}>
+    <section className="section-padding relative overflow-hidden" style={{ background: '#D4CDB8' }}>
       <div className="container-luxury relative z-10">
         <SectionReveal className="text-center mb-20">
-          <p className="text-[#6B5040] text-xs tracking-[0.5em] uppercase mb-4 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-[#1A1410] text-xs tracking-[0.5em] uppercase mb-4 font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>
             Our Journey
           </p>
-          <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
+          <h2 className="text-5xl md:text-6xl text-[#1A1410] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}>
             Kisah Cinta
           </h2>
           <GoldDivider />
@@ -70,14 +70,14 @@ function StoryCard({ item, index }: { item: StoryItem; index: number }) {
       </div>
 
       <div className={`w-full md:w-5/12 ${isEven ? 'md:text-left' : 'md:text-right'} text-center`}>
-        <p className="text-[#6B5040] text-xs tracking-[0.4em] uppercase mb-3 font-semibold" style={{ fontFamily: 'var(--font-poppins)' }}>
+        <p className="text-[#1A1410] text-xs tracking-[0.4em] uppercase mb-3 font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>
           {item.date}
         </p>
-        <h3 className="text-3xl text-[#2C2416] mb-4" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}>
+        <h3 className="text-3xl text-[#1A1410] mb-4" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 500 }}>
           {item.title}
         </h3>
-        <div className={`h-px w-12 bg-[#8A7560] mb-4 ${isEven ? '' : 'md:ml-auto'} mx-auto md:mx-0`} />
-        <p className="text-[#3D2E1E] text-sm leading-relaxed" style={{ fontFamily: 'var(--font-poppins)' }}>
+        <div className={`h-0.5 w-12 bg-[#3D2E1E] mb-4 ${isEven ? '' : 'md:ml-auto'} mx-auto md:mx-0`} />
+        <p className="text-[#1A1410] text-sm leading-relaxed font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
           {item.description}
         </p>
       </div>

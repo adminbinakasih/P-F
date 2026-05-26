@@ -25,13 +25,13 @@ export default function EventSection({ couple }: EventSectionProps) {
   }
 
   return (
-    <section className="section-padding relative overflow-hidden bg-[#EAE4D5]">
+    <section className="section-padding relative overflow-hidden" style={{ background: '#C8BFA8' }}>
       <div className="container-luxury relative z-10">
         <SectionReveal className="text-center mb-16">
-          <p className="text-[#6B5040] text-xs tracking-[0.5em] uppercase mb-4 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-[#1A1410] text-xs tracking-[0.5em] uppercase mb-4 font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>
             Catat Tanggalnya
           </p>
-          <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
+          <h2 className="text-5xl md:text-6xl text-[#1A1410] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}>
             Rangkaian Acara
           </h2>
           <GoldDivider />
@@ -43,10 +43,10 @@ export default function EventSection({ couple }: EventSectionProps) {
             <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#CCC6B1]/60" />
             <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/60" />
             <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/60" />
-            <p className="text-[#6B5040] text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase mb-2 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+            <p className="text-[#1A1410] text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase mb-2 font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>
               {weddingDateFormatted}
             </p>
-            <p className="text-[#2C2416] text-xl sm:text-2xl md:text-3xl" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
+            <p className="text-[#1A1410] text-xl sm:text-2xl md:text-3xl font-medium" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
               {couple.groom.name} & {couple.bride.name}
             </p>
           </div>
@@ -93,30 +93,30 @@ function EventCard({ title, subtitle, venue, icon }: { title: string; subtitle: 
       <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-[#CCC6B1]/40 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-[#CCC6B1]/80" />
 
       <div className="text-center">
-        <span className="text-[#8A7560] text-2xl block mb-4" style={{ fontFamily: 'var(--font-cormorant)' }}>{icon}</span>
-        <h3 className="text-2xl text-[#2C2416] mb-1" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}>{title}</h3>
-        <p className="text-[#6B5040] text-xs tracking-[0.3em] uppercase mb-6 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>{subtitle}</p>
-        <div className="h-px bg-gradient-to-r from-transparent via-[#CCC6B1]/50 to-transparent mb-6" />
+        <span className="text-[#3D2E1E] text-2xl block mb-4 font-bold" style={{ fontFamily: 'var(--font-cormorant)' }}>{icon}</span>
+        <h3 className="text-2xl text-[#1A1410] mb-1" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 500 }}>{title}</h3>
+        <p className="text-[#1A1410] text-xs tracking-[0.3em] uppercase mb-6 font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>{subtitle}</p>
+        <div className="h-0.5 bg-[#8A7560] mb-6" />
 
         <div className="space-y-3 text-left">
           <div className="flex items-start gap-3">
-            <Clock size={14} className="text-[#8A7560] mt-0.5 flex-shrink-0" />
+            <Clock size={14} className="text-[#3D2E1E] mt-0.5 flex-shrink-0" />
             <div>
-              {venue.date && <p className="text-[#2C2416] text-sm font-semibold" style={{ fontFamily: 'var(--font-poppins)' }}>{venue.date}</p>}
-              <p className="text-[#3D2E1E] text-sm" style={{ fontFamily: 'var(--font-poppins)' }}>{venue.time}</p>
+              {venue.date && <p className="text-[#1A1410] text-sm font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>{venue.date}</p>}
+              <p className="text-[#1A1410] text-sm font-semibold" style={{ fontFamily: 'var(--font-poppins)' }}>{venue.time}</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <MapPin size={14} className="text-[#8A7560] mt-0.5 flex-shrink-0" />
+            <MapPin size={14} className="text-[#3D2E1E] mt-0.5 flex-shrink-0" />
             <div>
-              <p className="text-[#2C2416] text-sm font-semibold" style={{ fontFamily: 'var(--font-poppins)' }}>{venue.name}</p>
-              <p className="text-[#5A4535] text-xs mt-0.5" style={{ fontFamily: 'var(--font-poppins)' }}>{venue.address}</p>
+              <p className="text-[#1A1410] text-sm font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>{venue.name}</p>
+              <p className="text-[#1A1410] text-xs mt-0.5 font-semibold" style={{ fontFamily: 'var(--font-poppins)' }}>{venue.address}</p>
             </div>
           </div>
         </div>
 
         <a href={venue.mapsUrl} target="_blank" rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center gap-2 text-[#8A7560] hover:text-[#6B5040] transition-colors text-xs tracking-wider uppercase font-medium"
+          className="mt-6 inline-flex items-center gap-2 text-[#1A1410] hover:text-[#3D2E1E] transition-colors text-xs tracking-wider uppercase font-bold underline underline-offset-2"
           style={{ fontFamily: 'var(--font-poppins)' }}>
           <ExternalLink size={12} />
           Lihat di Maps

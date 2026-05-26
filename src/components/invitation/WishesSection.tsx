@@ -44,14 +44,14 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
     setIsLoading(false)
   }
 
-  const inputClass = "w-full bg-white/70 border border-[#CCC6B1]/60 focus:border-[#8A7560] text-[#2C2416] px-4 py-3 outline-none transition-colors text-sm placeholder:text-[#8A7560]"
+  const inputClass = "w-full bg-white border-2 border-[#8A7560] focus:border-[#1A1410] text-[#1A1410] px-4 py-3 outline-none transition-colors text-sm placeholder:text-[#8A7560] font-medium"
 
   return (
-    <section className="section-padding relative overflow-hidden" style={{ background: '#EDE8DC' }}>
+    <section className="section-padding relative overflow-hidden" style={{ background: '#C8BFA8' }}>
       <div className="container-luxury relative z-10">
         <SectionReveal className="text-center mb-16">
-          <p className="text-[#6B5040] text-xs tracking-[0.5em] uppercase mb-4 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>Ucapan & Doa</p>
-          <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>Buku Tamu</h2>
+          <p className="text-[#1A1410] text-xs tracking-[0.5em] uppercase mb-4 font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>Ucapan & Doa</p>
+          <h2 className="text-5xl md:text-6xl text-[#1A1410] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}>Buku Tamu</h2>
           <GoldDivider />
         </SectionReveal>
 
@@ -63,7 +63,7 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
               <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/50" />
               <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/50" />
 
-              <h3 className="text-xl text-[#2C2416] mb-6 text-center font-medium" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
+              <h3 className="text-xl text-[#1A1410] mb-6 text-center font-bold" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
                 Tulis Ucapan & Doa
               </h3>
               <div className="space-y-4">
@@ -82,20 +82,20 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
               {displayedWishes.map((wish, index) => (
                 <motion.div key={wish.id} className="glass p-6 relative" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4, delay: index * 0.05 }}>
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#CCC6B1]/50 to-[#B76E79]/30 border border-[#CCC6B1]/40 flex items-center justify-center flex-shrink-0">
-                      <span className="text-[#5A4535] text-xs font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>{getInitials(wish.name)}</span>
+                    <div className="w-10 h-10 rounded-full bg-[#8A7560] border-2 border-[#3D2E1E] flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-xs font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>{getInitials(wish.name)}</span>
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between mb-2">
-                        <h4 className="text-[#2C2416] text-sm font-semibold" style={{ fontFamily: 'var(--font-poppins)' }}>{wish.name}</h4>
-                        <span className="text-[#8A7560] text-xs" style={{ fontFamily: 'var(--font-poppins)' }}>{timeAgo(wish.createdAt)}</span>
+                        <h4 className="text-[#1A1410] text-sm font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>{wish.name}</h4>
+                        <span className="text-[#5A4535] text-xs font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>{timeAgo(wish.createdAt)}</span>
                       </div>
-                      <p className="text-[#3D2E1E] leading-relaxed" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontSize: '1rem' }}>
+                      <p className="text-[#1A1410] leading-relaxed font-medium" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontSize: '1rem' }}>
                         "{wish.message}"
                       </p>
                     </div>
                   </div>
-                  <Heart size={10} className="absolute bottom-3 right-4 text-[#B76E79]/50" fill="currentColor" />
+                  <Heart size={10} className="absolute bottom-3 right-4 text-[#B76E79]" fill="currentColor" />
                 </motion.div>
               ))}
             </AnimatePresence>

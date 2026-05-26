@@ -10,13 +10,13 @@ interface CoupleSectionProps { couple: Couple }
 
 export default function CoupleSection({ couple }: CoupleSectionProps) {
   return (
-    <section className="section-padding relative overflow-hidden bg-[#F5F0E8]">
+    <section className="section-padding relative overflow-hidden" style={{ background: '#C8BFA8' }}>
       <div className="container-luxury relative z-10">
         <SectionReveal className="text-center mb-16">
-          <p className="text-[#6B5040] text-xs tracking-[0.5em] uppercase mb-4 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-[#1A1410] text-xs tracking-[0.5em] uppercase mb-4 font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>
             Dengan Penuh Cinta
           </p>
-          <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
+          <h2 className="text-5xl md:text-6xl text-[#1A1410] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}>
             Mempelai
           </h2>
           <GoldDivider />
@@ -58,27 +58,27 @@ function PersonCard({ person, role }: { person: Couple['bride'] | Couple['groom'
           <div className="absolute inset-0 bg-gradient-to-t from-[#F5F0E8]/40 to-transparent" />
         </div>
         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 glass px-4 py-1 whitespace-nowrap">
-          <span className="text-[#6B5040] text-xs tracking-[0.3em] uppercase font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <span className="text-[#1A1410] text-xs tracking-[0.3em] uppercase font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>
             {role}
           </span>
         </div>
       </div>
 
-      <h3 className="text-4xl sm:text-5xl text-[#2C2416] mt-2 mb-1" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}>
+      <h3 className="text-4xl sm:text-5xl text-[#1A1410] mt-2 mb-1" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 500 }}>
         {person.name}
       </h3>
-      <p className="text-[#5A4535] text-xs tracking-wide mb-4 px-2" style={{ fontFamily: 'var(--font-poppins)' }}>
+      <p className="text-[#1A1410] text-xs tracking-wide mb-4 px-2 font-semibold" style={{ fontFamily: 'var(--font-poppins)' }}>
         {person.fullName}
       </p>
 
       <div className="mb-4">
-        <p className="text-[#8A7560] text-xs tracking-wider mb-2 font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+        <p className="text-[#3D2E1E] text-xs tracking-wider mb-2 font-bold uppercase" style={{ fontFamily: 'var(--font-poppins)' }}>
           Putra/Putri dari
         </p>
-        <p className="text-[#3D2E1E] text-sm font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+        <p className="text-[#1A1410] text-sm font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>
           {person.father}
         </p>
-        <p className="text-[#3D2E1E] text-sm font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+        <p className="text-[#1A1410] text-sm font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>
           & {person.mother}
         </p>
       </div>
