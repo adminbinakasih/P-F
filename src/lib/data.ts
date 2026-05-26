@@ -13,7 +13,7 @@ export const pieterFebriyantiData: InvitationData = {
       photo: '/pria.JPEG',
       father: 'Bapak R. Ginting',
       mother: 'Ibu M. Br Sembiring Milala',
-      instagram: '@pieter.nero',
+      instagram: '@Pieterneroginting',
       bio: 'Seorang pria yang percaya bahwa cinta sejati adalah perjalanan yang paling indah.',
     },
     bride: {
@@ -22,7 +22,7 @@ export const pieterFebriyantiData: InvitationData = {
       photo: '/wanita.JPEG',
       father: 'Bapak K. Surbakti',
       mother: 'Ibu K. br. Ginting',
-      instagram: '@febriyanti.surbakti',
+      instagram: '@Febriyanti_srbt',
       bio: 'Seorang wanita yang menemukan keindahan hidup dalam setiap momen bersama orang-orang tercinta.',
     },
     weddingDate: '2026-06-15',
