@@ -35,7 +35,7 @@ export default function EventSection({ couple }: EventSectionProps) {
   }
 
   return (
-    <section className="section-padding relative overflow-hidden bg-[#0A0A0A]">
+    <section className="section-padding relative overflow-hidden bg-[#EAE4D5]">
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
         <div
@@ -54,7 +54,7 @@ export default function EventSection({ couple }: EventSectionProps) {
             Catat Tanggalnya
           </p>
           <h2
-            className="text-5xl md:text-6xl text-white mb-6"
+            className="text-5xl md:text-6xl text-[#2C2416] mb-6"
             style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}
           >
             Rangkaian Acara
@@ -76,7 +76,7 @@ export default function EventSection({ couple }: EventSectionProps) {
               {weddingDateFormatted}
             </p>
             <p
-              className="text-white text-xl sm:text-2xl md:text-3xl"
+              className="text-[#2C2416] text-xl sm:text-2xl md:text-3xl"
               style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}
             >
               {couple.groom.name} & {couple.bride.name}
@@ -120,7 +120,7 @@ export default function EventSection({ couple }: EventSectionProps) {
                   Dresscode
                 </p>
                 <p
-                  className="text-white/80 text-sm"
+                  className="text-[#2C2416]/80 text-sm"
                   style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}
                 >
                   {couple.venue.dresscode}
@@ -173,7 +173,7 @@ function EventCard({
         </span>
 
         <h3
-          className="text-2xl text-white mb-1"
+          className="text-2xl text-[#2C2416] mb-1"
           style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}
         >
           {title}
@@ -193,14 +193,14 @@ function EventCard({
             <div>
               {venue.date && (
                 <p
-                  className="text-white/80 text-sm font-medium"
+                  className="text-[#2C2416]/80 text-sm font-medium"
                   style={{ fontFamily: 'var(--font-poppins)' }}
                 >
                   {venue.date}
                 </p>
               )}
               <p
-                className="text-white/60 text-sm"
+                className="text-[#2C2416]/60 text-sm"
                 style={{ fontFamily: 'var(--font-poppins)' }}
               >
                 {venue.time}
@@ -211,13 +211,13 @@ function EventCard({
             <MapPin size={14} className="text-[#CCC6B1]/50 mt-0.5 flex-shrink-0" />
             <div>
               <p
-                className="text-white/80 text-sm font-medium"
+                className="text-[#2C2416]/80 text-sm font-medium"
                 style={{ fontFamily: 'var(--font-poppins)' }}
               >
                 {venue.name}
               </p>
               <p
-                className="text-white/40 text-xs mt-0.5"
+                className="text-[#2C2416]/40 text-xs mt-0.5"
                 style={{ fontFamily: 'var(--font-poppins)' }}
               >
                 {venue.address}

@@ -13,7 +13,7 @@ export default function BibleVerseSection() {
     <section
       ref={ref}
       className="relative py-24 overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #0A0A0A 0%, #111008 50%, #0A0A0A 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #E8E2D0 0%, #DDD7C4 50%, #E8E2D0 100%)' }}
     >
       {/* Decorative glow */}
       <div
@@ -55,7 +55,7 @@ export default function BibleVerseSection() {
 
           {/* Ayat utama */}
           <motion.blockquote
-            className="text-white/75 text-2xl md:text-3xl lg:text-4xl leading-relaxed mb-6"
+            className="text-[#2C2416]/75 text-2xl md:text-3xl lg:text-4xl leading-relaxed mb-6"
             style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -80,7 +80,7 @@ export default function BibleVerseSection() {
 
           {/* Ayat kedua */}
           <motion.blockquote
-            className="text-white/50 text-lg md:text-xl leading-relaxed mb-4"
+            className="text-[#2C2416]/50 text-lg md:text-xl leading-relaxed mb-4"
             style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}

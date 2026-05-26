@@ -49,13 +49,13 @@ export default function ShareSection({ slug, coupleName, weddingDate }: ShareSec
   }
 
   return (
-    <section className="section-padding relative overflow-hidden" style={{ background: '#0D0D0D' }}>
+    <section className="section-padding relative overflow-hidden" style={{ background: '#EDE8DC' }}>
       <div className="container-luxury relative z-10">
         <SectionReveal className="text-center mb-16">
           <p className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
             Sebarkan Kebahagiaan
           </p>
-          <h2 className="text-5xl md:text-6xl text-white mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
+          <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
             Bagikan Undangan
           </h2>
           <GoldDivider />
@@ -68,12 +68,12 @@ export default function ShareSection({ slug, coupleName, weddingDate }: ShareSec
             <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/30" />
             <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/30" />
 
-            <p className="text-white/40 text-xs mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+            <p className="text-[#2C2416]/40 text-xs mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
               Link Undangan
             </p>
 
-            <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-3 mb-6">
-              <p className="text-white/60 text-sm flex-1 truncate text-left" style={{ fontFamily: 'var(--font-poppins)' }}>
+            <div className="flex items-center gap-2 bg-[#2C2416]/5 border border-[#2C2416]/15 px-4 py-3 mb-6">
+              <p className="text-[#2C2416]/60 text-sm flex-1 truncate text-left" style={{ fontFamily: 'var(--font-poppins)' }}>
                 {url}
               </p>
               <motion.button onClick={handleCopy} className="flex-shrink-0 text-[#CCC6B1]/60 hover:text-[#CCC6B1] transition-colors" whileTap={{ scale: 0.9 }}>

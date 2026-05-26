@@ -88,7 +88,7 @@ export default function RootLayout({
       lang="id"
       className={`${playfair.variable} ${cormorant.variable} ${poppins.variable} ${inter.variable}`}
     >
-      <body className="bg-matte-black text-off-white font-body antialiased">
+      <body className="bg-[#F5F0E8] text-[#1A1410] font-body antialiased">
         {children}
       </body>
     </html>

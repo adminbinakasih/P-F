@@ -59,13 +59,13 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
   }
 
   return (
-    <section className="section-padding relative overflow-hidden" style={{ background: '#0D0D0D' }}>
+    <section className="section-padding relative overflow-hidden" style={{ background: '#EDE8DC' }}>
       <div className="container-luxury relative z-10">
         <SectionReveal className="text-center mb-16">
           <p className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
             Ucapan & Doa
           </p>
-          <h2 className="text-5xl md:text-6xl text-white mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
+          <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
             Buku Tamu
           </h2>
           <GoldDivider />
@@ -80,7 +80,7 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
               <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/30" />
               <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/30" />
 
-              <h3 className="text-xl text-white mb-6 text-center" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
+              <h3 className="text-xl text-[#2C2416] mb-6 text-center" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
                 Tulis Ucapan & Doa
               </h3>
 
@@ -88,7 +88,7 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
                 <input
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full bg-white/5 border border-white/10 focus:border-[#CCC6B1]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-white/20"
+                  className="w-full bg-[#2C2416]/5 border border-[#2C2416]/15 focus:border-[#CCC6B1]/50 text-[#2C2416]/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-[#2C2416]/20"
                   style={{ fontFamily: 'var(--font-poppins)' }}
                   placeholder="Nama Anda"
                   required
@@ -97,7 +97,7 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   rows={4}
-                  className="w-full bg-white/5 border border-white/10 focus:border-[#CCC6B1]/50 text-white/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-white/20 resize-none"
+                  className="w-full bg-[#2C2416]/5 border border-[#2C2416]/15 focus:border-[#CCC6B1]/50 text-[#2C2416]/80 px-4 py-3 outline-none transition-colors text-sm placeholder:text-[#2C2416]/20 resize-none"
                   style={{ fontFamily: 'var(--font-poppins)' }}
                   placeholder="Tulis ucapan dan doa tulus untuk kedua mempelai..."
                   required
@@ -134,14 +134,14 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between mb-2">
-                        <h4 className="text-white/80 text-sm font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
+                        <h4 className="text-[#2C2416]/80 text-sm font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
                           {wish.name}
                         </h4>
-                        <span className="text-white/30 text-xs" style={{ fontFamily: 'var(--font-poppins)' }}>
+                        <span className="text-[#2C2416]/30 text-xs" style={{ fontFamily: 'var(--font-poppins)' }}>
                           {timeAgo(wish.createdAt)}
                         </span>
                       </div>
-                      <p className="text-white/50 leading-relaxed" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontSize: '1rem' }}>
+                      <p className="text-[#2C2416]/50 leading-relaxed" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontSize: '1rem' }}>
                         "{wish.message}"
                       </p>
                     </div>

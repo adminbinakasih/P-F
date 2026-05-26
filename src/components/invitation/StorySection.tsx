@@ -13,7 +13,7 @@ interface StorySectionProps {
 
 export default function StorySection({ story }: StorySectionProps) {
   return (
-    <section className="section-padding relative overflow-hidden" style={{ background: '#0D0D0D' }}>
+    <section className="section-padding relative overflow-hidden" style={{ background: '#EDE8DC' }}>
       {/* Background texture */}
       <div className="absolute inset-0 pointer-events-none opacity-30">
         <div
@@ -35,7 +35,7 @@ export default function StorySection({ story }: StorySectionProps) {
             Our Journey
           </p>
           <h2
-            className="text-5xl md:text-6xl text-white mb-6"
+            className="text-5xl md:text-6xl text-[#2C2416] mb-6"
             style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}
           >
             Kisah Cinta
@@ -86,7 +86,7 @@ function StoryCard({ item, index }: { item: StoryItem; index: number }) {
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 40vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#F5F0E8]/40 to-transparent" />
           </div>
         ) : (
           <div className="aspect-[4/3] glass flex items-center justify-center">
@@ -117,14 +117,14 @@ function StoryCard({ item, index }: { item: StoryItem; index: number }) {
           {item.date}
         </p>
         <h3
-          className="text-3xl text-white mb-4"
+          className="text-3xl text-[#2C2416] mb-4"
           style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}
         >
           {item.title}
         </h3>
         <div className={`h-px w-12 bg-[#CCC6B1]/40 mb-4 ${isEven ? '' : 'md:ml-auto'} mx-auto md:mx-0`} />
         <p
-          className="text-white/50 text-sm leading-relaxed"
+          className="text-[#2C2416]/50 text-sm leading-relaxed"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           {item.description}

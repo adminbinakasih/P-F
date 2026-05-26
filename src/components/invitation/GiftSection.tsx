@@ -13,17 +13,17 @@ interface GiftSectionProps {
 
 export default function GiftSection({ gifts }: GiftSectionProps) {
   return (
-    <section className="section-padding relative overflow-hidden bg-[#0A0A0A]">
+    <section className="section-padding relative overflow-hidden bg-[#EAE4D5]">
       <div className="container-luxury relative z-10">
         <SectionReveal className="text-center mb-16">
           <p className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
             Tanda Kasih
           </p>
-          <h2 className="text-5xl md:text-6xl text-white mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
+          <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
             Amplop Digital
           </h2>
           <GoldDivider />
-          <p className="text-white/40 text-sm mt-6 max-w-md mx-auto" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-[#2C2416]/40 text-sm mt-6 max-w-md mx-auto" style={{ fontFamily: 'var(--font-poppins)' }}>
             Kehadiran dan doa restu Anda adalah hadiah terindah bagi kami. Namun jika Anda ingin memberikan tanda kasih, berikut informasinya.
           </p>
         </SectionReveal>
@@ -68,17 +68,17 @@ function GiftCard({ gift }: { gift: GiftAccount }) {
         <Gift size={14} style={{ color: typeColor + '60' }} />
       </div>
 
-      <h3 className="text-2xl text-white mb-1" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}>
+      <h3 className="text-2xl text-[#2C2416] mb-1" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}>
         {gift.name}
       </h3>
-      <p className="text-white/50 text-xs mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+      <p className="text-[#2C2416]/50 text-xs mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
         a.n. {gift.accountName}
       </p>
 
       <div className="h-px bg-gradient-to-r from-transparent via-[#CCC6B1]/20 to-transparent mb-4" />
 
       <div className="flex items-center justify-between gap-3">
-        <p className="text-white/80 text-sm font-medium tracking-wider flex-1 break-all" style={{ fontFamily: 'var(--font-poppins)' }}>
+        <p className="text-[#2C2416]/80 text-sm font-medium tracking-wider flex-1 break-all" style={{ fontFamily: 'var(--font-poppins)' }}>
           {gift.accountNumber}
         </p>
         <motion.button

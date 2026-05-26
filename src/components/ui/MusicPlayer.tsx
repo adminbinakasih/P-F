@@ -88,7 +88,7 @@ export default function MusicPlayer({
       {src && <audio ref={audioRef} src={src} loop preload="auto" />}
 
       <motion.div
-        className="glass-dark rounded-full overflow-hidden"
+        className="glass rounded-full overflow-hidden"
         animate={{ width: isExpanded ? 220 : 52, height: 52 }}
         transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
@@ -120,13 +120,13 @@ export default function MusicPlayer({
                 {/* Song info */}
                 <div className="flex-1 min-w-0">
                   <p
-                    className="text-white/80 text-xs truncate"
+                    className="text-[#2C2416]/80 text-xs truncate"
                     style={{ fontFamily: 'var(--font-poppins)' }}
                   >
                     {title}
                   </p>
                   <p
-                    className="text-[#CCC6B1]/60 text-[10px] truncate"
+                    className="text-[#2C2416]/50 text-[10px] truncate"
                     style={{ fontFamily: 'var(--font-poppins)' }}
                   >
                     {artist}
@@ -136,7 +136,7 @@ export default function MusicPlayer({
                 {/* Mute button */}
                 <button
                   onClick={toggleMute}
-                  className="flex-shrink-0 text-white/40 hover:text-[#CCC6B1] transition-colors"
+                  className="flex-shrink-0 text-[#1A1410]/40 hover:text-[#CCC6B1] transition-colors"
                 >
                   {isMuted ? <VolumeX size={12} /> : <Volume2 size={12} />}
                 </button>
@@ -147,7 +147,7 @@ export default function MusicPlayer({
 
         {/* Progress bar */}
         {isPlaying && (
-          <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/10">
+          <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#2C2416]/8">
             <div
               className="h-full bg-[#CCC6B1]"
               style={{ width: `${progress}%`, transition: 'width 1s linear' }}

@@ -13,7 +13,7 @@ interface CoupleSectionProps {
 
 export default function CoupleSection({ couple }: CoupleSectionProps) {
   return (
-    <section className="section-padding relative overflow-hidden bg-[#0A0A0A]">
+    <section className="section-padding relative overflow-hidden bg-[#F5F0E8]">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div
@@ -34,7 +34,7 @@ export default function CoupleSection({ couple }: CoupleSectionProps) {
             Dengan Penuh Cinta
           </p>
           <h2
-            className="text-5xl md:text-6xl text-white mb-6"
+            className="text-5xl md:text-6xl text-[#2C2416] mb-6"
             style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}
           >
             Mempelai
@@ -99,7 +99,7 @@ function PersonCard({
             sizes="(max-width: 768px) 224px, 224px"
           />
           {/* Photo overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#F5F0E8]/50 to-transparent" />
         </div>
 
         {/* Role badge */}
@@ -115,13 +115,13 @@ function PersonCard({
 
       {/* Name — nickname besar, fullname kecil di bawah */}
       <h3
-        className="text-4xl sm:text-5xl text-white mt-2 mb-1"
+        className="text-4xl sm:text-5xl text-[#2C2416] mt-2 mb-1"
         style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 400 }}
       >
         {person.name}
       </h3>
       <p
-        className="text-white/40 text-xs tracking-wide mb-4 px-2"
+        className="text-[#2C2416]/40 text-xs tracking-wide mb-4 px-2"
         style={{ fontFamily: 'var(--font-poppins)' }}
       >
         {person.fullName}
@@ -130,19 +130,19 @@ function PersonCard({
       {/* Parents */}
       <div className="mb-4">
         <p
-          className="text-white/30 text-xs tracking-wider mb-1"
+          className="text-[#2C2416]/30 text-xs tracking-wider mb-1"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           Putra/Putri dari
         </p>
         <p
-          className="text-white/60 text-sm"
+          className="text-[#2C2416]/60 text-sm"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           {person.father}
         </p>
         <p
-          className="text-white/60 text-sm"
+          className="text-[#2C2416]/60 text-sm"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           & {person.mother}

@@ -26,7 +26,7 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
   }
 
   return (
-    <section className="section-padding relative overflow-hidden" style={{ background: '#0A0A0A' }}>
+    <section className="section-padding relative overflow-hidden" style={{ background: '#F0EBE0' }}>
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(201,168,76,0.04) 0%, transparent 65%)' }}
@@ -38,7 +38,7 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
           <p className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
             Kenangan Indah
           </p>
-          <h2 className="text-5xl md:text-6xl text-white mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
+          <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
             Galeri Foto
           </h2>
           <GoldDivider />
@@ -68,14 +68,14 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
               <div className="absolute top-0 right-0 w-0 h-0 border-t-2 border-r-2 border-[#CCC6B1]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#CCC6B1]/80 transition-all duration-500 z-10" />
               <div className="absolute bottom-0 left-0 w-0 h-0 border-b-2 border-l-2 border-[#CCC6B1]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#CCC6B1]/80 transition-all duration-500 z-10" />
               <div className="absolute bottom-0 right-0 w-0 h-0 border-b-2 border-r-2 border-[#CCC6B1]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#CCC6B1]/80 transition-all duration-500 z-10" />
-              <div className="absolute inset-0 bg-[#0A0A0A]/0 group-hover:bg-[#0A0A0A]/30 transition-all duration-500 z-10" />
+              <div className="absolute inset-0 bg-[#F5F0E8]/0 group-hover:bg-[#F5F0E8]/30 transition-all duration-500 z-10" />
             </motion.div>
           ))}
         </div>
 
         {/* Hint */}
         <SectionReveal className="text-center mt-8" delay={0.2}>
-          <p className="text-white/20 text-xs tracking-[0.3em] uppercase" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-[#2C2416]/20 text-xs tracking-[0.3em] uppercase" style={{ fontFamily: 'var(--font-poppins)' }}>
             Ketuk foto untuk memperbesar
           </p>
         </SectionReveal>
@@ -91,7 +91,7 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="absolute inset-0 bg-[#0A0A0A]/97 backdrop-blur-md" onClick={closeLightbox} />
+            <div className="absolute inset-0 bg-[#F5F0E8]/97 backdrop-blur-md" onClick={closeLightbox} />
 
             <motion.div
               className="relative z-10 w-full max-w-4xl mx-4 sm:mx-8"
@@ -123,13 +123,13 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
               )}
             </motion.div>
 
-            <button onClick={closeLightbox} className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 w-10 h-10 glass flex items-center justify-center text-white/50 hover:text-[#CCC6B1] transition-colors">
+            <button onClick={closeLightbox} className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 w-10 h-10 glass flex items-center justify-center text-[#2C2416]/50 hover:text-[#CCC6B1] transition-colors">
               <X size={16} />
             </button>
-            <button onClick={prev} className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 glass flex items-center justify-center text-white/50 hover:text-[#CCC6B1] transition-colors">
+            <button onClick={prev} className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 glass flex items-center justify-center text-[#2C2416]/50 hover:text-[#CCC6B1] transition-colors">
               <ChevronLeft size={18} />
             </button>
-            <button onClick={next} className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 glass flex items-center justify-center text-white/50 hover:text-[#CCC6B1] transition-colors">
+            <button onClick={next} className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 glass flex items-center justify-center text-[#2C2416]/50 hover:text-[#CCC6B1] transition-colors">
               <ChevronRight size={18} />
             </button>
 

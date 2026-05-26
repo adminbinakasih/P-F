@@ -7,7 +7,7 @@ interface FooterProps {
 
 export default function Footer({ coupleName, hashtag }: FooterProps) {
   return (
-    <footer className="py-12 md:py-20 bg-[#0A0A0A] border-t border-white/5">
+    <footer className="py-12 md:py-20 border-t border-[#CCC6B1]/20" style={{ background: '#F5F0E8' }}>
       <div className="container-luxury text-center">
 
         {/* Ayat Alkitab */}
@@ -19,7 +19,7 @@ export default function Footer({ coupleName, hashtag }: FooterProps) {
             ✦ Firman Tuhan ✦
           </p>
           <blockquote
-            className="text-white/60 text-xl md:text-2xl leading-relaxed italic mb-4"
+            className="text-[#2C2416]/60 text-xl md:text-2xl leading-relaxed italic mb-4"
             style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 300 }}
           >
             "Kasih itu sabar; kasih itu murah hati; ia tidak cemburu. Ia tidak memegahkan diri dan tidak sombong. Ia tidak melakukan yang tidak sopan dan tidak mencari keuntungan diri sendiri. Ia tidak pemarah dan tidak menyimpan kesalahan orang lain."
@@ -42,7 +42,7 @@ export default function Footer({ coupleName, hashtag }: FooterProps) {
         </div>
 
         <p
-          className="text-3xl text-white/80 mb-2"
+          className="text-3xl text-[#2C2416]/80 mb-2"
           style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}
         >
           {coupleName}
@@ -57,13 +57,13 @@ export default function Footer({ coupleName, hashtag }: FooterProps) {
 
         {/* Penutup */}
         <p
-          className="text-white/30 text-sm mb-2"
+          className="text-[#2C2416]/30 text-sm mb-2"
           style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}
         >
           Merupakan suatu kehormatan dan kebahagiaan bagi kami
         </p>
         <p
-          className="text-white/30 text-sm mb-8"
+          className="text-[#2C2416]/30 text-sm mb-8"
           style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}
         >
           apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
@@ -72,7 +72,7 @@ export default function Footer({ coupleName, hashtag }: FooterProps) {
         <div className="h-px bg-gradient-to-r from-transparent via-[#CCC6B1]/10 to-transparent mb-8" />
 
         <p
-          className="text-white/20 text-xs"
+          className="text-[#2C2416]/20 text-xs"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           Dibuat oleh{' '}
