@@ -2,10 +2,12 @@ import type { Metadata } from 'next'
 import { getInvitationBySlug } from '@/lib/data'
 import InvitationWrapper from '@/components/invitation/InvitationWrapper'
 
-export async function generateMetadata(
-  props: PageProps<'/invite/[slug]'>
-): Promise<Metadata> {
-  const { slug } = await props.params
+interface Props {
+  params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
   const data = getInvitationBySlug(slug)
   const { couple } = data
 
@@ -21,7 +23,7 @@ export async function generateMetadata(
       description: `${couple.groom.fullName} & ${couple.bride.fullName} — ${tanggal}`,
       images: [
         {
-          url: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80',
+          url: '/EL_06256.png',
           width: 1200,
           height: 630,
           alt: `Pernikahan ${couple.groom.name} & ${couple.bride.name}`,
@@ -36,8 +38,8 @@ export async function generateMetadata(
   }
 }
 
-export default async function InvitePage(props: PageProps<'/invite/[slug]'>) {
-  const { slug } = await props.params
+export default async function InvitePage({ params }: Props) {
+  const { slug } = await params
   const data = getInvitationBySlug(slug)
   return <InvitationWrapper data={data} />
 }
