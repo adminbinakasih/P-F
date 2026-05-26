@@ -55,7 +55,7 @@ export default function BibleVerseSection() {
 
           {/* Ayat utama */}
           <motion.blockquote
-            className="text-[#2C2416]/75 text-2xl md:text-3xl lg:text-4xl leading-relaxed mb-6"
+            className="text-[#2C2416] text-2xl md:text-3xl lg:text-4xl leading-relaxed mb-6"
             style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -67,7 +67,7 @@ export default function BibleVerseSection() {
           </motion.blockquote>
 
           <motion.p
-            className="text-[#CCC6B1]/60 text-sm tracking-[0.4em] uppercase mb-12"
+            className="text-[#6B5E4E] text-sm tracking-[0.4em] uppercase mb-12"
             style={{ fontFamily: 'var(--font-poppins)' }}
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
@@ -80,7 +80,7 @@ export default function BibleVerseSection() {
 
           {/* Ayat kedua */}
           <motion.blockquote
-            className="text-[#2C2416]/50 text-lg md:text-xl leading-relaxed mb-4"
+            className="text-[#2C2416]/80 text-lg md:text-xl leading-relaxed mb-4"
             style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -90,7 +90,7 @@ export default function BibleVerseSection() {
           </motion.blockquote>
 
           <motion.p
-            className="text-[#CCC6B1]/40 text-xs tracking-[0.3em] uppercase"
+            className="text-[#6B5E4E] text-xs tracking-[0.3em] uppercase"
             style={{ fontFamily: 'var(--font-poppins)' }}
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}

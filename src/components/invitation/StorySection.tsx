@@ -111,7 +111,7 @@ function StoryCard({ item, index }: { item: StoryItem; index: number }) {
       {/* Content */}
       <div className={`w-full md:w-5/12 ${isEven ? 'md:text-left' : 'md:text-right'} text-center`}>
         <p
-          className="text-[#CCC6B1]/60 text-xs tracking-[0.4em] uppercase mb-3"
+          className="text-[#6B5E4E] text-xs tracking-[0.4em] uppercase mb-3"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           {item.date}
@@ -122,9 +122,9 @@ function StoryCard({ item, index }: { item: StoryItem; index: number }) {
         >
           {item.title}
         </h3>
-        <div className={`h-px w-12 bg-[#CCC6B1]/40 mb-4 ${isEven ? '' : 'md:ml-auto'} mx-auto md:mx-0`} />
+        <div className={`h-px w-12 bg-[#CCC6B1]/60 mb-4 ${isEven ? '' : 'md:ml-auto'} mx-auto md:mx-0`} />
         <p
-          className="text-[#2C2416]/50 text-sm leading-relaxed"
+          className="text-[#2C2416]/75 text-sm leading-relaxed"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           {item.description}

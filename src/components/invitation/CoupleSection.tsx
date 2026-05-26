@@ -28,7 +28,7 @@ export default function CoupleSection({ couple }: CoupleSectionProps) {
         {/* Section header */}
         <SectionReveal className="text-center mb-16">
           <p
-            className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-4"
+            className="text-[#6B5E4E] text-xs tracking-[0.5em] uppercase mb-4"
             style={{ fontFamily: 'var(--font-poppins)' }}
           >
             Dengan Penuh Cinta
@@ -121,7 +121,7 @@ function PersonCard({
         {person.name}
       </h3>
       <p
-        className="text-[#2C2416]/40 text-xs tracking-wide mb-4 px-2"
+        className="text-[#6B5E4E] text-xs tracking-wide mb-4 px-2"
         style={{ fontFamily: 'var(--font-poppins)' }}
       >
         {person.fullName}
@@ -130,19 +130,19 @@ function PersonCard({
       {/* Parents */}
       <div className="mb-4">
         <p
-          className="text-[#2C2416]/30 text-xs tracking-wider mb-1"
+          className="text-[#6B5E4E] text-xs tracking-wider mb-1"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           Putra/Putri dari
         </p>
         <p
-          className="text-[#2C2416]/60 text-sm"
+          className="text-[#2C2416]/80 text-sm"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           {person.father}
         </p>
         <p
-          className="text-[#2C2416]/60 text-sm"
+          className="text-[#2C2416]/80 text-sm"
           style={{ fontFamily: 'var(--font-poppins)' }}
         >
           & {person.mother}

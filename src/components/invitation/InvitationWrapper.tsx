@@ -60,28 +60,33 @@ export default function InvitationWrapper({ data }: InvitationWrapperProps) {
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: 'url(/EL_06256.png)' }}
             />
-            <div className="absolute inset-0 bg-[#0A0A0A]/70" />
-            <div className="absolute inset-0 gradient-hero" />
+            <div className="absolute inset-0 bg-[#1A1008]/50" />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: 'linear-gradient(180deg, rgba(26,16,8,0.3) 0%, rgba(26,16,8,0.2) 40%, rgba(26,16,8,0.6) 85%, rgba(26,16,8,0.8) 100%)',
+              }}
+            />
           </div>
 
           {/* Corner ornaments */}
-          <div className="absolute top-8 left-8 z-10 opacity-30">
+          <div className="absolute top-8 left-8 z-10 opacity-50">
             <div className="w-12 h-12 border-t border-l border-[#CCC6B1]" />
           </div>
-          <div className="absolute top-8 right-8 z-10 opacity-30">
+          <div className="absolute top-8 right-8 z-10 opacity-50">
             <div className="w-12 h-12 border-t border-r border-[#CCC6B1]" />
           </div>
-          <div className="absolute bottom-8 left-8 z-10 opacity-30">
+          <div className="absolute bottom-8 left-8 z-10 opacity-50">
             <div className="w-12 h-12 border-b border-l border-[#CCC6B1]" />
           </div>
-          <div className="absolute bottom-8 right-8 z-10 opacity-30">
+          <div className="absolute bottom-8 right-8 z-10 opacity-50">
             <div className="w-12 h-12 border-b border-r border-[#CCC6B1]" />
           </div>
 
           <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
             <motion.p
-              className="text-[#CCC6B1]/60 text-xs tracking-[0.5em] uppercase mb-6"
-              style={{ fontFamily: 'var(--font-poppins)' }}
+              className="text-[#CCC6B1]/90 text-xs tracking-[0.5em] uppercase mb-6"
+              style={{ fontFamily: 'var(--font-poppins)', textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isOpened ? 1 : 0, y: isOpened ? 0 : 20 }}
               transition={{ delay: 0.5 }}
@@ -92,7 +97,7 @@ export default function InvitationWrapper({ data }: InvitationWrapperProps) {
             {/* Groom first */}
             <motion.h1
               className="text-5xl sm:text-7xl md:text-9xl text-white leading-none mb-4"
-              style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}
+              style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300, textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isOpened ? 1 : 0, y: isOpened ? 0 : 30 }}
               transition={{ delay: 0.6 }}
@@ -106,15 +111,15 @@ export default function InvitationWrapper({ data }: InvitationWrapperProps) {
               animate={{ opacity: isOpened ? 1 : 0 }}
               transition={{ delay: 0.75 }}
             >
-              <div className="h-px w-10 md:w-16 bg-gradient-to-r from-transparent to-[#CCC6B1]/60" />
+              <div className="h-px w-10 md:w-16 bg-gradient-to-r from-transparent to-[#CCC6B1]/80" />
               <span className="text-[#CCC6B1] text-3xl md:text-4xl" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>&</span>
-              <div className="h-px w-10 md:w-16 bg-gradient-to-l from-transparent to-[#CCC6B1]/60" />
+              <div className="h-px w-10 md:w-16 bg-gradient-to-l from-transparent to-[#CCC6B1]/80" />
             </motion.div>
 
             {/* Bride */}
             <motion.h1
               className="text-5xl sm:text-7xl md:text-9xl text-white leading-none mb-8"
-              style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}
+              style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300, textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isOpened ? 1 : 0, y: isOpened ? 0 : 30 }}
               transition={{ delay: 0.9 }}
@@ -123,8 +128,8 @@ export default function InvitationWrapper({ data }: InvitationWrapperProps) {
             </motion.h1>
 
             <motion.p
-              className="text-white/40 text-sm tracking-[0.3em]"
-              style={{ fontFamily: 'var(--font-poppins)' }}
+              className="text-white/70 text-sm tracking-[0.3em]"
+              style={{ fontFamily: 'var(--font-poppins)', textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: isOpened ? 1 : 0 }}
               transition={{ delay: 1.1 }}
