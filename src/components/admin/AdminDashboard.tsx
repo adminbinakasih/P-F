@@ -38,10 +38,10 @@ export default function AdminDashboard() {
         {/* Logo */}
         <div className="flex items-center gap-3 px-4 h-16 border-b border-white/5">
           <div className="w-8 h-8 rounded-full bg-[#CCC6B1]/10 border border-[#CCC6B1]/30 flex items-center justify-center flex-shrink-0">
-            <span className="text-[#CCC6B1] text-sm" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>EV</span>
+            <span className="text-[#CCC6B1] text-sm" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>PF</span>
           </div>
           {sidebarOpen && (
-            <span className="text-white/80 text-sm font-medium truncate">Eternal Vows</span>
+            <span className="text-white/80 text-sm font-medium truncate">Pieter & Febry</span>
           )}
         </div>
 
@@ -97,7 +97,7 @@ export default function AdminDashboard() {
             >
               <Menu size={18} />
             </button>
-            <div className="hidden md:flex items-center gap-2 bg-white/5 border border-white/8 px-3 py-2 rounded-sm w-64">
+            <div className="hidden md:flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-2 rounded-sm w-64">
               <Search size={13} className="text-white/30" />
               <input
                 placeholder="Search..."

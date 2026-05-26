@@ -69,7 +69,7 @@ export const pieterFebriyantiData: InvitationData = {
         date: 'Lamaran',
         title: 'Meminang Hati',
         description: 'Dengan penuh keberanian dan cinta yang tulus, ia datang melamar. Sebuah momen yang akan selalu dikenang seumur hidup.',
-        image: '/IMG_2012.JPG.jpeg',
+        image: '/IMG_2012.JPEG',
       },
       {
         date: '15 Juni 2026',
@@ -81,7 +81,7 @@ export const pieterFebriyantiData: InvitationData = {
   },
   gallery: [
     { id: '1',  url: '/EL_06103.png',      caption: 'Pieter & Febry',   width: 800, height: 1000 },
-    { id: '2',  url: '/IMG_2012.JPG.jpeg', caption: 'Momen Spesial',    width: 800, height: 1000 },
+    { id: '2',  url: '/IMG_2012.JPEG', caption: 'Momen Spesial',    width: 800, height: 1000 },
     { id: '3',  url: '/EL_06253.png',      caption: 'Senja Berdua',     width: 800, height: 1000 },
     { id: '4',  url: '/IMG_2436.JPEG',     caption: 'Indah',            width: 800, height: 1000 },
     { id: '5',  url: '/EL_06284.png',      caption: 'Bahagia',          width: 800, height: 1000 },
