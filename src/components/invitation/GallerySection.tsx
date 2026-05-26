@@ -55,7 +55,7 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.6, delay: index * 0.06, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.6, delay: (index % 6) * 0.06, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
               <Image
                 src={item.url}
@@ -64,14 +64,10 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 640px) 50vw, 33vw"
               />
-
-              {/* Gold corner accents on hover */}
               <div className="absolute top-0 left-0 w-0 h-0 border-t-2 border-l-2 border-[#CCC6B1]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#CCC6B1]/80 transition-all duration-500 z-10" />
               <div className="absolute top-0 right-0 w-0 h-0 border-t-2 border-r-2 border-[#CCC6B1]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#CCC6B1]/80 transition-all duration-500 z-10" />
               <div className="absolute bottom-0 left-0 w-0 h-0 border-b-2 border-l-2 border-[#CCC6B1]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#CCC6B1]/80 transition-all duration-500 z-10" />
               <div className="absolute bottom-0 right-0 w-0 h-0 border-b-2 border-r-2 border-[#CCC6B1]/0 group-hover:w-5 group-hover:h-5 group-hover:border-[#CCC6B1]/80 transition-all duration-500 z-10" />
-
-              {/* Overlay */}
               <div className="absolute inset-0 bg-[#0A0A0A]/0 group-hover:bg-[#0A0A0A]/30 transition-all duration-500 z-10" />
             </motion.div>
           ))}
