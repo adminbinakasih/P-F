@@ -96,14 +96,14 @@ export default function MusicPlayer({
           {/* Play button */}
           <motion.button
             onClick={togglePlay}
-            className="w-8 h-8 rounded-full bg-[#CCC6B1]/20 border border-[#CCC6B1]/30 flex items-center justify-center flex-shrink-0 hover:bg-[#CCC6B1]/30 transition-colors"
+            className="w-8 h-8 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center shrink-0 hover:bg-gold/30 transition-colors"
             whileTap={{ scale: 0.9 }}
             onHoverStart={() => setIsExpanded(true)}
           >
             {isPlaying ? (
-              <Pause size={12} className="text-[#CCC6B1]" />
+              <Pause size={12} className="text-gold" />
             ) : (
-              <Play size={12} className="text-[#CCC6B1] ml-0.5" />
+              <Play size={12} className="text-gold ml-0.5" />
             )}
           </motion.button>
 
@@ -136,7 +136,7 @@ export default function MusicPlayer({
                 {/* Mute button */}
                 <button
                   onClick={toggleMute}
-                  className="flex-shrink-0 text-[#1A1410]/40 hover:text-[#CCC6B1] transition-colors"
+                  className="shrink-0 text-[#1A1410]/40 hover:text-gold transition-colors"
                 >
                   {isMuted ? <VolumeX size={12} /> : <Volume2 size={12} />}
                 </button>
@@ -149,7 +149,7 @@ export default function MusicPlayer({
         {isPlaying && (
           <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#2C2416]/8">
             <div
-              className="h-full bg-[#CCC6B1]"
+              className="h-full bg-gold"
               style={{ width: `${progress}%`, transition: 'width 1s linear' }}
             />
           </div>
@@ -162,7 +162,7 @@ export default function MusicPlayer({
           {[1, 2, 3].map((i) => (
             <motion.div
               key={i}
-              className="w-0.5 bg-[#CCC6B1] rounded-full"
+              className="w-0.5 bg-gold rounded-full"
               animate={{ height: ['4px', '12px', '6px', '14px', '4px'] }}
               transition={{
                 duration: 0.8,

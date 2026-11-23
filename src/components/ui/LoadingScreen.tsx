@@ -8,7 +8,7 @@ interface LoadingScreenProps {
   brideName?: string
 }
 
-export default function LoadingScreen({ groomName = 'Pieter', brideName = 'Febriyanti' }: LoadingScreenProps) {
+export default function LoadingScreen({ groomName = 'Elianser', brideName = 'Esra' }: LoadingScreenProps) {
   const [isLoading, setIsLoading] = useState(true)
   const [progress, setProgress] = useState(0)
 
@@ -71,7 +71,7 @@ export default function LoadingScreen({ groomName = 'Pieter', brideName = 'Febri
               <motion.p className="text-[#3D2E1E] text-xs tracking-[0.3em] mt-2 font-bold"
                 style={{ fontFamily: 'var(--font-poppins)' }}
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}>
-                #PieterFebry2026
+                #ElianserEsra2026
               </motion.p>
             </div>
 

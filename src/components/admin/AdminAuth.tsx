@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { Lock, Eye, EyeOff } from 'lucide-react'
 import AdminDashboard from './AdminDashboard'
 
-const ADMIN_PASSWORD = 'pieter2026'
+const ADMIN_PASSWORD = 'elianser2026'
 
 export default function AdminAuth() {
   const [password, setPassword] = useState('')
@@ -68,7 +68,7 @@ export default function AdminAuth() {
             <div className="h-px w-8 bg-[#8A7560]" />
           </div>
           <p className="text-[#3D2E1E] text-xs tracking-[0.3em] uppercase font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
-            Pieter & Febriyanti — 15 Juni 2026
+            Elianser & Esra — 15 Juni 2026
           </p>
         </div>
 
@@ -92,7 +92,7 @@ export default function AdminAuth() {
                   value={password}
                   onChange={(e) => { setPassword(e.target.value); setError(false) }}
                   className={`w-full bg-[#F5F0E8] border-2 pl-11 pr-12 py-3.5 outline-none transition-all text-sm text-[#1A1410] font-medium placeholder:text-[#8A7560] ${
-                    error ? 'border-red-500' : 'border-[#CCC6B1] focus:border-[#3D2E1E]'
+                    error ? 'border-red-500' : 'border-gold focus:border-[#3D2E1E]'
                   }`}
                   style={{ fontFamily: 'var(--font-poppins)' }}
                   placeholder="Masukkan password"

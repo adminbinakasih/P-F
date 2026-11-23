@@ -43,7 +43,7 @@ export default function AdminGuests() {
       `${g.name},${g.phone || '-'},${g.attendance},${g.guestCount},${new Date(g.createdAt).toLocaleDateString('id-ID')}`
     )
     const blob = new Blob(['Nama,No. HP,Status,Jumlah Tamu,Tanggal\n' + rows.join('\n')], { type: 'text/csv' })
-    const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: 'rsvp-pieter-febriyanti.csv' })
+    const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: 'rsvp-Elianser-Esra.csv' })
     a.click()
   }
 
@@ -70,7 +70,7 @@ export default function AdminGuests() {
 
       {/* Filters */}
       <div className="flex flex-wrap gap-3">
-        <div className="flex items-center gap-2 bg-white border border-[#CCC6B1] px-3 py-2 flex-1 min-w-48">
+        <div className="flex items-center gap-2 bg-white border border-gold px-3 py-2 flex-1 min-w-48">
           <Search size={13} className="text-[#8A7560]" />
           <input value={search} onChange={e => setSearch(e.target.value)}
             placeholder="Cari nama tamu..."
@@ -87,7 +87,7 @@ export default function AdminGuests() {
               className={`px-3 py-2 text-xs font-bold transition-all border-2 ${
                 filter === f.key
                   ? 'bg-[#3D2E1E] border-[#3D2E1E] text-white'
-                  : 'border-[#CCC6B1] text-[#3D2E1E] hover:border-[#8A7560]'
+                  : 'border-gold text-[#3D2E1E] hover:border-[#8A7560]'
               }`} style={{ fontFamily: 'var(--font-poppins)' }}>
               {f.label}
             </button>
@@ -96,7 +96,7 @@ export default function AdminGuests() {
       </div>
 
       {/* Table */}
-      <div className="bg-white rounded-sm border border-[#CCC6B1]/40 overflow-hidden" style={{ boxShadow: '0 2px 12px rgba(26,16,8,0.08)' }}>
+      <div className="bg-white rounded-sm border border-gold/40 overflow-hidden" style={{ boxShadow: '0 2px 12px rgba(26,16,8,0.08)' }}>
         {loading ? (
           <div className="text-center py-16">
             <RefreshCw size={24} className="text-[#8A7560] mx-auto mb-3 animate-spin" />
@@ -128,7 +128,7 @@ export default function AdminGuests() {
                       initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.03 }}>
                       <td className="px-4 py-3">
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-[#D4CDB8] border border-[#8A7560] flex items-center justify-center flex-shrink-0">
+                          <div className="w-8 h-8 rounded-full bg-[#D4CDB8] border border-[#8A7560] flex items-center justify-center shrink-0">
                             <span className="text-[#1A1410] text-xs font-bold">{guest.name[0]}</span>
                           </div>
                           <span className="text-[#1A1410] text-xs font-bold">{guest.name}</span>

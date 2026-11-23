@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+/* Tailwind CSS v4 Theme Configuration */
+/* stylelint-disable-next-line at-rule-no-unknown */
 @theme {
   --font-display: var(--font-cormorant), 'Cormorant Garamond', serif;
   --font-heading: var(--font-playfair), 'Playfair Display', serif;
@@ -16,6 +18,10 @@
   --color-bg-alt: #EDE8DC;
   --color-text-main: #1A1410;
   --color-text-soft: #3D2E1E;
+
+  /* Spacing untuk warning w-[800px] -> w-200 */
+  --spacing-137\.5: 550px;
+  --spacing-200: 800px;
 }
 
 @layer base {

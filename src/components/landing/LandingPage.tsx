@@ -7,7 +7,7 @@ import { ArrowRight, Sparkles, Star, Check, Heart } from 'lucide-react'
 import SectionReveal from '@/components/ui/SectionReveal'
 import GoldDivider from '@/components/ui/GoldDivider'
 
-const DEMO_SLUG = 'pieter-febriyanti'
+const DEMO_SLUG = 'elianser-esra'
 
 const features = [
   { icon: '✦', title: 'Desain Sinematik', desc: 'Tampilan mewah berkelas Apple dengan estetika premium yang memukau setiap tamu undangan.' },
@@ -76,7 +76,7 @@ export default function LandingPage() {
               { label: 'Harga', anchor: 'pricing' },
             ].map((item) => (
               <a key={item.anchor} href={`#${item.anchor}`}
-                className="text-[#2C2416]/50 hover:text-[#CCC6B1] transition-colors text-xs tracking-[0.2em] uppercase"
+                className="text-[#2C2416]/50 hover:text-gold transition-colors text-xs tracking-[0.2em] uppercase"
                 style={{ fontFamily: 'var(--font-poppins)' }}>
                 {item.label}
               </a>
@@ -106,16 +106,16 @@ export default function LandingPage() {
 
         {/* Rotating rings */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-          <motion.div className="w-[800px] h-[800px] rounded-full border border-[#CCC6B1]/15"
+          <motion.div className="w-200 h-200 rounded-full border border-gold/15"
             animate={{ rotate: 360 }} transition={{ duration: 60, repeat: Infinity, ease: 'linear' }} />
-          <motion.div className="absolute w-[550px] h-[550px] rounded-full border border-[#CCC6B1]/10"
+          <motion.div className="absolute w-137.5 h-137.5 rounded-full border border-gold/10"
             animate={{ rotate: -360 }} transition={{ duration: 40, repeat: Infinity, ease: 'linear' }} />
         </div>
 
         <motion.div className="relative z-10 text-center px-6 max-w-5xl mx-auto" style={{ opacity: heroOpacity }}>
           <motion.div className="inline-flex items-center gap-2 glass px-4 py-2 mb-8"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <Sparkles size={12} className="text-[#CCC6B1]" />
+            <Sparkles size={12} className="text-gold" />
             <span className="text-[#2C2416]/70 text-xs tracking-[0.3em] uppercase" style={{ fontFamily: 'var(--font-poppins)' }}>
               Platform Undangan Pernikahan Digital Premium
             </span>
@@ -152,7 +152,7 @@ export default function LandingPage() {
 
         <motion.div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}>
-          <motion.div className="w-px h-12 bg-gradient-to-b from-[#CCC6B1]/60 to-transparent mx-auto"
+          <motion.div className="w-px h-12 bg-linear-to-b from-gold/60 to-transparent mx-auto"
             animate={{ scaleY: [1, 0.5, 1] }} transition={{ duration: 2, repeat: Infinity }} />
         </motion.div>
       </section>
@@ -161,7 +161,7 @@ export default function LandingPage() {
       <section id="features" className="section-padding" style={{ background: '#EDE8DC' }}>
         <div className="container-luxury">
           <SectionReveal className="text-center mb-16">
-            <p className="text-[#CCC6B1]/70 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+            <p className="text-gold/70 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
               Semua yang Anda Butuhkan
             </p>
             <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
@@ -174,9 +174,9 @@ export default function LandingPage() {
             {features.map((feature, i) => (
               <SectionReveal key={i} delay={i * 0.05}>
                 <div className="glass p-6 group hover-lift relative h-full">
-                  <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#CCC6B1]/30 group-hover:border-[#CCC6B1]/60 transition-colors" />
-                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/30 group-hover:border-[#CCC6B1]/60 transition-colors" />
-                  <span className="text-[#CCC6B1]/60 text-xl block mb-4" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                  <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-gold/30 group-hover:border-gold/60 transition-colors" />
+                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-gold/30 group-hover:border-gold/60 transition-colors" />
+                  <span className="text-gold/60 text-xl block mb-4" style={{ fontFamily: 'var(--font-cormorant)' }}>
                     {feature.icon}
                   </span>
                   <h3 className="text-[#2C2416]/90 text-lg mb-2" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
@@ -196,7 +196,7 @@ export default function LandingPage() {
       <section id="demo" className="section-padding" style={{ background: '#F5F0E8' }}>
         <div className="container-luxury">
           <SectionReveal className="text-center mb-16">
-            <p className="text-[#CCC6B1]/70 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+            <p className="text-gold/70 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
               Lihat Langsung
             </p>
             <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
@@ -204,7 +204,7 @@ export default function LandingPage() {
             </h2>
             <GoldDivider />
             <p className="text-[#2C2416]/40 text-sm mt-6 max-w-lg mx-auto" style={{ fontFamily: 'var(--font-poppins)' }}>
-              Undangan pernikahan Pieter & Febriyanti — dibuat dengan Developer SMA Unggul Bina Kasih Nusantara
+              Undangan pernikahan Elianser & Esra — dibuat dengan Developer SMA Unggul Bina Kasih Nusantara
             </p>
           </SectionReveal>
 
@@ -212,7 +212,7 @@ export default function LandingPage() {
             <div className="relative max-w-4xl mx-auto group">
               {/* Browser mockup */}
               <div className="glass rounded-sm overflow-hidden luxury-shadow">
-                <div className="flex items-center gap-2 px-4 py-3 border-b border-[#CCC6B1]/20">
+                <div className="flex items-center gap-2 px-4 py-3 border-b border-gold/20">
                   <div className="flex gap-1.5">
                     <div className="w-3 h-3 rounded-full bg-red-400/50" />
                     <div className="w-3 h-3 rounded-full bg-yellow-400/50" />
@@ -229,17 +229,17 @@ export default function LandingPage() {
                     style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80)' }} />
                   <div className="absolute inset-0 bg-[#F5F0E8]/50" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-                    <p className="text-[#CCC6B1]/80 text-xs tracking-[0.4em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+                    <p className="text-gold/80 text-xs tracking-[0.4em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
                       Pernikahan
                     </p>
                     <h3 className="text-4xl md:text-6xl lg:text-7xl text-[#2C2416] mb-2"
                       style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
-                      Pieter
+                      Elianser
                     </h3>
-                    <span className="text-[#CCC6B1] text-3xl mb-2" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>&</span>
+                    <span className="text-gold text-3xl mb-2" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>&</span>
                     <h3 className="text-4xl md:text-6xl lg:text-7xl text-[#2C2416] mb-4"
                       style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
-                      Febriyanti
+                      Esra
                     </h3>
                     <p className="text-[#CCC6B1]/70 text-sm tracking-widest" style={{ fontFamily: 'var(--font-poppins)' }}>
                       22 November 2025
@@ -266,7 +266,7 @@ export default function LandingPage() {
             <div className="flex flex-wrap justify-center gap-3">
               {['budi-santoso', 'dewi-rahayu', 'ahmad-fauzi'].map((name) => (
                 <Link key={name} href={`/invite/${name}`}
-                  className="glass px-4 py-2 text-xs text-[#CCC6B1]/70 hover:text-[#CCC6B1] transition-colors border border-[#CCC6B1]/20 hover:border-[#CCC6B1]/50"
+                  className="glass px-4 py-2 text-xs text-gold/70 hover:text-gold transition-colors border border-gold/20 hover:border-gold/50"
                   style={{ fontFamily: 'var(--font-poppins)' }}>
                   /invite/{name}
                 </Link>
@@ -280,7 +280,7 @@ export default function LandingPage() {
       <section className="section-padding" style={{ background: '#EAE4D5' }}>
         <div className="container-luxury">
           <SectionReveal className="text-center mb-16">
-            <p className="text-[#CCC6B1]/70 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+            <p className="text-gold/70 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
               Kata Mereka
             </p>
             <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
@@ -293,11 +293,11 @@ export default function LandingPage() {
             {testimonials.map((t, i) => (
               <SectionReveal key={i} delay={i * 0.1}>
                 <div className="glass p-6 relative hover-lift h-full flex flex-col">
-                  <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#CCC6B1]/20" />
-                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/20" />
+                  <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-gold/20" />
+                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-gold/20" />
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, j) => (
-                      <Star key={j} size={10} className="text-[#CCC6B1]" fill="#CCC6B1" />
+                      <Star key={j} size={10} className="text-gold" fill="#CCC6B1" />
                     ))}
                   </div>
                   <p className="text-[#2C2416]/60 text-sm leading-relaxed flex-1 mb-4 italic"
@@ -323,7 +323,7 @@ export default function LandingPage() {
       <section id="pricing" className="section-padding" style={{ background: '#F0EBE0' }}>
         <div className="container-luxury">
           <SectionReveal className="text-center mb-16">
-            <p className="text-[#CCC6B1]/70 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+            <p className="text-gold/70 text-xs tracking-[0.5em] uppercase mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
               Sederhana & Transparan
             </p>
             <h2 className="text-5xl md:text-6xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
@@ -335,9 +335,9 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {plans.map((plan, i) => (
               <SectionReveal key={i} delay={i * 0.1}>
-                <div className={`relative p-8 hover-lift h-full flex flex-col ${plan.highlight ? 'border border-[#CCC6B1]/50 bg-[#CCC6B1]/10' : 'glass'}`}>
+                <div className={`relative p-8 hover-lift h-full flex flex-col ${plan.highlight ? 'border border-gold/50 bg-gold/10' : 'glass'}`}>
                   {plan.highlight && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#CCC6B1] px-4 py-1">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold px-4 py-1">
                       <span className="text-[#2C2416] text-xs tracking-[0.2em] uppercase font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
                         Terpopuler
                       </span>
@@ -354,11 +354,11 @@ export default function LandingPage() {
                       /{plan.period}
                     </span>
                   </div>
-                  <div className="h-px bg-gradient-to-r from-transparent via-[#CCC6B1]/30 to-transparent mb-6" />
+                  <div className="h-px bg-linear-to-r from-transparent via-gold/30 to-transparent mb-6" />
                   <ul className="space-y-3 mb-8 flex-1">
                     {plan.features.map((f, j) => (
                       <li key={j} className="flex items-center gap-3">
-                        <Check size={12} className="text-[#CCC6B1] flex-shrink-0" />
+                        <Check size={12} className="text-gold shrink-0" />
                         <span className="text-[#2C2416]/60 text-sm" style={{ fontFamily: 'var(--font-poppins)' }}>{f}</span>
                       </li>
                     ))}
@@ -380,11 +380,11 @@ export default function LandingPage() {
         <div className="container-luxury relative z-10 text-center">
           <SectionReveal>
             <div className="flex items-center justify-center gap-3 mb-8">
-              <div className="h-px w-12 bg-[#CCC6B1]/30" />
-              <Heart size={12} className="text-[#B76E79]" fill="#B76E79" />
-              <div className="h-px w-12 bg-[#CCC6B1]/30" />
+              <div className="h-px w-12 bg-gold/30" />
+              <Heart size={12} className="text-rose-gold" fill="#B76E79" />
+              <div className="h-px w-12 bg-gold/30" />
             </div>
-            <p className="text-[#CCC6B1]/70 text-xs tracking-[0.5em] uppercase mb-6" style={{ fontFamily: 'var(--font-poppins)' }}>
+            <p className="text-gold/70 text-xs tracking-[0.5em] uppercase mb-6" style={{ fontFamily: 'var(--font-poppins)' }}>
               Mulai Kisah Anda
             </p>
             <h2 className="text-5xl md:text-7xl text-[#2C2416] mb-6" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
@@ -409,15 +409,15 @@ export default function LandingPage() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="py-12 border-t border-[#CCC6B1]/20" style={{ background: '#F5F0E8' }}>
+      <footer className="py-12 border-t border-gold/20" style={{ background: '#F5F0E8' }}>
         <div className="container-luxury text-center">
           <p className="text-3xl text-[#2C2416]/60 mb-2" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 300 }}>
             Developer SMA Unggul Bina Kasih Nusantara
           </p>
-          <p className="text-[#CCC6B1]/50 text-xs tracking-[0.3em] uppercase mb-6" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <p className="text-gold/50 text-xs tracking-[0.3em] uppercase mb-6" style={{ fontFamily: 'var(--font-poppins)' }}>
             Platform Undangan Pernikahan Digital Premium
           </p>
-          <div className="h-px bg-gradient-to-r from-transparent via-[#CCC6B1]/20 to-transparent mb-6" />
+          <div className="h-px bg-linear-to-r from-transparent via-gold/20 to-transparent mb-6" />
           <p className="text-[#2C2416]/25 text-xs" style={{ fontFamily: 'var(--font-poppins)' }}>
             © 2026 Developer SMA Unggul Bina Kasih Nusantara. Dibuat dengan penuh cinta.
           </p>

@@ -96,7 +96,7 @@ export default function AdminInvitations() {
   const getLink = (slug: string) => `${baseUrl}/invite/${slug}`
 
   const getWAMsg = (guest: GuestLink) =>
-    `Kepada Yth. ${guest.name},\n\nDengan penuh sukacita kami mengundang Anda untuk hadir dalam pernikahan\n\n✨ Pieter & Febriyanti ✨\n\n📅 Senin, 15 Juni 2026\n📍 GBKP Rg. Simpang Tuntungan, Medan\n\nBuka undangan digital Anda di:\n${getLink(guest.slug)}\n\n#PieterFebry2026`
+    `Kepada Yth. ${guest.name},\n\nDengan penuh sukacita kami mengundang Anda untuk hadir dalam pernikahan\n\n✨ Elianser & Esra ✨\n\n📅 Senin, 15 Juni 2026\n📍 GBKP Rg. Simpang Tuntungan, Medan\n\nBuka undangan digital Anda di:\n${getLink(guest.slug)}\n\n#ElianserEsra2026`
 
   const exportCSV = () => {
     const rows = guests.map(g => `"${g.name}","${getLink(g.slug)}"`)
@@ -139,7 +139,7 @@ export default function AdminInvitations() {
       </div>
 
       {/* ── Card undangan utama ── */}
-      <div className="bg-white rounded-sm p-5 border border-[#CCC6B1]/40 relative" style={{ boxShadow: '0 2px 12px rgba(26,16,8,0.08)' }}>
+      <div className="bg-white rounded-sm p-5 border border-gold/40 relative" style={{ boxShadow: '0 2px 12px rgba(26,16,8,0.08)' }}>
         <div className="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-[#8A7560]" />
         <div className="absolute top-0 right-0 w-5 h-5 border-t-2 border-r-2 border-[#8A7560]" />
         <div className="absolute bottom-0 left-0 w-5 h-5 border-b-2 border-l-2 border-[#8A7560]" />
@@ -148,13 +148,13 @@ export default function AdminInvitations() {
         <div className="flex items-start justify-between mb-4">
           <div>
             <p className="text-[#1A1410]" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontSize: '1.4rem', fontWeight: 400 }}>
-              Pieter Nero Ginting Suka
+              Elianser Nero Ginting Suka
             </p>
             <p className="text-[#1A1410]" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontSize: '1.4rem', fontWeight: 400 }}>
-              & Febriyanti Br. Surbakti
+              & Esra Br. Surbakti
             </p>
           </div>
-          <span className="text-[10px] px-2 py-1 font-bold rounded-sm flex-shrink-0"
+          <span className="text-[10px] px-2 py-1 font-bold rounded-sm shrink-0"
             style={{ background: '#dcfce7', color: '#166534', border: '1px solid #86efac' }}>
             Aktif
           </span>
@@ -166,10 +166,10 @@ export default function AdminInvitations() {
           {[
             { label: 'Tanggal', value: '15 Juni 2026' },
             { label: 'Lokasi', value: 'GBKP Rg. Simpang Tuntungan' },
-            { label: 'URL Utama', value: '/invite/pieter-febriyanti' },
-            { label: 'Hashtag', value: '#PieterFebry2026' },
+            { label: 'URL Utama', value: '/invite/Elianser-Esra' },
+            { label: 'Hashtag', value: '#ElianserEsra2026' },
           ].map(item => (
-            <div key={item.label} className="bg-[#F5F0E8] p-2.5 border border-[#CCC6B1]/30">
+            <div key={item.label} className="bg-[#F5F0E8] p-2.5 border border-gold/30">
               <p className="text-[#8A7560] text-[9px] uppercase tracking-wider mb-0.5 font-bold">{item.label}</p>
               <p className="text-[#1A1410] text-xs font-semibold truncate">{item.value}</p>
             </div>
@@ -177,14 +177,14 @@ export default function AdminInvitations() {
         </div>
 
         <div className="flex gap-3">
-          <Link href="/invite/pieter-febriyanti" target="_blank"
+          <Link href="/invite/Elianser-Esra" target="_blank"
             className="flex-1 flex items-center justify-center gap-2 py-3 bg-[#3D2E1E] text-[#F5F0E8] text-xs font-bold tracking-wider uppercase hover:bg-[#1A1410] transition-colors"
             style={{ fontFamily: 'var(--font-poppins)' }}>
             <ExternalLink size={12} />Buka Undangan
           </Link>
           <button
             type="button"
-            onClick={() => copyText(getLink('pieter-febriyanti'), 'main')}
+            onClick={() => copyText(getLink('Elianser-Esra'), 'main')}
             className="flex items-center gap-2 px-4 py-3 border-2 border-[#3D2E1E] text-[#1A1410] text-xs font-bold uppercase hover:bg-[#3D2E1E] hover:text-white transition-all"
             style={{ fontFamily: 'var(--font-poppins)' }}>
             {copiedId === 'main' ? <><Check size={12} />Tersalin!</> : <><Copy size={12} />Salin Link</>}
@@ -194,7 +194,7 @@ export default function AdminInvitations() {
 
       {/* ── Daftar link personal ── */}
       {guests.length > 0 ? (
-        <div className="bg-white rounded-sm border border-[#CCC6B1]/40 overflow-hidden" style={{ boxShadow: '0 2px 12px rgba(26,16,8,0.08)' }}>
+        <div className="bg-white rounded-sm border border-gold/40 overflow-hidden" style={{ boxShadow: '0 2px 12px rgba(26,16,8,0.08)' }}>
           <div className="px-5 py-4 border-b border-[#EAE4D5] flex items-center gap-2" style={{ background: '#F5F0E8' }}>
             <Users size={14} className="text-[#8A7560]" />
             <h3 className="text-[#1A1410] text-sm font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>
@@ -206,14 +206,14 @@ export default function AdminInvitations() {
               <motion.div key={guest.id}
                 className="flex items-center gap-3 px-5 py-3 hover:bg-[#F5F0E8] transition-colors"
                 initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: Math.min(i * 0.03, 0.3) }}>
-                <div className="w-9 h-9 rounded-full bg-[#D4CDB8] border border-[#8A7560] flex items-center justify-center flex-shrink-0">
+                <div className="w-9 h-9 rounded-full bg-[#D4CDB8] border border-[#8A7560] flex items-center justify-center shrink-0">
                   <span className="text-[#1A1410] text-xs font-bold">{guest.name[0].toUpperCase()}</span>
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-[#1A1410] text-sm font-bold truncate">{guest.name}</p>
                   <p className="text-[#8A7560] text-[10px] font-medium truncate">/invite/{guest.slug}</p>
                 </div>
-                <div className="flex items-center gap-1 flex-shrink-0">
+                <div className="flex items-center gap-1 shrink-0">
                   <Link href={`/invite/${guest.slug}`} target="_blank"
                     className="p-2 text-[#8A7560] hover:text-[#3D2E1E] transition-colors rounded" title="Buka undangan">
                     <ExternalLink size={13} />
@@ -236,8 +236,8 @@ export default function AdminInvitations() {
           </div>
         </div>
       ) : (
-        <div className="bg-white rounded-sm border border-[#CCC6B1]/40 py-16 text-center" style={{ boxShadow: '0 2px 12px rgba(26,16,8,0.08)' }}>
-          <LinkIcon size={32} className="text-[#CCC6B1] mx-auto mb-3" />
+        <div className="bg-white rounded-sm border border-gold/40 py-16 text-center" style={{ boxShadow: '0 2px 12px rgba(26,16,8,0.08)' }}>
+          <LinkIcon size={32} className="text-gold mx-auto mb-3" />
           <p className="text-[#3D2E1E] text-sm font-bold mb-1">Belum ada link personal</p>
           <p className="text-[#8A7560] text-xs font-medium mb-5">Buat link undangan personal untuk setiap tamu</p>
           <button type="button"
@@ -284,13 +284,13 @@ export default function AdminInvitations() {
               <div className="flex gap-2 mb-5">
                 <button type="button" onClick={() => setBulkMode(false)}
                   className={`flex-1 py-2.5 text-xs font-bold uppercase border-2 transition-all ${
-                    !bulkMode ? 'bg-[#3D2E1E] border-[#3D2E1E] text-white' : 'border-[#CCC6B1] text-[#3D2E1E] hover:border-[#8A7560]'
+                    !bulkMode ? 'bg-[#3D2E1E] border-[#3D2E1E] text-white' : 'border-gold text-[#3D2E1E] hover:border-[#8A7560]'
                   }`} style={{ fontFamily: 'var(--font-poppins)' }}>
                   Satu Tamu
                 </button>
                 <button type="button" onClick={() => setBulkMode(true)}
                   className={`flex-1 py-2.5 text-xs font-bold uppercase border-2 transition-all ${
-                    bulkMode ? 'bg-[#3D2E1E] border-[#3D2E1E] text-white' : 'border-[#CCC6B1] text-[#3D2E1E] hover:border-[#8A7560]'
+                    bulkMode ? 'bg-[#3D2E1E] border-[#3D2E1E] text-white' : 'border-gold text-[#3D2E1E] hover:border-[#8A7560]'
                   }`} style={{ fontFamily: 'var(--font-poppins)' }}>
                   Banyak Tamu
                 </button>
@@ -308,7 +308,7 @@ export default function AdminInvitations() {
                       value={guestName}
                       onChange={e => setGuestName(e.target.value)}
                       onKeyDown={e => e.key === 'Enter' && addSingle()}
-                      className="w-full bg-[#F5F0E8] border-2 border-[#CCC6B1] focus:border-[#3D2E1E] text-[#1A1410] px-4 py-3 outline-none text-sm font-medium placeholder:text-[#8A7560]"
+                      className="w-full bg-[#F5F0E8] border-2 border-gold focus:border-[#3D2E1E] text-[#1A1410] px-4 py-3 outline-none text-sm font-medium placeholder:text-[#8A7560]"
                       style={{ fontFamily: 'var(--font-poppins)' }}
                       placeholder="Contoh: Budi Santoso"
                       autoFocus
@@ -340,7 +340,7 @@ export default function AdminInvitations() {
                       value={bulkNames}
                       onChange={e => setBulkNames(e.target.value)}
                       rows={7}
-                      className="w-full bg-[#F5F0E8] border-2 border-[#CCC6B1] focus:border-[#3D2E1E] text-[#1A1410] px-4 py-3 outline-none text-sm font-medium placeholder:text-[#8A7560] resize-none"
+                      className="w-full bg-[#F5F0E8] border-2 border-gold focus:border-[#3D2E1E] text-[#1A1410] px-4 py-3 outline-none text-sm font-medium placeholder:text-[#8A7560] resize-none"
                       style={{ fontFamily: 'var(--font-poppins)' }}
                       placeholder={'Budi Santoso\nDewi Rahayu\nAhmad Fauzi\n...'}
                       autoFocus

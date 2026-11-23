@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: `${couple.groom.fullName} & ${couple.bride.fullName} — ${tanggal}`,
       images: [
         {
-          url: '/EL_06256.png',
+          url: '/prawedd/IMG_4362b.JPG',
           width: 1200,
           height: 630,
           alt: `Pernikahan ${couple.groom.name} & ${couple.bride.name}`,

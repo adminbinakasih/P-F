@@ -51,15 +51,15 @@ export default function AdminWishes() {
           <p className="text-[#8A7560] text-xs font-medium">Memuat ucapan...</p>
         </div>
       ) : wishes.length === 0 ? (
-        <div className="text-center py-16 bg-white rounded-sm border border-[#CCC6B1]/40">
-          <MessageSquare size={32} className="text-[#CCC6B1] mx-auto mb-3" />
+        <div className="text-center py-16 bg-white rounded-sm border border-gold/40">
+          <MessageSquare size={32} className="text-gold mx-auto mb-3" />
           <p className="text-[#8A7560] text-sm font-medium">Belum ada ucapan masuk</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {wishes.map((wish, i) => (
             <motion.div key={wish.id}
-              className="bg-white rounded-sm p-5 border border-[#CCC6B1]/40 relative"
+              className="bg-white rounded-sm p-5 border border-gold/40 relative"
               style={{ boxShadow: '0 2px 12px rgba(26,16,8,0.06)' }}
               initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.04 }}>
               {/* Corner ornaments */}
@@ -67,7 +67,7 @@ export default function AdminWishes() {
               <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#8A7560]" />
 
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#D4CDB8] border-2 border-[#8A7560] flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-[#D4CDB8] border-2 border-[#8A7560] flex items-center justify-center shrink-0">
                   <span className="text-[#1A1410] text-sm font-bold">{wish.name[0]}</span>
                 </div>
                 <div className="flex-1 min-w-0">
@@ -81,7 +81,7 @@ export default function AdminWishes() {
                   </p>
                 </div>
               </div>
-              <Heart size={10} className="absolute bottom-3 right-4 text-[#B76E79]" fill="#B76E79" />
+              <Heart size={10} className="absolute bottom-3 right-4 text-rose-gold" fill="#B76E79" />
             </motion.div>
           ))}
         </div>

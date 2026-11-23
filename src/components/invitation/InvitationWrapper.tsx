@@ -58,7 +58,7 @@ export default function InvitationWrapper({ data }: InvitationWrapperProps) {
           <div className="absolute inset-0 z-0">
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: 'url(/EL_06256.png)' }}
+              style={{ backgroundImage: 'url(/prawedd/IMG_4362b.JPG)' }}
             />
             <div className="absolute inset-0 bg-[#1A1008]/50" />
             <div
@@ -71,21 +71,21 @@ export default function InvitationWrapper({ data }: InvitationWrapperProps) {
 
           {/* Corner ornaments */}
           <div className="absolute top-8 left-8 z-10 opacity-50">
-            <div className="w-12 h-12 border-t border-l border-[#CCC6B1]" />
+            <div className="w-12 h-12 border-t border-l border-gold" />
           </div>
           <div className="absolute top-8 right-8 z-10 opacity-50">
-            <div className="w-12 h-12 border-t border-r border-[#CCC6B1]" />
+            <div className="w-12 h-12 border-t border-r border-gold" />
           </div>
           <div className="absolute bottom-8 left-8 z-10 opacity-50">
-            <div className="w-12 h-12 border-b border-l border-[#CCC6B1]" />
+            <div className="w-12 h-12 border-b border-l border-gold" />
           </div>
           <div className="absolute bottom-8 right-8 z-10 opacity-50">
-            <div className="w-12 h-12 border-b border-r border-[#CCC6B1]" />
+            <div className="w-12 h-12 border-b border-r border-gold" />
           </div>
 
           <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
             <motion.p
-              className="text-[#CCC6B1]/90 text-xs tracking-[0.5em] uppercase mb-6"
+              className="text-gold/90 text-xs tracking-[0.5em] uppercase mb-6"
               style={{ fontFamily: 'var(--font-poppins)', textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isOpened ? 1 : 0, y: isOpened ? 0 : 20 }}
@@ -111,9 +111,9 @@ export default function InvitationWrapper({ data }: InvitationWrapperProps) {
               animate={{ opacity: isOpened ? 1 : 0 }}
               transition={{ delay: 0.75 }}
             >
-              <div className="h-px w-10 md:w-16 bg-gradient-to-r from-transparent to-[#CCC6B1]/80" />
-              <span className="text-[#CCC6B1] text-3xl md:text-4xl" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>&</span>
-              <div className="h-px w-10 md:w-16 bg-gradient-to-l from-transparent to-[#CCC6B1]/80" />
+              <div className="h-px w-10 md:w-16 bg-linear-to-r from-transparent to-gold/80" />
+              <span className="text-gold text-3xl md:text-4xl" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>&</span>
+              <div className="h-px w-10 md:w-16 bg-linear-to-l from-transparent to-gold/80" />
             </motion.div>
 
             {/* Bride */}
@@ -165,7 +165,7 @@ export default function InvitationWrapper({ data }: InvitationWrapperProps) {
 
       {/* Music player */}
       {isOpened && (
-        <MusicPlayer src="/music.mp3" title="I Wanna Grow Old with You" artist="Westlife" />
+        <MusicPlayer src="/musik.mp3" title="I Wanna Grow Old with You" artist="Westlife" />
       )}
     </>
   )

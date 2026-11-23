@@ -61,10 +61,10 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
             <div className="absolute inset-0 bg-[#1A1008]/92 backdrop-blur-md" onClick={closeLightbox} />
 
             <motion.div className="relative z-10 w-full max-w-4xl mx-4 sm:mx-8" initial={{ scale: 0.92, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.92, opacity: 0 }} transition={{ duration: 0.4 }}>
-              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-[#CCC6B1] z-20" />
-              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-[#CCC6B1] z-20" />
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-[#CCC6B1] z-20" />
-              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-[#CCC6B1] z-20" />
+              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-gold z-20" />
+              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-gold z-20" />
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-gold z-20" />
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-gold z-20" />
 
               <div className="relative w-full h-[65vh] sm:h-[75vh]">
                 <Image src={gallery[lightboxIndex].url} alt={gallery[lightboxIndex].caption || ''} fill className="object-contain" sizes="95vw" />
@@ -90,7 +90,7 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
               {gallery.map((_, i) => (
                 <button key={i} onClick={() => setLightboxIndex(i)}
-                  className={`transition-all duration-300 rounded-full ${i === lightboxIndex ? 'w-4 h-1.5 bg-[#CCC6B1]' : 'w-1.5 h-1.5 bg-white/40 hover:bg-white/70'}`} />
+                  className={`transition-all duration-300 rounded-full ${i === lightboxIndex ? 'w-4 h-1.5 bg-gold' : 'w-1.5 h-1.5 bg-white/40 hover:bg-white/70'}`} />
               ))}
             </div>
           </motion.div>

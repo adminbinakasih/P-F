@@ -46,10 +46,10 @@ function GiftCard({ gift }: { gift: GiftAccount }) {
 
   return (
     <div className="glass p-6 relative group hover-lift">
-      <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#CCC6B1]/40 group-hover:border-[#CCC6B1]/80 transition-colors" />
-      <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#CCC6B1]/40 group-hover:border-[#CCC6B1]/80 transition-colors" />
-      <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/40 group-hover:border-[#CCC6B1]/80 transition-colors" />
-      <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/40 group-hover:border-[#CCC6B1]/80 transition-colors" />
+      <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-gold/40 group-hover:border-gold/80 transition-colors" />
+      <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-gold/40 group-hover:border-gold/80 transition-colors" />
+      <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-gold/40 group-hover:border-gold/80 transition-colors" />
+      <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-gold/40 group-hover:border-gold/80 transition-colors" />
 
       <div className="flex items-center justify-between mb-4">
         <span className="text-xs tracking-[0.3em] uppercase font-bold" style={{ fontFamily: 'var(--font-poppins)', color: typeColor }}>{typeLabel}</span>

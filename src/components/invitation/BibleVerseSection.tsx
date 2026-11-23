@@ -17,8 +17,8 @@ export default function BibleVerseSection() {
       <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 65%)' }} />
 
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-8">
-        <motion.div className="w-[500px] h-[500px] rounded-full border border-[#CCC6B1]" animate={{ rotate: 360 }} transition={{ duration: 60, repeat: Infinity, ease: 'linear' }} />
-        <motion.div className="absolute w-[350px] h-[350px] rounded-full border border-[#CCC6B1]" animate={{ rotate: -360 }} transition={{ duration: 40, repeat: Infinity, ease: 'linear' }} />
+        <motion.div className="w-[500px] h-[500px] rounded-full border border-gold" animate={{ rotate: 360 }} transition={{ duration: 60, repeat: Infinity, ease: 'linear' }} />
+        <motion.div className="absolute w-[350px] h-[350px] rounded-full border border-gold" animate={{ rotate: -360 }} transition={{ duration: 40, repeat: Infinity, ease: 'linear' }} />
       </div>
 
       <div className="container-luxury relative z-10 text-center max-w-3xl mx-auto">
@@ -35,8 +35,10 @@ export default function BibleVerseSection() {
             style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 500 }}
             initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 1, delay: 0.2 }}
           >
-            "Apa yang telah dipersatukan Allah,
-            <br />tidak boleh diceraikan manusia."
+            "Tuhan membuat segala sesuatu indah pada waktunya,
+            <br />Indah saat Dia mempertemukan, Indah saat Dia menumbuhkan kasih,
+            <br />dan indah saat Dia memperkenankan putra-putri kami
+            <br />dalam suatu ikatan Pernikahan Kudus"
           </motion.blockquote>
 
           <motion.p
@@ -44,17 +46,20 @@ export default function BibleVerseSection() {
             style={{ fontFamily: 'var(--font-poppins)' }}
             initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Markus 10 : 9
+            
           </motion.p>
 
           <GoldDivider className="mb-10" />
 
           <motion.blockquote
-            className="text-[#1A1410] text-lg md:text-xl leading-relaxed mb-4"
+            className="text-[#1A1410] text-lg md:text-xl leading-relaxed mb-8"
             style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 500 }}
             initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 1, delay: 0.5 }}
           >
-            "Dan di atas semuanya itu: kenakanlah kasih, sebagai pengikat yang mempersatukan dan menyempurnakan."
+            "Dengan penuh rasa syukur dan atas berkat serta karuniaNya
+            <br />kami mengundang Bapak/Ibu/Saudara/i berkenan hadir
+            <br />untuk memberi doa restu untuk hadir dalam acara Pemberkatan Pernikahan
+            <br />dan Resepsi Pernikahan Putra - Putri kami"
           </motion.blockquote>
 
           <motion.p
@@ -62,7 +67,7 @@ export default function BibleVerseSection() {
             style={{ fontFamily: 'var(--font-poppins)' }}
             initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Kolose 3 : 14
+            Kami Yang Berbahagia
           </motion.p>
         </motion.div>
       </div>

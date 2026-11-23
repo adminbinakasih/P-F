@@ -79,10 +79,10 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
               }}
             >
               {/* Corner accents */}
-              <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#CCC6B1]" />
-              <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#CCC6B1]" />
-              <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#CCC6B1]" />
-              <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-[#CCC6B1]" />
+              <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-gold" />
+              <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-gold" />
+              <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-gold" />
+              <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-gold" />
 
               <motion.span
                 key={unit.value}

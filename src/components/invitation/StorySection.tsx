@@ -24,7 +24,7 @@ export default function StorySection({ story }: StorySectionProps) {
         </SectionReveal>
 
         <div className="relative">
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#CCC6B1]/50 to-transparent hidden md:block" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-gold/50 to-transparent hidden md:block" />
           <div className="space-y-16 md:space-y-24">
             {story.map((item, index) => (
               <StoryCard key={index} item={item} index={index} />
@@ -52,7 +52,7 @@ function StoryCard({ item, index }: { item: StoryItem; index: number }) {
       <div className="w-full md:w-5/12">
         {item.image ? (
           <div className="relative aspect-[4/3] overflow-hidden group">
-            <div className="absolute -inset-1 border border-[#CCC6B1]/30 z-10 pointer-events-none" />
+            <div className="absolute -inset-1 border border-gold/30 z-10 pointer-events-none" />
             <Image src={item.image} alt={item.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 40vw" />
           </div>
         ) : (
@@ -65,7 +65,7 @@ function StoryCard({ item, index }: { item: StoryItem; index: number }) {
       <div className="hidden md:flex w-2/12 justify-center">
         <div className="relative">
           <div className="w-4 h-4 rounded-full bg-[#8A7560] animate-pulse-gold" />
-          <div className="absolute inset-0 rounded-full bg-[#CCC6B1]/30 scale-150" />
+          <div className="absolute inset-0 rounded-full bg-gold/30 scale-150" />
         </div>
       </div>
 

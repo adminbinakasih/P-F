@@ -33,13 +33,13 @@ export default function CoupleSection({ couple }: CoupleSectionProps) {
 
         <SectionReveal className="text-center mt-16" delay={0.3}>
           <div className="inline-flex items-center gap-3">
-            <div className="h-px w-12 bg-[#CCC6B1]/50" />
-            <Heart size={14} className="text-[#B76E79]" fill="#B76E79" />
+            <div className="h-px w-12 bg-gold/50" />
+            <Heart size={14} className="text-rose-gold" fill="#B76E79" />
             <p className="text-[#8A7560] text-lg tracking-wider" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
               {couple.hashtag}
             </p>
-            <Heart size={14} className="text-[#B76E79]" fill="#B76E79" />
-            <div className="h-px w-12 bg-[#CCC6B1]/50" />
+            <Heart size={14} className="text-rose-gold" fill="#B76E79" />
+            <div className="h-px w-12 bg-gold/50" />
           </div>
         </SectionReveal>
       </div>
@@ -52,10 +52,10 @@ function PersonCard({ person, role }: { person: Couple['bride'] | Couple['groom'
     <div className="flex flex-col items-center text-center group">
       <div className="relative mb-8">
         <div className="relative w-56 h-72 overflow-hidden">
-          <div className="absolute -inset-2 border border-[#CCC6B1]/30 z-10 pointer-events-none" />
-          <div className="absolute -inset-4 border border-[#CCC6B1]/15 z-10 pointer-events-none" />
+          <div className="absolute -inset-2 border border-gold/30 z-10 pointer-events-none" />
+          <div className="absolute -inset-4 border border-gold/15 z-10 pointer-events-none" />
           <Image src={person.photo} alt={person.fullName} fill className="object-cover object-top transition-transform duration-700 group-hover:scale-105" sizes="224px" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#F5F0E8]/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#F5F0E8]/40 to-transparent" />
         </div>
         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 glass px-4 py-1 whitespace-nowrap">
           <span className="text-[#1A1410] text-xs tracking-[0.3em] uppercase font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>

@@ -1,0 +1,47 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@theme",
+      "description": "Tailwind CSS v4 theme configuration directive",
+      "references": [
+        {
+          "name": "Tailwind CSS v4 Documentation",
+          "url": "https://tailwindcss.com/docs"
+        }
+      ]
+    },
+    {
+      "name": "@import",
+      "description": "Import styles from another file"
+    },
+    {
+      "name": "@layer",
+      "description": "Tailwind CSS layer directive for organizing styles",
+      "references": [
+        {
+          "name": "Tailwind CSS Layers",
+          "url": "https://tailwindcss.com/docs/adding-custom-styles#using-css-and-layer"
+        }
+      ]
+    },
+    {
+      "name": "@apply",
+      "description": "Apply Tailwind utility classes inline",
+      "references": [
+        {
+          "name": "Tailwind CSS @apply",
+          "url": "https://tailwindcss.com/docs/functions-and-directives#apply"
+        }
+      ]
+    },
+    {
+      "name": "@config",
+      "description": "Specify config file path"
+    },
+    {
+      "name": "@tailwind",
+      "description": "Inject Tailwind's base, components, utilities styles"
+    }
+  ]
+}

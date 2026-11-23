@@ -34,12 +34,12 @@ export default function AdminDashboard() {
 
         {/* Logo */}
         <div className="flex items-center gap-3 px-4 h-16 border-b" style={{ borderColor: 'rgba(138,117,96,0.2)' }}>
-          <div className="w-9 h-9 rounded-full bg-[#D4CDB8] border-2 border-[#8A7560] flex items-center justify-center flex-shrink-0">
+          <div className="w-9 h-9 rounded-full bg-[#D4CDB8] border-2 border-[#8A7560] flex items-center justify-center shrink-0">
             <span className="text-[#1A1410] text-sm font-bold" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>PF</span>
           </div>
           {sidebarOpen && (
             <div className="overflow-hidden">
-              <p className="text-[#F5F0E8] text-sm font-semibold truncate">Pieter & Febry</p>
+              <p className="text-[#F5F0E8] text-sm font-semibold truncate">Elianser & Esra</p>
               <p className="text-[#8A7560] text-[10px] truncate">Admin Panel</p>
             </div>
           )}
@@ -59,7 +59,7 @@ export default function AdminDashboard() {
                     : 'text-[#8A7560] hover:text-[#D4CDB8] hover:bg-white/5'
                 }`}
               >
-                <Icon size={16} className="flex-shrink-0" />
+                <Icon size={16} className="shrink-0" />
                 {sidebarOpen && (
                   <span className="text-xs font-semibold tracking-wide truncate">{item.label}</span>
                 )}
@@ -77,7 +77,7 @@ export default function AdminDashboard() {
             onClick={() => setSidebarOpen(!sidebarOpen)}
             className="w-full flex items-center gap-3 px-3 py-2.5 text-[#8A7560] hover:text-[#D4CDB8] transition-colors"
           >
-            <Menu size={16} className="flex-shrink-0" />
+            <Menu size={16} className="shrink-0" />
             {sidebarOpen && <span className="text-xs font-medium">Tutup Sidebar</span>}
           </button>
         </div>
@@ -98,7 +98,7 @@ export default function AdminDashboard() {
             <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-[#3D2E1E]">
               {mobileOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
-            <div className="hidden md:flex items-center gap-2 bg-[#EAE4D5] border border-[#CCC6B1] px-3 py-2 w-56">
+            <div className="hidden md:flex items-center gap-2 bg-[#EAE4D5] border border-gold px-3 py-2 w-56">
               <Search size={13} className="text-[#8A7560]" />
               <input placeholder="Cari..." className="bg-transparent text-[#1A1410] text-xs outline-none flex-1 placeholder:text-[#8A7560] font-medium" />
             </div>
@@ -106,7 +106,7 @@ export default function AdminDashboard() {
           <div className="flex items-center gap-3">
             <button className="relative text-[#8A7560] hover:text-[#3D2E1E] transition-colors">
               <Bell size={16} />
-              <span className="absolute -top-1 -right-1 w-2 h-2 bg-[#B76E79] rounded-full" />
+              <span className="absolute -top-1 -right-1 w-2 h-2 bg-rose-gold rounded-full" />
             </button>
             <div className="w-9 h-9 rounded-full bg-[#3D2E1E] border-2 border-[#8A7560] flex items-center justify-center">
               <span className="text-[#F5F0E8] text-xs font-bold">A</span>

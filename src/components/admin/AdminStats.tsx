@@ -68,14 +68,14 @@ export default function AdminStats() {
             Dashboard
           </h1>
           <p className="text-[#6B5040] text-xs font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
-            Undangan Pernikahan Pieter & Febriyanti — 15 Juni 2026
+            Undangan Pernikahan Elianser & Esra — 15 Juni 2026
           </p>
         </div>
         <div className="flex items-center gap-3">
           <button onClick={fetchData} className="text-[#8A7560] hover:text-[#3D2E1E] transition-colors p-2" title="Refresh">
             <RefreshCw size={15} className={loading ? 'animate-spin' : ''} />
           </button>
-          <Link href="/invite/pieter-febriyanti" target="_blank"
+          <Link href="/invite/Elianser-Esra" target="_blank"
             className="inline-flex items-center gap-2 px-4 py-2 bg-[#3D2E1E] text-[#F5F0E8] text-xs font-bold tracking-wider uppercase hover:bg-[#1A1410] transition-colors"
             style={{ fontFamily: 'var(--font-poppins)' }}>
             <Eye size={12} />Lihat Undangan
@@ -89,7 +89,7 @@ export default function AdminStats() {
           const Icon = s.icon
           return (
             <motion.div key={i}
-              className="bg-white rounded-sm p-5 relative overflow-hidden border border-[#CCC6B1]/40"
+              className="bg-white rounded-sm p-5 relative overflow-hidden border border-gold/40"
               style={{ boxShadow: '0 2px 12px rgba(26,16,8,0.08)' }}
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}>
               <div className="absolute top-0 right-0 w-20 h-20 rounded-full -translate-y-8 translate-x-8 opacity-10"
@@ -111,7 +111,7 @@ export default function AdminStats() {
       {/* Charts row */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* RSVP breakdown */}
-        <motion.div className="bg-white rounded-sm p-5 border border-[#CCC6B1]/40"
+        <motion.div className="bg-white rounded-sm p-5 border border-gold/40"
           style={{ boxShadow: '0 2px 12px rgba(26,16,8,0.08)' }}
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
           <h3 className="text-[#1A1410] text-sm font-bold mb-4 flex items-center gap-2" style={{ fontFamily: 'var(--font-poppins)' }}>
@@ -144,7 +144,7 @@ export default function AdminStats() {
         </motion.div>
 
         {/* Recent RSVPs */}
-        <motion.div className="bg-white rounded-sm p-5 lg:col-span-2 border border-[#CCC6B1]/40"
+        <motion.div className="bg-white rounded-sm p-5 lg:col-span-2 border border-gold/40"
           style={{ boxShadow: '0 2px 12px rgba(26,16,8,0.08)' }}
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
           <h3 className="text-[#1A1410] text-sm font-bold mb-4 flex items-center gap-2" style={{ fontFamily: 'var(--font-poppins)' }}>
@@ -184,7 +184,7 @@ export default function AdminStats() {
       </div>
 
       {/* Info undangan */}
-      <motion.div className="bg-white rounded-sm p-5 border border-[#CCC6B1]/40"
+      <motion.div className="bg-white rounded-sm p-5 border border-gold/40"
         style={{ boxShadow: '0 2px 12px rgba(26,16,8,0.08)' }}
         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
         <div className="flex items-center justify-between mb-4">
@@ -192,19 +192,19 @@ export default function AdminStats() {
             <Mail size={14} className="text-[#8A7560]" />
             Info Undangan
           </h3>
-          <Link href="/invite/pieter-febriyanti" target="_blank"
+          <Link href="/invite/Elianser-Esra" target="_blank"
             className="text-[#8A7560] hover:text-[#3D2E1E] text-xs font-bold transition-colors underline underline-offset-2">
             Buka Undangan ↗
           </Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: 'Pengantin Pria', value: 'Pieter Nero Ginting Suka' },
-            { label: 'Pengantin Wanita', value: 'Febriyanti Br. Surbakti' },
+            { label: 'Pengantin Pria', value: 'Elianser Nero Ginting Suka' },
+            { label: 'Pengantin Wanita', value: 'Esra Br. Surbakti' },
             { label: 'Pemberkatan', value: 'Senin, 15 Juni 2026 — 15.00 WIB' },
             { label: 'Pesta Adat', value: 'Selasa, 16 Juni 2026 — 08.00 WIB' },
           ].map((item) => (
-            <div key={item.label} className="p-3 bg-[#F5F0E8] rounded-sm border border-[#CCC6B1]/30">
+            <div key={item.label} className="p-3 bg-[#F5F0E8] rounded-sm border border-gold/30">
               <p className="text-[#8A7560] text-[10px] uppercase tracking-wider mb-1 font-bold">{item.label}</p>
               <p className="text-[#1A1410] text-xs font-semibold">{item.value}</p>
             </div>

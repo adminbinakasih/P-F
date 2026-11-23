@@ -39,10 +39,10 @@ export default function EventSection({ couple }: EventSectionProps) {
 
         <SectionReveal className="text-center mb-16" delay={0.1}>
           <div className="inline-block glass px-6 sm:px-10 py-5 sm:py-6 relative max-w-full">
-            <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#CCC6B1]/60" />
-            <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#CCC6B1]/60" />
-            <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/60" />
-            <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/60" />
+            <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-gold/60" />
+            <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-gold/60" />
+            <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-gold/60" />
+            <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-gold/60" />
             <p className="text-[#1A1410] text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase mb-2 font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>
               {weddingDateFormatted}
             </p>
@@ -57,7 +57,7 @@ export default function EventSection({ couple }: EventSectionProps) {
             <EventCard title="Pemberkatan Pernikahan" subtitle="Akad / Ibadah Pernikahan" venue={couple.venue} icon="✝" />
           </SectionReveal>
           <SectionReveal delay={0.3} direction="right">
-            <EventCard title="Pesta Adat" subtitle="Resepsi & Adat Karo" venue={couple.reception} icon="✦" />
+            <EventCard title="Pesta Adat" subtitle="Resepsi & Adat Batak" venue={couple.reception} icon="✦" />
           </SectionReveal>
         </div>
 
@@ -87,10 +87,10 @@ export default function EventSection({ couple }: EventSectionProps) {
 function EventCard({ title, subtitle, venue, icon }: { title: string; subtitle: string; venue: Couple['venue']; icon: string }) {
   return (
     <div className="glass p-5 sm:p-8 relative group hover-lift">
-      <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-[#CCC6B1]/40 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-[#CCC6B1]/80" />
-      <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-[#CCC6B1]/40 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-[#CCC6B1]/80" />
-      <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-[#CCC6B1]/40 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-[#CCC6B1]/80" />
-      <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-[#CCC6B1]/40 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-[#CCC6B1]/80" />
+      <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-gold/40 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-gold/80" />
+      <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-gold/40 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-gold/80" />
+      <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-gold/40 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-gold/80" />
+      <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-gold/40 transition-all duration-300 group-hover:w-8 group-hover:h-8 group-hover:border-gold/80" />
 
       <div className="text-center">
         <span className="text-[#3D2E1E] text-2xl block mb-4 font-bold" style={{ fontFamily: 'var(--font-cormorant)' }}>{icon}</span>
@@ -100,14 +100,14 @@ function EventCard({ title, subtitle, venue, icon }: { title: string; subtitle: 
 
         <div className="space-y-3 text-left">
           <div className="flex items-start gap-3">
-            <Clock size={14} className="text-[#3D2E1E] mt-0.5 flex-shrink-0" />
+            <Clock size={14} className="text-[#3D2E1E] mt-0.5 shrink-0" />
             <div>
               {venue.date && <p className="text-[#1A1410] text-sm font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>{venue.date}</p>}
               <p className="text-[#1A1410] text-sm font-semibold" style={{ fontFamily: 'var(--font-poppins)' }}>{venue.time}</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <MapPin size={14} className="text-[#3D2E1E] mt-0.5 flex-shrink-0" />
+            <MapPin size={14} className="text-[#3D2E1E] mt-0.5 shrink-0" />
             <div>
               <p className="text-[#1A1410] text-sm font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>{venue.name}</p>
               <p className="text-[#1A1410] text-xs mt-0.5 font-semibold" style={{ fontFamily: 'var(--font-poppins)' }}>{venue.address}</p>

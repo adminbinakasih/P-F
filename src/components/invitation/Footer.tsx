@@ -1,6 +1,6 @@
 import { Heart, MessageCircle } from 'lucide-react'
 
-const WA_NUMBER = '6283197679315'
+const WA_NUMBER = '6285270480776'
 
 interface FooterProps { coupleName: string; hashtag: string }
 
@@ -29,7 +29,7 @@ export default function Footer({ coupleName, hashtag }: FooterProps) {
 
         <div className="flex items-center justify-center gap-3 mb-4">
           <div className="h-0.5 w-12 bg-[#3D2E1E]" />
-          <Heart size={14} className="text-[#B76E79]" fill="#B76E79" />
+          <Heart size={14} className="text-rose-gold" fill="#B76E79" />
           <div className="h-0.5 w-12 bg-[#3D2E1E]" />
         </div>
 
@@ -60,7 +60,7 @@ export default function Footer({ coupleName, hashtag }: FooterProps) {
             style={{ fontFamily: 'var(--font-poppins)' }}
           >
             <MessageCircle size={14} />
-            +62 831-9767-9315
+            +62 852-7048-0776
           </a>
         </div>
 

@@ -1,114 +1,119 @@
 import type { InvitationData, Wish } from './types'
 
 // ============================================================
-// DATA PERNIKAHAN: PIETER & FEBRIYANTI
+// DATA PERNIKAHAN: ELIANSER & ESRA
 // ============================================================
-export const pieterFebriyantiData: InvitationData = {
-  slug: 'pieter-febriyanti',
+export const elianserEsraData: InvitationData = {
+  slug: 'elianser-esra',
   guestName: 'Tamu Undangan',
   couple: {
     groom: {
-      name: 'Pieter',
-      fullName: 'Pieter Nero Ginting Suka, Amd. Ds',
-      photo: '/pria.JPEG',
-      father: 'Bapak R. Ginting',
-      mother: 'Ibu M. Br Sembiring Milala',
-      instagram: '@Pieterneroginting',
+      name: 'Elianser',
+      fullName: 'Elianser Sihombing, S.SI',
+      photo: '/prawedd/WhatsApp Image 2026-11-19 at 09.31.35.jpeg',
+      father: 'Bapak T. Sihombing',
+      mother: 'Ibu R. Br. Pardosi',
+      instagram: '@elianser',
       bio: 'Seorang pria yang percaya bahwa cinta sejati adalah perjalanan yang paling indah.',
     },
     bride: {
-      name: 'Febry',
-      fullName: 'Febriyanti Br. Surbakti, S.Si., M.Si',
-      photo: '/wanita.JPEG',
-      father: 'Bapak K. Surbakti',
-      mother: 'Ibu K. br. Ginting',
-      instagram: '@Febriyanti_srbt',
+      name: 'Esra',
+      fullName: 'Esra Putri Udur Parhusip, S.Tr.Par',
+      photo: '/prawedd/WhatsApp Image 2026-11-19 at 09.31.36.jpeg',
+      father: 'Bapak T. Parhusip, S.KP',
+      mother: 'Ibu Br. T. Br. Situmorang',
+      instagram: '@esraputri',
       bio: 'Seorang wanita yang menemukan keindahan hidup dalam setiap momen bersama orang-orang tercinta.',
     },
-    weddingDate: '2026-06-15',
-    weddingTime: '15:00',
-    hashtag: '#PieterFebry2026',
+    weddingDate: '2026-12-12',
+    weddingTime: '09:00',
+    hashtag: '#ElianserEsra2026',
     venue: {
-      name: 'GBKP Rg. Simpang Tuntungan',
-      address: 'Jl. Jamin Ginting, Ladang Bambu, Kec. Medan Tuntungan, Kota Medan, Sumatera Utara 20138',
+      name: 'Pemberkatan Pernikahan',
+      address: 'Gereja HKBP Resort Khusus Sempurna, Jl. Sempurna No. 90, Cinta Damai, Medan',
       city: 'Medan',
-      mapsUrl: 'https://maps.google.com/maps?q=GBKP+Simpang+Tuntungan+Medan',
-      date: 'Senin, 15 Juni 2026',
-      time: '15.00 WIB',
+      mapsUrl: 'https://maps.app.goo.gl/Xi6JUdxfGY9KEwQ46',
+      date: 'Jumat, 12 Desember 2026',
+      time: '09.00 WIB - Selesai',
       dresscode: 'Formal — Putih & Gold',
     },
     reception: {
-      name: 'Jambur Gotong Royong Pancurbatu',
-      address: 'Jl. Ali Parinduri, Desa Lama, Kec. Pancur Batu, Kabupaten Deli Serdang, Sumatera Utara',
-      city: 'Deli Serdang',
-      mapsUrl: 'https://maps.google.com/maps?q=Jambur+Gotong+Royong+Pancurbatu+Deli+Serdang',
-      date: 'Selasa, 16 Juni 2026',
-      time: '08.00 WIB - Selesai',
-      dresscode: 'Adat Karo',
+      name: 'Resepsi & Adat Batak',
+      address: 'WISMA ADAT HKBP CINTA DAMAI, Jl. Pantai Timur, Medan',
+      city: 'Medan',
+      mapsUrl: 'https://maps.app.goo.gl/zfnB6pgRwwohyor28',
+      date: 'Sabtu, 13 Desember 2026',
+      time: '12.00 WIB - Selesai',
+      dresscode: 'Adat Batak',
     },
     story: [
       {
         date: 'Awal Pertemuan',
         title: 'Pertemuan Pertama',
         description: 'Dua jiwa yang dipertemukan oleh takdir. Sebuah pertemuan sederhana yang ternyata menjadi awal dari segalanya.',
-        image: '/EL_06253.png',
+        image: '/stories/IMG-20250922-WA0014.jpg.jpeg',
       },
       {
         date: 'Mengenal Lebih Dekat',
         title: 'Semakin Dekat',
         description: 'Hari demi hari, percakapan demi percakapan — kami semakin mengenal satu sama lain dan menemukan kecocokan yang luar biasa.',
-        image: '/EL_06140.png',
+        image: '/stories/IMG-20250922-WA0026-1.jpg.jpeg',
       },
       {
         date: 'Resmi Bersama',
         title: 'Menjalin Hubungan',
         description: 'Dengan restu keluarga dan keyakinan di hati, kami memutuskan untuk melangkah bersama dalam satu ikatan yang tulus.',
-        image: '/IMG_2438.JPEG',
+        image: '/stories/IMG-20250922-WA0034-1.jpg.jpeg',
       },
       {
         date: 'Lamaran',
         title: 'Meminang Hati',
         description: 'Dengan penuh keberanian dan cinta yang tulus, ia datang melamar. Sebuah momen yang akan selalu dikenang seumur hidup.',
-        image: '/IMG_2012.JPEG',
+        image: '/stories/Screenshot_2025-02-07-22-43-03-25.jpg.jpeg',
       },
       {
-        date: '15 Juni 2026',
+        date: '12 Desember 2026',
         title: 'Hari yang Dinantikan',
         description: 'Hari ini, di hadapan Tuhan, keluarga, dan orang-orang terkasih — kami mengucapkan janji suci untuk selamanya.',
-        image: '/IMG_2437.JPEG',
+        image: '/prawedd/IMG_4362b.JPG',
       },
     ],
   },
   gallery: [
-    { id: '1',  url: '/EL_06103.png',      caption: 'Pieter & Febry',   width: 800, height: 1000 },
-    { id: '2',  url: '/IMG_2012.JPEG', caption: 'Momen Spesial',    width: 800, height: 1000 },
-    { id: '3',  url: '/EL_06253.png',      caption: 'Senja Berdua',     width: 800, height: 1000 },
-    { id: '4',  url: '/IMG_2436.JPEG',     caption: 'Indah',            width: 800, height: 1000 },
-    { id: '5',  url: '/EL_06284.png',      caption: 'Bahagia',          width: 800, height: 1000 },
-    { id: '6',  url: '/IMG_2437.JPEG',     caption: 'Bersama Selalu',   width: 800, height: 1000 },
-    { id: '7',  url: '/EL_06301.png',      caption: 'Cinta Sejati',     width: 800, height: 1000 },
-    { id: '8',  url: '/IMG_2438.JPEG',     caption: 'Selamanya',        width: 800, height: 1000 },
-    { id: '9',  url: '/EL_06256.png',      caption: 'Kenangan',         width: 800, height: 1000 },
+    { id: '1',  url: '/prawedd/IMG_4276 bb.JPG',      caption: 'Elianser & Esra',   width: 800, height: 1000 },
+    { id: '2',  url: '/prawedd/IMG_4281.jpg',         caption: 'Momen Spesial',    width: 800, height: 1000 },
+    { id: '3',  url: '/prawedd/IMG_4299 (1) bb.JPG',  caption: 'Senja Berdua',     width: 800, height: 1000 },
+    { id: '4',  url: '/prawedd/IMG_4305.jpg',         caption: 'Indah',            width: 800, height: 1000 },
+    { id: '5',  url: '/prawedd/IMG_4311.jpg',         caption: 'Bahagia',          width: 800, height: 1000 },
+    { id: '6',  url: '/prawedd/IMG_4319 bb.JPG',      caption: 'Bersama Selalu',   width: 800, height: 1000 },
+    { id: '7',  url: '/prawedd/IMG_4321 bb.JPG',      caption: 'Cinta Sejati',     width: 800, height: 1000 },
+    { id: '8',  url: '/prawedd/IMG_4348.jpg',         caption: 'Selamanya',        width: 800, height: 1000 },
+    { id: '9',  url: '/prawedd/IMG_4352.JPG',         caption: 'Kenangan',         width: 800, height: 1000 },
+    { id: '10', url: '/prawedd/IMG_4362b.JPG',        caption: 'Kebersamaan',      width: 800, height: 1000 },
+    { id: '11', url: '/prawedd/IMG_4377.JPG',         caption: 'Kasih Sayang',     width: 800, height: 1000 },
+    { id: '12', url: '/prawedd/IMG_4389.JPG',         caption: 'Romantis',         width: 800, height: 1000 },
+    { id: '13', url: '/prawedd/IMG_4405b.JPG',        caption: 'Kebahagiaan',      width: 800, height: 1000 },
+    { id: '14', url: '/prawedd/IMG_4407 bb.JPG',      caption: 'Harmonis',         width: 800, height: 1000 },
   ],
   wishes: [],
   gifts: [
     {
       type: 'bank',
       name: 'Bank Mandiri',
-      accountName: 'Pieter Nero Ginting',
-      accountNumber: '1060019312324',
+      accountName: 'Elianser Sihombing',
+      accountNumber: '1060015762423',
     },
     {
       type: 'bank',
-      name: 'Bank Mandiri',
-      accountName: 'Febriyanti',
-      accountNumber: '1050020589739',
+      name: 'BCA',
+      accountName: 'Esra Putri Udur Parhusip',
+      accountNumber: '3491717431',
     },
     {
       type: 'ewallet',
       name: 'Dana',
-      accountName: 'Pieter Nero Ginting Suka',
-      accountNumber: '083197679315',
+      accountName: 'Esra Putri Udur Parhusip',
+      accountNumber: '085270480776',
     },
   ],
   template: 'classic',
@@ -117,18 +122,21 @@ export const pieterFebriyantiData: InvitationData = {
 // ============================================================
 // DEFAULT DATA (legacy / demo)
 // ============================================================
-export const defaultInvitationData: InvitationData = pieterFebriyantiData
+export const defaultInvitationData: InvitationData = elianserEsraData
 
 export function getInvitationBySlug(slug: string): InvitationData {
-  // Route khusus Pieter & Febriyanti
+  // Route khusus Elianser & Esra (dengan backward compatibility untuk URL lama)
   if (
-    slug === 'pieter-febriyanti' ||
+    slug === 'elianser-esra' ||
+    slug === 'elianser' ||
+    slug === 'esra' ||
+    slug === 'default' ||
+    slug === 'pieter-febriyanti' || // Legacy URL compatibility
     slug === 'pieter' ||
-    slug === 'febriyanti' ||
-    slug === 'default'
+    slug === 'febriyanti'
   ) {
     return {
-      ...pieterFebriyantiData,
+      ...elianserEsraData,
       slug,
       guestName: 'Tamu Undangan',
     }
@@ -136,7 +144,7 @@ export function getInvitationBySlug(slug: string): InvitationData {
 
   // Personalized: nama tamu dari slug
   return {
-    ...pieterFebriyantiData,
+    ...elianserEsraData,
     slug,
     guestName: slug
       .split('-')
@@ -145,6 +153,6 @@ export function getInvitationBySlug(slug: string): InvitationData {
   }
 }
 
-export const mockWishes: Wish[] = pieterFebriyantiData.wishes
+export const mockWishes: Wish[] = elianserEsraData.wishes
 
-export const weddingDate = new Date('2026-06-15T15:00:00')
+export const weddingDate = new Date('2026-12-12T09:00:00')

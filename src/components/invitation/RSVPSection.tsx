@@ -76,7 +76,7 @@ export default function RSVPSection({ invitationSlug, guestName }: RSVPSectionPr
           <AnimatePresence mode="wait">
             {submitted ? (
               <motion.div key="success" className="text-center py-16" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }}>
-                <div className="w-20 h-20 rounded-full border-2 border-[#CCC6B1] flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 rounded-full border-2 border-gold flex items-center justify-center mx-auto mb-6">
                   <CheckCircle size={32} className="text-[#8A7560]" />
                 </div>
                 <h3 className="text-3xl text-[#2C2416] mb-4" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>Terima Kasih</h3>

@@ -17,8 +17,8 @@ export default function ShareSection({ slug, coupleName, weddingDate }: ShareSec
   useEffect(() => { setUrl(`${window.location.origin}/invite/${slug}`) }, [slug])
 
   const tanggal = new Date(weddingDate).toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
-  const shareMessage = `Kepada Yth. Bapak/Ibu/Saudara/i,\n\nDengan penuh sukacita kami mengundang Anda untuk hadir dalam pernikahan\n\n✨ ${coupleName} ✨\n\n📅 ${tanggal}\n\nBuka undangan digital kami di:\n${url}\n\n#PieterFebry2026`
-  const confirmMessage = `Halo Pieter & Febry, saya ingin mengkonfirmasi kehadiran saya di pernikahan kalian pada ${tanggal}. 🙏`
+  const shareMessage = `Kepada Yth. Bapak/Ibu/Saudara/i,\n\nDengan penuh sukacita kami mengundang Anda untuk hadir dalam pernikahan\n\n✨ ${coupleName} ✨\n\n📅 ${tanggal}\n\nBuka undangan digital kami di:\n${url}\n\n#ElianserEsra2026`
+  const confirmMessage = `Halo Elianser & Esra, saya ingin mengkonfirmasi kehadiran saya di pernikahan kalian pada ${tanggal}. 🙏`
 
   const handleCopy = async () => {
     try { await navigator.clipboard.writeText(url); setCopied(true); setTimeout(() => setCopied(false), 2000) } catch { /* fallback */ }
@@ -42,16 +42,16 @@ export default function ShareSection({ slug, coupleName, weddingDate }: ShareSec
         <div className="max-w-lg mx-auto space-y-4">
           <SectionReveal delay={0.1}>
             <div className="glass p-8 text-center relative">
-              <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#CCC6B1]/50" />
-              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#CCC6B1]/50" />
-              <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/50" />
-              <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/50" />
+              <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-gold/50" />
+              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-gold/50" />
+              <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-gold/50" />
+              <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-gold/50" />
 
               <p className="text-[#1A1410] text-xs mb-4 font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>Link Undangan</p>
 
               <div className="flex items-center gap-2 bg-white border-2 border-[#8A7560] px-4 py-3 mb-6">
                 <p className="text-[#1A1410] text-sm flex-1 truncate text-left font-semibold" style={{ fontFamily: 'var(--font-poppins)' }}>{url}</p>
-                <motion.button onClick={handleCopy} className="flex-shrink-0 text-[#3D2E1E] hover:text-[#1A1410] transition-colors" whileTap={{ scale: 0.9 }}>
+                <motion.button onClick={handleCopy} className="shrink-0 text-[#3D2E1E] hover:text-[#1A1410] transition-colors" whileTap={{ scale: 0.9 }}>
                   {copied ? <Check size={14} /> : <Copy size={14} />}
                 </motion.button>
               </div>

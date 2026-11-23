@@ -58,10 +58,10 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
         <div className="max-w-2xl mx-auto">
           <SectionReveal delay={0.1}>
             <form onSubmit={handleSubmit} className="glass p-5 sm:p-8 mb-12 relative">
-              <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#CCC6B1]/50" />
-              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#CCC6B1]/50" />
-              <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#CCC6B1]/50" />
-              <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#CCC6B1]/50" />
+              <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-gold/50" />
+              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-gold/50" />
+              <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-gold/50" />
+              <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-gold/50" />
 
               <h3 className="text-xl text-[#1A1410] mb-6 text-center font-bold" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
                 Tulis Ucapan & Doa
@@ -82,7 +82,7 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
               {displayedWishes.map((wish, index) => (
                 <motion.div key={wish.id} className="glass p-6 relative" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4, delay: index * 0.05 }}>
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[#8A7560] border-2 border-[#3D2E1E] flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-[#8A7560] border-2 border-[#3D2E1E] flex items-center justify-center shrink-0">
                       <span className="text-white text-xs font-bold" style={{ fontFamily: 'var(--font-poppins)' }}>{getInitials(wish.name)}</span>
                     </div>
                     <div className="flex-1 min-w-0">
@@ -95,7 +95,7 @@ export default function WishesSection({ wishes: initialWishes, invitationSlug }:
                       </p>
                     </div>
                   </div>
-                  <Heart size={10} className="absolute bottom-3 right-4 text-[#B76E79]" fill="currentColor" />
+                  <Heart size={10} className="absolute bottom-3 right-4 text-rose-gold" fill="currentColor" />
                 </motion.div>
               ))}
             </AnimatePresence>
