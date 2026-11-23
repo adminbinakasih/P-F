@@ -6,7 +6,7 @@ import { Share2, Copy, Check, MessageCircle, Phone } from 'lucide-react'
 import SectionReveal from '@/components/ui/SectionReveal'
 import GoldDivider from '@/components/ui/GoldDivider'
 
-const WA_NUMBER = '6283197679315'
+const WA_NUMBER = '6285270480776'
 
 interface ShareSectionProps { slug: string; coupleName: string; weddingDate: string }
 
@@ -88,7 +88,7 @@ export default function ShareSection({ slug, coupleName, weddingDate }: ShareSec
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-3 bg-[#25D366] text-white hover:bg-[#1da851] transition-all text-sm font-bold"
                 style={{ fontFamily: 'var(--font-poppins)' }} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                <Phone size={14} />+62 831-9767-9315
+                <Phone size={14} />+62 852-7048-0776
               </motion.a>
             </div>
           </SectionReveal>
