@@ -101,16 +101,16 @@ export default function HeroBoardingPass({ couple, guestName, onOpen }: HeroBoar
               <div className="flex flex-col justify-center items-center text-center">
                 <Heart size={32} className="text-[#B76E79] mb-4" fill="#B76E79" />
                 <p className="text-xs text-[#8B7355] tracking-[0.3em] uppercase mb-3">Wedding of</p>
-                <h1 className="text-4xl md:text-5xl text-[#2C2416] leading-tight mb-2" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 500 }}>
-                  {couple.groom.name}
+                <h1 className="text-2xl md:text-3xl text-[#2C2416] leading-tight mb-2 px-4" style={{ fontFamily: 'var(--font-poppins)', fontWeight: 600 }}>
+                  {couple.groom.fullName}
                 </h1>
                 <div className="flex items-center gap-3 my-3">
                   <div className="h-px w-8 bg-[#8B7355]" />
                   <span className="text-2xl text-[#8B7355]" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>&</span>
                   <div className="h-px w-8 bg-[#8B7355]" />
                 </div>
-                <h1 className="text-4xl md:text-5xl text-[#2C2416] leading-tight" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontWeight: 500 }}>
-                  {couple.bride.name}
+                <h1 className="text-2xl md:text-3xl text-[#2C2416] leading-tight px-4" style={{ fontFamily: 'var(--font-poppins)', fontWeight: 600 }}>
+                  {couple.bride.fullName}
                 </h1>
               </div>
             </div>
