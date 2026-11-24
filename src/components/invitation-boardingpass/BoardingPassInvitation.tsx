@@ -48,26 +48,26 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
 
   if (!isOpen) {
     return (
-      <div className="fixed inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 flex items-center justify-center p-4 z-50 overflow-y-auto">
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 flex items-center justify-center p-4 pt-safe z-50 overflow-y-auto">
         {/* Boarding Pass Cover */}
-        <div className="max-w-md w-full my-auto">
+        <div className="max-w-md w-full my-auto py-8">
           {/* Ticket Design */}
           <div className="bg-white rounded-2xl shadow-2xl border-4 border-slate-200">
             {/* Ticket Header - Gold Band */}
-            <div className="bg-gradient-to-r from-rose-gold via-gold to-amber-500 px-4 py-8 sm:px-6 text-white relative rounded-t-2xl">
+            <div className="bg-gradient-to-r from-rose-gold via-gold to-amber-500 px-4 py-10 sm:px-6 text-white relative rounded-t-2xl">
               {/* Background decorations only */}
               <div className="absolute inset-0 opacity-10 overflow-hidden rounded-t-2xl pointer-events-none">
                 <div className="absolute top-4 right-4 w-24 h-24 bg-white rounded-full"></div>
                 <div className="absolute bottom-4 left-4 w-20 h-20 bg-white rounded-full"></div>
               </div>
-              <div className="relative z-10 text-center space-y-2">
-                <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="relative z-10 text-center space-y-3">
+                <div className="flex items-center justify-center gap-2 mb-3">
                   <span className="text-xs font-mono opacity-80">FLIGHT-INV-2026</span>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wider">Wedding Invitation</h3>
-                <div className="flex items-center justify-center gap-2 mt-2">
+                <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wider mb-2">Wedding Invitation</h3>
+                <div className="flex items-center justify-center gap-2">
                   <span className="text-xl sm:text-2xl">✈️</span>
-                  <span className="text-xs sm:text-sm">Boarding Pass</span>
+                  <span className="text-xs sm:text-sm font-medium">Boarding Pass</span>
                   <span className="text-xl sm:text-2xl">🎫</span>
                 </div>
               </div>
