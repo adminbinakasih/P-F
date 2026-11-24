@@ -72,7 +72,8 @@ export default function GalleryBoardingPass({ data }: GalleryBoardingPassProps) 
                 src={photo.url}
                 alt={photo.caption || `Gallery ${index + 1}`}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                sizes="(max-width: 768px) 50vw, 25vw"
               />
               
               {/* Overlay on Hover */}

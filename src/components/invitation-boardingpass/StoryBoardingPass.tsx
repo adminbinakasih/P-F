@@ -62,13 +62,14 @@ export default function StoryBoardingPass({ data }: StoryBoardingPassProps) {
                   <div className="w-full md:w-5/12">
                     <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-slate-100 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                       {/* Image */}
-                      <div className="relative h-64 overflow-hidden">
+                      <div className="relative h-64 overflow-hidden bg-slate-100">
                         {item.image && (
                           <Image
                             src={item.image}
                             alt={item.title}
                             fill
-                            className="object-cover"
+                            className="object-cover object-center"
+                            sizes="(max-width: 768px) 100vw, 50vw"
                           />
                         )}
                         {/* Overlay Gradient */}
