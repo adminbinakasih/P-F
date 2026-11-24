@@ -62,18 +62,20 @@ export default function StoryBoardingPass({ data }: StoryBoardingPassProps) {
                   <div className="w-full md:w-5/12">
                     <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-slate-100 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                       {/* Image */}
-                      <div className="relative h-64 overflow-hidden bg-slate-100">
+                      <div className="relative w-full" style={{ paddingBottom: '75%' }}>
                         {item.image && (
-                          <Image
-                            src={item.image}
-                            alt={item.title}
-                            fill
-                            className="object-cover object-center"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                          />
+                          <div className="absolute inset-0 bg-slate-100">
+                            <Image
+                              src={item.image}
+                              alt={item.title}
+                              fill
+                              className="object-contain"
+                              sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                          </div>
                         )}
                         {/* Overlay Gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
                         
                         {/* Ticket Number Badge */}
                         <div className="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-mono font-bold text-slate-800">
