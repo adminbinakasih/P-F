@@ -14,7 +14,10 @@ const rsvpSchema = z.object({
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
+    console.log('Received RSVP data:', body)
+    
     const data = rsvpSchema.parse(body)
+    console.log('Validated RSVP data:', data)
 
     const { error } = await supabase.from('rsvp').insert({
       name: data.name,
@@ -27,16 +30,21 @@ export async function POST(request: NextRequest) {
 
     if (error) {
       console.error('Supabase RSVP insert error:', error)
-      return Response.json({ success: false, message: 'Gagal menyimpan RSVP' }, { status: 500 })
+      return Response.json({ success: false, message: `Database error: ${error.message}` }, { status: 500 })
     }
 
     return Response.json({ success: true, message: 'RSVP berhasil dikirim' })
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return Response.json({ success: false, message: 'Data tidak valid' }, { status: 400 })
+      console.error('Validation error:', error.errors)
+      return Response.json({ 
+        success: false, 
+        message: 'Data tidak valid', 
+        errors: error.errors 
+      }, { status: 400 })
     }
     console.error('RSVP POST error:', error)
-    return Response.json({ success: false, message: 'Internal server error' }, { status: 500 })
+    return Response.json({ success: false, message: `Internal server error: ${error}` }, { status: 500 })
   }
 }
 

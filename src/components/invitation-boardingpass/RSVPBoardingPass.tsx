@@ -23,21 +23,26 @@ export default function RSVPBoardingPass({ guestName = '' }: RSVPBoardingPassPro
     setIsSubmitting(true);
 
     try {
+      const payload = {
+        name: formData.name,
+        attendance: formData.attendance,
+        guestCount: parseInt(formData.guestCount),
+        message: formData.message,
+        invitationSlug: 'elianser-esra',
+      };
+
+      console.log('Sending RSVP data:', payload);
+
       const response = await fetch('/api/rsvp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          name: formData.name,
-          attendance: formData.attendance,
-          guestCount: parseInt(formData.guestCount),
-          message: formData.message,
-          invitationSlug: 'elianser-esra',
-        }),
+        body: JSON.stringify(payload),
       });
 
       const result = await response.json();
+      console.log('RSVP response:', result);
 
       if (result.success) {
         setIsSubmitted(true);
@@ -53,7 +58,8 @@ export default function RSVPBoardingPass({ guestName = '' }: RSVPBoardingPassPro
           });
         }, 3000);
       } else {
-        alert('Gagal mengirim konfirmasi. Silakan coba lagi.');
+        console.error('RSVP failed:', result);
+        alert(`Gagal mengirim konfirmasi: ${result.message || 'Silakan coba lagi'}`);
       }
     } catch (error) {
       console.error('RSVP submission error:', error);
