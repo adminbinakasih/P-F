@@ -189,7 +189,17 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
 
       {/* Main Invitation Content */}
       <div className="min-h-screen bg-white">
-        <HeroBoardingPass couple={data.couple} guestName={guestName || ''} onOpen={() => {}} />
+        <HeroBoardingPass 
+          couple={data.couple} 
+          guestName={guestName || ''} 
+          onOpen={() => {
+            // Scroll to RSVP section
+            const rsvpSection = document.getElementById('rsvp-section');
+            if (rsvpSection) {
+              rsvpSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }} 
+        />
         <CoupleBoardingPass couple={data.couple} />
         <EventBoardingPass data={data} />
         <StoryBoardingPass data={data} />

@@ -71,7 +71,7 @@ export default function RSVPBoardingPass({ guestName = '' }: RSVPBoardingPassPro
   };
 
   return (
-    <section className="relative py-20 px-4 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
+    <section id="rsvp-section" className="relative py-20 px-4 bg-gradient-to-b from-white to-slate-50 overflow-hidden scroll-mt-20">
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-20 h-20 opacity-5">
         <Luggage className="w-full h-full" />
