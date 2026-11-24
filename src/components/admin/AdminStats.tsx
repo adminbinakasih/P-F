@@ -68,14 +68,14 @@ export default function AdminStats() {
             Dashboard
           </h1>
           <p className="text-[#6B5040] text-xs font-medium" style={{ fontFamily: 'var(--font-poppins)' }}>
-            Undangan Pernikahan Elianser & Esra — 15 Juni 2026
+            Undangan Pernikahan Elianser & Esra — 12 Desember 2026
           </p>
         </div>
         <div className="flex items-center gap-3">
           <button onClick={fetchData} className="text-[#8A7560] hover:text-[#3D2E1E] transition-colors p-2" title="Refresh">
             <RefreshCw size={15} className={loading ? 'animate-spin' : ''} />
           </button>
-          <Link href="/invite/Elianser-Esra" target="_blank"
+          <Link href="/invite/elianser-esra" target="_blank"
             className="inline-flex items-center gap-2 px-4 py-2 bg-[#3D2E1E] text-[#F5F0E8] text-xs font-bold tracking-wider uppercase hover:bg-[#1A1410] transition-colors"
             style={{ fontFamily: 'var(--font-poppins)' }}>
             <Eye size={12} />Lihat Undangan
