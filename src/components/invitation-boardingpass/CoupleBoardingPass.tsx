@@ -74,18 +74,18 @@ function PassengerCard({ number, role, person, side }: PassengerCardProps) {
         </div>
       </div>
 
-      {/* Body - Photo & Info */}
-      <div className="p-6">
+      {/* Body - Photo & Info Side by Side */}
+      <div className="p-6 flex flex-col md:flex-row gap-6">
         
-        {/* Photo */}
-        <div className="relative mb-6 group">
+        {/* Photo - Left Side */}
+        <div className="relative group md:w-1/2">
           <div className={`relative w-full aspect-[3/4] overflow-hidden ${side === 'left' ? 'clip-passport-left' : 'clip-passport-right'}`} style={{ background: '#E8DED2' }}>
             <Image 
               src={person.photo} 
               alt={person.fullName} 
               fill 
               className="object-cover object-top transition-transform duration-700 group-hover:scale-105" 
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 25vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </div>
@@ -96,8 +96,8 @@ function PassengerCard({ number, role, person, side }: PassengerCardProps) {
           </div>
         </div>
 
-        {/* Passenger Details */}
-        <div className="space-y-4">
+        {/* Passenger Details - Right Side */}
+        <div className="space-y-4 md:w-1/2 flex flex-col justify-center">
           
           {/* Full Name */}
           <div>
@@ -144,15 +144,6 @@ function PassengerCard({ number, role, person, side }: PassengerCardProps) {
                   <span className="text-xl">📷</span>
                 </a>
               </div>
-            </div>
-          )}
-
-          {/* Bio */}
-          {person.bio && (
-            <div className="pt-2">
-              <p className="text-sm text-[#5A4A42] italic leading-relaxed" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                "{person.bio}"
-              </p>
             </div>
           )}
         </div>
