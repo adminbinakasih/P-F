@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Luggage, Users, MessageSquare, Check, Loader2 } from 'lucide-react';
+import { MiniBarcodePattern } from './BarcodePattern';
 
 interface RSVPBoardingPassProps {
   guestName?: string;
@@ -210,15 +211,7 @@ export default function RSVPBoardingPass({ guestName = '' }: RSVPBoardingPassPro
           {/* Ticket Footer - Barcode */}
           <div className="px-8 pb-8">
             <div className="pt-6 border-t-2 border-dashed border-slate-200">
-              <div className="flex justify-center gap-[2px] h-12 items-end">
-                {[...Array(40)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="w-1 bg-slate-800"
-                    style={{ height: `${Math.random() * 60 + 40}%` }}
-                  ></div>
-                ))}
-              </div>
+              <MiniBarcodePattern text={`RSVP-CONFIRMATION-${new Date().getFullYear()}`} barCount={40} />
               <p className="text-center text-xs text-slate-500 mt-2 font-mono">
                 RSVP-CONFIRMATION-{new Date().getFullYear()}
               </p>

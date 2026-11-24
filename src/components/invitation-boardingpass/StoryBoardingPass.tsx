@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Heart, MapPin, Calendar } from 'lucide-react';
 import { InvitationData } from '@/lib/types';
+import { MiniBarcodePattern } from './BarcodePattern';
 
 interface StoryBoardingPassProps {
   data: InvitationData;
@@ -112,15 +113,7 @@ export default function StoryBoardingPass({ data }: StoryBoardingPassProps) {
 
                         {/* Mini Barcode */}
                         <div className="pt-3 border-t border-slate-100">
-                          <div className="flex gap-[1px] h-8 items-end">
-                            {[...Array(20)].map((_, i) => (
-                              <div
-                                key={i}
-                                className="w-1 bg-slate-300"
-                                style={{ height: `${Math.random() * 60 + 40}%` }}
-                              ></div>
-                            ))}
-                          </div>
+                          <MiniBarcodePattern text={`STORY-${index + 1}`} barCount={20} />
                         </div>
                       </div>
                     </div>

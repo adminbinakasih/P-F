@@ -3,6 +3,7 @@
 import React from 'react';
 import { Calendar, Clock, MapPin, Plane } from 'lucide-react';
 import { InvitationData } from '@/lib/types';
+import { MiniBarcodePattern } from './BarcodePattern';
 
 interface EventBoardingPassProps {
   data: InvitationData;
@@ -116,15 +117,7 @@ export default function EventBoardingPass({ data }: EventBoardingPassProps) {
 
               {/* Barcode */}
               <div className="pt-4 border-t border-slate-200">
-                <div className="flex justify-center gap-[2px] h-16 items-end">
-                  {[...Array(30)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-1 bg-slate-800"
-                      style={{ height: `${Math.random() * 60 + 40}%` }}
-                    ></div>
-                  ))}
-                </div>
+                <MiniBarcodePattern text={`HOLY-MATRIMONY-${venueDate.getFullYear()}`} />
                 <p className="text-center text-xs text-slate-500 mt-2 font-mono">
                   HOLY-MATRIMONY-{venueDate.getFullYear()}
                 </p>
@@ -199,15 +192,7 @@ export default function EventBoardingPass({ data }: EventBoardingPassProps) {
 
               {/* Barcode */}
               <div className="pt-4 border-t border-slate-200">
-                <div className="flex justify-center gap-[2px] h-16 items-end">
-                  {[...Array(30)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-1 bg-slate-800"
-                      style={{ height: `${Math.random() * 60 + 40}%` }}
-                    ></div>
-                  ))}
-                </div>
+                <MiniBarcodePattern text={`RECEPTION-${receptionDate.getFullYear()}`} />
                 <p className="text-center text-xs text-slate-500 mt-2 font-mono">
                   RECEPTION-{receptionDate.getFullYear()}
                 </p>

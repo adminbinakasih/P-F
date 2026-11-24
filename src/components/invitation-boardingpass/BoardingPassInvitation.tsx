@@ -10,6 +10,7 @@ import GalleryBoardingPass from './GalleryBoardingPass';
 import RSVPBoardingPass from './RSVPBoardingPass';
 import GiftBoardingPass from './GiftBoardingPass';
 import FooterBoardingPass from './FooterBoardingPass';
+import BarcodePattern from './BarcodePattern';
 
 interface BoardingPassInvitationProps {
   data: InvitationData;
@@ -128,20 +129,10 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
               </button>
 
               {/* Barcode */}
-              <div className="pt-4">
-                <div className="flex justify-center gap-[2px] h-16 items-end">
-                  {[...Array(30)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-1 bg-slate-800"
-                      style={{ height: `${Math.random() * 60 + 40}%` }}
-                    ></div>
-                  ))}
-                </div>
-                <p className="text-center text-xs text-slate-500 mt-2 font-mono">
-                  INV-{data.couple.groom.name.toUpperCase()}-{data.couple.bride.name.toUpperCase()}-2026
-                </p>
-              </div>
+              <BarcodePattern 
+                text={`INV-${data.couple.groom.name.toUpperCase()}-${data.couple.bride.name.toUpperCase()}-2026`}
+                className="pt-4"
+              />
             </div>
 
             {/* Ticket Footer */}

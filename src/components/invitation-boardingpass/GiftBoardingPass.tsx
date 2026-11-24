@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Gift, CreditCard, Copy, Check, Wallet } from 'lucide-react';
 import { InvitationData } from '@/lib/types';
+import { MiniBarcodePattern } from './BarcodePattern';
 
 interface GiftBoardingPassProps {
   data: InvitationData;
@@ -144,15 +145,7 @@ export default function GiftBoardingPass({ data }: GiftBoardingPassProps) {
 
                 {/* Mini Barcode */}
                 <div className="pt-3 border-t border-slate-200">
-                  <div className="flex justify-center gap-[2px] h-10 items-end">
-                    {[...Array(25)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="w-1 bg-slate-700"
-                        style={{ height: `${Math.random() * 60 + 40}%` }}
-                      ></div>
-                    ))}
-                  </div>
+                  <MiniBarcodePattern text={`GIFT-${account.accountNumber.slice(-4)}`} barCount={25} />
                   <p className="text-center text-xs text-slate-500 mt-1 font-mono">
                     GIFT-{account.accountNumber.slice(-4)}
                   </p>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Heart, MessageCircle, Mail } from 'lucide-react';
+import BarcodePattern from './BarcodePattern';
 
 export default function FooterBoardingPass() {
   const currentYear = new Date().getFullYear();
@@ -97,11 +98,11 @@ export default function FooterBoardingPass() {
           <div className="flex justify-center">
             <div className="space-y-2">
               <div className="flex justify-center gap-[2px] h-16 items-end">
-                {[...Array(40)].map((_, i) => (
+                {[85, 65, 95, 70, 55, 90, 75, 60, 80, 50, 92, 68, 78, 63, 88, 72, 58, 82, 67, 93, 77, 62, 87, 73, 83, 69, 91, 66, 79, 74, 86, 71, 94, 64, 89, 76, 61, 81, 70, 84].map((height, i) => (
                   <div
                     key={i}
                     className="w-1 bg-white/70"
-                    style={{ height: `${Math.random() * 60 + 40}%` }}
+                    style={{ height: `${height}%` }}
                   ></div>
                 ))}
               </div>
