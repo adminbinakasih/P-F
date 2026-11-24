@@ -10,23 +10,11 @@ interface EventBoardingPassProps {
 }
 
 export default function EventBoardingPass({ data }: EventBoardingPassProps) {
-  const { venue, reception } = data.couple;
-  
-  // Format dates - use weddingDate as fallback
-  const venueDate = venue.date ? new Date(venue.date) : new Date(data.couple.weddingDate);
-  const receptionDate = reception.date ? new Date(reception.date) : new Date(data.couple.weddingDate);
-  
-  const formatDate = (date: Date) => {
-    return date.toLocaleDateString('id-ID', { 
-      weekday: 'long', 
-      day: 'numeric', 
-      month: 'long', 
-      year: 'numeric' 
-    });
-  };
+  const { venue, reception, weddingDate } = data.couple;
   
   const formatTime = (time: string) => {
-    return time.replace('.', ':');
+    // Extract just the time part (e.g., "09.00 WIB - Selesai" -> "09.00 WIB - Selesai")
+    return time;
   };
 
   return (
@@ -84,14 +72,14 @@ export default function EventBoardingPass({ data }: EventBoardingPassProps) {
                     <Calendar className="w-4 h-4" />
                     <span>Departure Date</span>
                   </div>
-                  <p className="font-semibold text-slate-800">{formatDate(venueDate)}</p>
+                  <p className="font-semibold text-slate-800">{venue.date}</p>
                 </div>
                 <div className="space-y-1">
                   <div className="flex items-center gap-2 text-xs text-slate-500 uppercase">
                     <Clock className="w-4 h-4" />
                     <span>Boarding Time</span>
                   </div>
-                  <p className="font-semibold text-slate-800">{formatTime(venue.time)} WIB</p>
+                  <p className="font-semibold text-slate-800">{venue.time}</p>
                 </div>
               </div>
 
@@ -117,9 +105,9 @@ export default function EventBoardingPass({ data }: EventBoardingPassProps) {
 
               {/* Barcode */}
               <div className="pt-4 border-t border-slate-200">
-                <MiniBarcodePattern text={`HOLY-MATRIMONY-${venueDate.getFullYear()}`} />
+                <MiniBarcodePattern text={`HOLY-MATRIMONY-2026`} />
                 <p className="text-center text-xs text-slate-500 mt-2 font-mono">
-                  HOLY-MATRIMONY-{venueDate.getFullYear()}
+                  HOLY-MATRIMONY-2026
                 </p>
               </div>
             </div>
@@ -159,14 +147,14 @@ export default function EventBoardingPass({ data }: EventBoardingPassProps) {
                     <Calendar className="w-4 h-4" />
                     <span>Departure Date</span>
                   </div>
-                  <p className="font-semibold text-slate-800">{formatDate(receptionDate)}</p>
+                  <p className="font-semibold text-slate-800">{reception.date}</p>
                 </div>
                 <div className="space-y-1">
                   <div className="flex items-center gap-2 text-xs text-slate-500 uppercase">
                     <Clock className="w-4 h-4" />
                     <span>Boarding Time</span>
                   </div>
-                  <p className="font-semibold text-slate-800">{formatTime(reception.time)} WIB</p>
+                  <p className="font-semibold text-slate-800">{reception.time}</p>
                 </div>
               </div>
 
@@ -192,9 +180,9 @@ export default function EventBoardingPass({ data }: EventBoardingPassProps) {
 
               {/* Barcode */}
               <div className="pt-4 border-t border-slate-200">
-                <MiniBarcodePattern text={`RECEPTION-${receptionDate.getFullYear()}`} />
+                <MiniBarcodePattern text={`RECEPTION-2026`} />
                 <p className="text-center text-xs text-slate-500 mt-2 font-mono">
-                  RECEPTION-{receptionDate.getFullYear()}
+                  RECEPTION-2026
                 </p>
               </div>
             </div>
