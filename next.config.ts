@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
   },
+  // Disable caching for all pages
+  generateBuildId: async () => {
+    // Use timestamp to force new build ID every deployment
+    return `build-${Date.now()}`
+  },
 }
 
 export default nextConfig
