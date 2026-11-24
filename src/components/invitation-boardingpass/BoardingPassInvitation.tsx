@@ -182,7 +182,7 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
       {/* Background Music */}
       <audio
         id="wedding-music"
-        src="/Si Rokkap Ni Tondi.mp3"
+        src="/si-rokkap-ni-tondi.mp3"
         loop
         preload="auto"
       />
