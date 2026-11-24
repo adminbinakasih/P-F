@@ -76,12 +76,19 @@ export default function GiftBoardingPass({ data }: GiftBoardingPassProps) {
                     : account.name.toLowerCase().includes('dana')
                     ? 'url(/bank/dana.jpeg?v=2)'
                     : 'linear-gradient(135deg, #D4AF37 0%, #AA8C30 100%)',
-                  backgroundSize: 'cover',
+                  backgroundSize: 'contain',
                   backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat'
+                  backgroundRepeat: 'no-repeat',
+                  backgroundColor: account.name.toLowerCase().includes('mandiri')
+                    ? '#003d6a'
+                    : account.name.toLowerCase().includes('bca')
+                    ? '#003d82'
+                    : account.name.toLowerCase().includes('dana')
+                    ? '#118eea'
+                    : '#D4AF37'
                 }}>
-                {/* Dark overlay for better text readability */}
-                <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/50"></div>
+                {/* Dark overlay for better text readability - reduced opacity */}
+                <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/30"></div>
                 
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-6">
