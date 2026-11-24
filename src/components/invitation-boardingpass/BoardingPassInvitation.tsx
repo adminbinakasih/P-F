@@ -89,14 +89,15 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
               {/* Couple Names */}
               <div className="text-center space-y-2">
                 <p className="text-xs text-slate-500 uppercase tracking-widest">The Wedding of</p>
-                <h1 className="text-2xl sm:text-3xl font-serif font-bold text-slate-800 leading-tight">
-                  {data.couple.groom.name} & {data.couple.bride.name}
+                <h1 className="text-lg sm:text-xl font-serif font-bold text-slate-800 leading-tight px-2">
+                  {data.couple.groom.fullName}
                 </h1>
-                <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-600">
-                  <span className="font-mono">{data.couple.groom.fullName.split(' ')[0]}</span>
-                  <span className="text-rose-gold">❤️</span>
-                  <span className="font-mono">{data.couple.bride.fullName.split(' ')[0]}</span>
+                <div className="flex items-center justify-center">
+                  <span className="text-rose-gold text-xl">❤️</span>
                 </div>
+                <h1 className="text-lg sm:text-xl font-serif font-bold text-slate-800 leading-tight px-2">
+                  {data.couple.bride.fullName}
+                </h1>
               </div>
 
               {/* Flight Details */}

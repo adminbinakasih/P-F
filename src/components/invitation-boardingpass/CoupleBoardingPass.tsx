@@ -101,11 +101,8 @@ function PassengerCard({ number, role, person, side }: PassengerCardProps) {
           
           {/* Full Name */}
           <div>
-            <p className="text-xs text-[#8B7355] tracking-[0.2em] uppercase mb-1 font-bold">Full Name</p>
-            <p className="text-2xl md:text-3xl text-[#2C2416] font-bold leading-tight" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic' }}>
-              {person.name}
-            </p>
-            <p className="text-sm text-[#5A4A42] mt-1 font-semibold" style={{ fontFamily: 'var(--font-poppins)' }}>
+            <p className="text-xs text-[#8B7355] tracking-[0.2em] uppercase mb-2 font-bold">Full Name</p>
+            <p className="text-xl md:text-2xl text-[#2C2416] font-bold leading-tight" style={{ fontFamily: 'var(--font-poppins)' }}>
               {person.fullName}
             </p>
           </div>
