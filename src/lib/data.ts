@@ -42,7 +42,7 @@ export const elianserEsraData: InvitationData = {
       address: 'WISMA ADAT HKBP CINTA DAMAI, Jl. Pantai Timur, Medan',
       city: 'Medan',
       mapsUrl: 'https://maps.app.goo.gl/zfnB6pgRwwohyor28',
-      date: 'Sabtu, 13 Desember 2026',
+      date: 'Jumat, 12 Desember 2026',
       time: '12.00 WIB - Selesai',
       dresscode: 'Adat Batak',
     },

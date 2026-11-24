@@ -202,7 +202,7 @@ export default function AdminStats() {
             { label: 'Pengantin Pria', value: 'Elianser Sihombing, S.S.I' },
             { label: 'Pengantin Wanita', value: 'Esra Putri Udur Parhusip, S.Tr.Par' },
             { label: 'Pemberkatan', value: 'Jumat, 12 Desember 2026 — 09.00 WIB' },
-            { label: 'Resepsi & Adat', value: 'Sabtu, 13 Desember 2026 — 12.00 WIB' },
+            { label: 'Resepsi & Adat', value: 'Jumat, 12 Desember 2026 — 12.00 WIB' },
           ].map((item) => (
             <div key={item.label} className="p-3 bg-[#F5F0E8] rounded-sm border border-gold/30">
               <p className="text-[#8A7560] text-[10px] uppercase tracking-wider mb-1 font-bold">{item.label}</p>
