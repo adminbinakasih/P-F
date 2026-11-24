@@ -52,11 +52,14 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
         {/* Boarding Pass Cover */}
         <div className="max-w-md w-full">
           {/* Ticket Design */}
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-slate-200">
+          <div className="bg-white rounded-3xl shadow-2xl border-4 border-slate-200 overflow-visible">
             {/* Ticket Header - Gold Band */}
-            <div className="bg-gradient-to-r from-rose-gold via-gold to-amber-500 px-4 py-6 sm:px-6 text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-12 -mt-12"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-8 -mb-8"></div>
+            <div className="bg-gradient-to-r from-rose-gold via-gold to-amber-500 px-4 py-6 sm:px-6 text-white relative rounded-t-3xl">
+              {/* Background decorations only - no overflow */}
+              <div className="absolute inset-0 opacity-20 overflow-hidden rounded-t-3xl">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full transform translate-x-8 -translate-y-8"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white rounded-full transform -translate-x-6 translate-y-6"></div>
+              </div>
               <div className="relative z-10 text-center">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <span className="text-xs font-mono opacity-80">FLIGHT-INV-2026</span>
@@ -71,7 +74,7 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
             </div>
 
             {/* Perforation Line */}
-            <div className="relative h-6 bg-white">
+            <div className="relative h-6 bg-white overflow-hidden">
               <div className="absolute inset-0 flex justify-between px-3">
                 {[...Array(18)].map((_, i) => (
                   <div key={i} className="w-1 h-full bg-slate-200"></div>
@@ -136,7 +139,7 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
             </div>
 
             {/* Ticket Footer */}
-            <div className="bg-slate-100 px-6 sm:px-8 py-4 text-center border-t-2 border-dashed border-slate-300">
+            <div className="bg-slate-100 px-6 sm:px-8 py-4 text-center border-t-2 border-dashed border-slate-300 rounded-b-3xl">
               <p className="text-xs text-slate-600">
                 Please keep this boarding pass until the end of the journey
               </p>
