@@ -21,7 +21,7 @@ export const elianserEsraData: InvitationData = {
       fullName: 'Esra Putri Udur Parhusip, S.Tr.Par',
       photo: '/prawedd/WhatsApp Image 2026-11-19 at 09.31.36.jpeg',
       father: 'Bapak T. Parhusip, S.KP',
-      mother: 'Ibu Br. T. Br. Situmorang',
+      mother: 'Ibu Br. Simanjuntak',
       instagram: '@esraputri',
       bio: 'Seorang wanita yang menemukan keindahan hidup dalam setiap momen bersama orang-orang tercinta.',
     },
