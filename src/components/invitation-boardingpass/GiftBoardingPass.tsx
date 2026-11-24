@@ -66,19 +66,21 @@ export default function GiftBoardingPass({ data }: GiftBoardingPassProps) {
               key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-slate-100 hover:shadow-2xl transition-all duration-300"
             >
-              {/* Card Header - Like Credit Card Top */}
-              <div className={`p-6 bg-gradient-to-br ${
-                account.name.toLowerCase().includes('mandiri')
-                  ? 'from-yellow-500 to-yellow-600'
-                  : account.name.toLowerCase().includes('bca')
-                  ? 'from-blue-500 to-blue-600'
-                  : account.name.toLowerCase().includes('dana')
-                  ? 'from-cyan-500 to-blue-500'
-                  : 'from-rose-gold to-gold'
-              } text-white relative overflow-hidden`}>
-                {/* Decorative circles */}
-                <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mt-12"></div>
-                <div className="absolute bottom-0 left-0 w-20 h-20 bg-white/10 rounded-full -ml-10 -mb-10"></div>
+              {/* Card Header - Like Credit Card Top with Bank Logo Background */}
+              <div className={`p-6 relative overflow-hidden text-white min-h-[200px] flex flex-col justify-between`}
+                style={{
+                  backgroundImage: account.name.toLowerCase().includes('mandiri')
+                    ? 'url(/bank/mandiri.jpeg)'
+                    : account.name.toLowerCase().includes('bca')
+                    ? 'url(/bank/bca.jpeg)'
+                    : account.name.toLowerCase().includes('dana')
+                    ? 'url(/bank/dana.jpeg)'
+                    : 'linear-gradient(135deg, #D4AF37 0%, #AA8C30 100%)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}>
+                {/* Dark overlay for better text readability */}
+                <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/50"></div>
                 
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-6">
@@ -89,14 +91,14 @@ export default function GiftBoardingPass({ data }: GiftBoardingPassProps) {
                   </div>
                   
                   {/* Account Number - Credit Card Style */}
-                  <div className="font-mono text-2xl tracking-wider mb-4 font-bold">
+                  <div className="font-mono text-2xl tracking-wider mb-4 font-bold drop-shadow-lg">
                     {account.accountNumber.match(/.{1,4}/g)?.join(' ') || account.accountNumber}
                   </div>
                   
                   {/* Account Holder Name */}
                   <div className="space-y-1">
-                    <p className="text-xs opacity-80 uppercase tracking-wide">Account Holder</p>
-                    <p className="font-semibold text-lg">{account.accountName}</p>
+                    <p className="text-xs opacity-90 uppercase tracking-wide">Account Holder</p>
+                    <p className="font-semibold text-lg drop-shadow-lg">{account.accountName}</p>
                   </div>
                 </div>
               </div>
