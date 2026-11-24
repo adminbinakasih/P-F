@@ -48,19 +48,19 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
 
   if (!isOpen) {
     return (
-      <div className="fixed inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 flex items-center justify-center p-4 z-50">
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 flex items-center justify-center p-4 z-50 overflow-y-auto">
         {/* Boarding Pass Cover */}
-        <div className="max-w-md w-full">
+        <div className="max-w-md w-full my-auto">
           {/* Ticket Design */}
-          <div className="bg-white rounded-3xl shadow-2xl border-4 border-slate-200 overflow-visible">
+          <div className="bg-white rounded-2xl shadow-2xl border-4 border-slate-200">
             {/* Ticket Header - Gold Band */}
-            <div className="bg-gradient-to-r from-rose-gold via-gold to-amber-500 px-4 py-6 sm:px-6 text-white relative rounded-t-3xl">
-              {/* Background decorations only - no overflow */}
-              <div className="absolute inset-0 opacity-20 overflow-hidden rounded-t-3xl">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full transform translate-x-8 -translate-y-8"></div>
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white rounded-full transform -translate-x-6 translate-y-6"></div>
+            <div className="bg-gradient-to-r from-rose-gold via-gold to-amber-500 px-4 py-8 sm:px-6 text-white relative rounded-t-2xl">
+              {/* Background decorations only */}
+              <div className="absolute inset-0 opacity-10 overflow-hidden rounded-t-2xl pointer-events-none">
+                <div className="absolute top-4 right-4 w-24 h-24 bg-white rounded-full"></div>
+                <div className="absolute bottom-4 left-4 w-20 h-20 bg-white rounded-full"></div>
               </div>
-              <div className="relative z-10 text-center">
+              <div className="relative z-10 text-center space-y-2">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <span className="text-xs font-mono opacity-80">FLIGHT-INV-2026</span>
                 </div>
@@ -139,7 +139,7 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
             </div>
 
             {/* Ticket Footer */}
-            <div className="bg-slate-100 px-6 sm:px-8 py-4 text-center border-t-2 border-dashed border-slate-300 rounded-b-3xl">
+            <div className="bg-slate-100 px-6 sm:px-8 py-4 text-center border-t-2 border-dashed border-slate-300 rounded-b-2xl">
               <p className="text-xs text-slate-600">
                 Please keep this boarding pass until the end of the journey
               </p>
