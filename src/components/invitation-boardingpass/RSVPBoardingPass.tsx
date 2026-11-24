@@ -22,16 +22,45 @@ export default function RSVPBoardingPass({ guestName = '' }: RSVPBoardingPassPro
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch('/api/rsvp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          attendance: formData.attendance,
+          guestCount: parseInt(formData.guestCount),
+          message: formData.message,
+          invitationSlug: 'elianser-esra',
+        }),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      const result = await response.json();
 
-    // Reset after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-    }, 3000);
+      if (result.success) {
+        setIsSubmitted(true);
+        // Reset after 3 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          // Reset form
+          setFormData({
+            name: guestName,
+            attendance: '',
+            guestCount: '1',
+            message: ''
+          });
+        }, 3000);
+      } else {
+        alert('Gagal mengirim konfirmasi. Silakan coba lagi.');
+      }
+    } catch (error) {
+      console.error('RSVP submission error:', error);
+      alert('Terjadi kesalahan. Silakan coba lagi.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
