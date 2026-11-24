@@ -63,7 +63,7 @@ export const elianserEsraData: InvitationData = {
         date: '12 Desember 2026',
         title: 'Hari yang Dinantikan',
         description: 'Hari ini, di hadapan Tuhan, keluarga, dan orang-orang terkasih — kami mengucapkan janji suci untuk selamanya.',
-        image: '/prawedd/3.JPG',
+        image: '/prawedd/3.jpeg',
       },
     ],
   },
