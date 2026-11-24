@@ -54,18 +54,18 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
           {/* Ticket Design */}
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-slate-200">
             {/* Ticket Header - Gold Band */}
-            <div className="bg-gradient-to-r from-rose-gold via-gold to-amber-500 p-6 text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+            <div className="bg-gradient-to-r from-rose-gold via-gold to-amber-500 px-4 py-6 sm:px-6 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-12 -mt-12"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-8 -mb-8"></div>
               <div className="relative z-10 text-center">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <span className="text-xs font-mono opacity-80">FLIGHT-INV-2026</span>
                 </div>
-                <h3 className="text-2xl font-bold uppercase tracking-wider">Wedding Invitation</h3>
+                <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wider">Wedding Invitation</h3>
                 <div className="flex items-center justify-center gap-2 mt-2">
-                  <span className="text-2xl">✈️</span>
-                  <span className="text-sm">Boarding Pass</span>
-                  <span className="text-2xl">🎫</span>
+                  <span className="text-xl sm:text-2xl">✈️</span>
+                  <span className="text-xs sm:text-sm">Boarding Pass</span>
+                  <span className="text-xl sm:text-2xl">🎫</span>
                 </div>
               </div>
             </div>
@@ -82,14 +82,14 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
             </div>
 
             {/* Ticket Body */}
-            <div className="p-8 space-y-6">
+            <div className="p-6 sm:p-8 space-y-6">
               {/* Couple Names */}
               <div className="text-center space-y-2">
                 <p className="text-xs text-slate-500 uppercase tracking-widest">The Wedding of</p>
-                <h1 className="text-3xl font-serif font-bold text-slate-800">
+                <h1 className="text-2xl sm:text-3xl font-serif font-bold text-slate-800 leading-tight">
                   {data.couple.groom.name} & {data.couple.bride.name}
                 </h1>
-                <div className="flex items-center justify-center gap-2 text-sm text-slate-600">
+                <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-600">
                   <span className="font-mono">{data.couple.groom.fullName.split(' ')[0]}</span>
                   <span className="text-rose-gold">❤️</span>
                   <span className="font-mono">{data.couple.bride.fullName.split(' ')[0]}</span>
@@ -136,7 +136,7 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
             </div>
 
             {/* Ticket Footer */}
-            <div className="bg-slate-100 px-8 py-4 text-center border-t-2 border-dashed border-slate-300">
+            <div className="bg-slate-100 px-6 sm:px-8 py-4 text-center border-t-2 border-dashed border-slate-300">
               <p className="text-xs text-slate-600">
                 Please keep this boarding pass until the end of the journey
               </p>
