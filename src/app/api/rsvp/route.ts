@@ -5,7 +5,7 @@ import { supabase } from '@/lib/supabase'
 const rsvpSchema = z.object({
   name: z.string().min(2),
   phone: z.string().optional(),
-  attendance: z.enum(['hadir', 'tidak_hadir', 'mungkin']),
+  attendance: z.enum(['hadir', 'tidak-hadir', 'mungkin']),
   guestCount: z.number().min(1).max(10),
   message: z.string().optional(),
   invitationSlug: z.string(),
