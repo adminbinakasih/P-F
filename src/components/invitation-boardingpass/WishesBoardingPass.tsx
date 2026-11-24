@@ -10,20 +10,44 @@ export default function WishesBoardingPass() {
 
   useEffect(() => {
     fetchWishes();
+    
+    // Listen for localStorage updates
+    const handleWishesUpdate = () => {
+      const localWishes = JSON.parse(localStorage.getItem('wedding-wishes') || '[]');
+      setWishes(localWishes);
+    };
+    
+    window.addEventListener('wishes-updated', handleWishesUpdate);
+    
     // Refresh wishes every 30 seconds
     const interval = setInterval(fetchWishes, 30000);
-    return () => clearInterval(interval);
+    
+    return () => {
+      window.removeEventListener('wishes-updated', handleWishesUpdate);
+      clearInterval(interval);
+    };
   }, []);
 
   const fetchWishes = async () => {
     try {
+      // First, load from localStorage
+      const localWishes = JSON.parse(localStorage.getItem('wedding-wishes') || '[]');
+      setWishes(localWishes);
+      
+      // Then try to fetch from API (optional, may fail)
       const response = await fetch('/api/wishes?slug=elianser-esra');
       const data = await response.json();
-      if (data.success) {
-        setWishes(data.wishes || []);
+      if (data.success && data.wishes && data.wishes.length > 0) {
+        // Merge with local wishes (deduplicate by message)
+        const allWishes = [...localWishes, ...data.wishes];
+        const unique = allWishes.filter((wish, index, self) => 
+          index === self.findIndex(w => w.message === wish.message && w.name === wish.name)
+        );
+        setWishes(unique);
       }
     } catch (error) {
       console.error('Failed to fetch wishes:', error);
+      // Keep localStorage wishes if API fails
     } finally {
       setLoading(false);
     }

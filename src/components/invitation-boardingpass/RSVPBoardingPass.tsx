@@ -44,12 +44,26 @@ export default function RSVPBoardingPass({ guestName = '' }: RSVPBoardingPassPro
       const result = await response.json();
       console.log('RSVP response:', result);
 
-      if (result.success) {
+      if (response.ok && result.success) {
         setIsSubmitted(true);
+        
+        // Save to localStorage as backup
+        const wishes = JSON.parse(localStorage.getItem('wedding-wishes') || '[]');
+        wishes.push({
+          id: Date.now(),
+          name: formData.name,
+          message: formData.message,
+          attendance: formData.attendance,
+          createdAt: new Date().toISOString()
+        });
+        localStorage.setItem('wedding-wishes', JSON.stringify(wishes));
+        
+        // Trigger wishes refresh
+        window.dispatchEvent(new Event('wishes-updated'));
+        
         // Reset after 3 seconds
         setTimeout(() => {
           setIsSubmitted(false);
-          // Reset form
           setFormData({
             name: guestName,
             attendance: '',
@@ -63,7 +77,33 @@ export default function RSVPBoardingPass({ guestName = '' }: RSVPBoardingPassPro
       }
     } catch (error) {
       console.error('RSVP submission error:', error);
-      alert('Terjadi kesalahan. Silakan coba lagi.');
+      
+      // Fallback: save to localStorage only
+      if (formData.message) {
+        const wishes = JSON.parse(localStorage.getItem('wedding-wishes') || '[]');
+        wishes.push({
+          id: Date.now(),
+          name: formData.name,
+          message: formData.message,
+          attendance: formData.attendance,
+          createdAt: new Date().toISOString()
+        });
+        localStorage.setItem('wedding-wishes', JSON.stringify(wishes));
+        window.dispatchEvent(new Event('wishes-updated'));
+        
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({
+            name: guestName,
+            attendance: '',
+            guestCount: '1',
+            message: ''
+          });
+        }, 3000);
+      } else {
+        alert('Terjadi kesalahan. Silakan coba lagi.');
+      }
     } finally {
       setIsSubmitting(false);
     }
