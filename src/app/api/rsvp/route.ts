@@ -36,11 +36,11 @@ export async function POST(request: NextRequest) {
     return Response.json({ success: true, message: 'RSVP berhasil dikirim' })
   } catch (error) {
     if (error instanceof z.ZodError) {
-      console.error('Validation error:', error.errors)
+      console.error('Validation error:', error.issues)
       return Response.json({ 
         success: false, 
         message: 'Data tidak valid', 
-        errors: error.errors 
+        errors: error.issues 
       }, { status: 400 })
     }
     console.error('RSVP POST error:', error)
