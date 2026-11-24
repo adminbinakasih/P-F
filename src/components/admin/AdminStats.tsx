@@ -199,10 +199,10 @@ export default function AdminStats() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: 'Pengantin Pria', value: 'Elianser Nero Ginting Suka' },
-            { label: 'Pengantin Wanita', value: 'Esra Br. Surbakti' },
-            { label: 'Pemberkatan', value: 'Senin, 15 Juni 2026 — 15.00 WIB' },
-            { label: 'Pesta Adat', value: 'Selasa, 16 Juni 2026 — 08.00 WIB' },
+            { label: 'Pengantin Pria', value: 'Elianser Sihombing, S.S.I' },
+            { label: 'Pengantin Wanita', value: 'Esra Putri Udur Parhusip, S.Tr.Par' },
+            { label: 'Pemberkatan', value: 'Jumat, 12 Desember 2026 — 09.00 WIB' },
+            { label: 'Resepsi & Adat', value: 'Sabtu, 13 Desember 2026 — 12.00 WIB' },
           ].map((item) => (
             <div key={item.label} className="p-3 bg-[#F5F0E8] rounded-sm border border-gold/30">
               <p className="text-[#8A7560] text-[10px] uppercase tracking-wider mb-1 font-bold">{item.label}</p>
