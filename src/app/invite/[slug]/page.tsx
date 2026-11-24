@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import { getInvitationBySlug } from '@/lib/data'
 import { BoardingPassInvitation } from '@/components/invitation-boardingpass'
 
+// Force dynamic rendering to prevent aggressive caching
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 interface Props {
   params: Promise<{ slug: string }>
 }
