@@ -74,6 +74,11 @@ export default function GalleryBoardingPass({ data }: GalleryBoardingPassProps) 
                 fill
                 className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
                 sizes="(max-width: 768px) 50vw, 25vw"
+                onError={(e) => {
+                  // Hide broken images
+                  const target = e.currentTarget as HTMLImageElement;
+                  target.style.display = 'none';
+                }}
               />
               
               {/* Overlay on Hover */}
