@@ -37,13 +37,34 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
   const handleOpen = () => {
     setIsOpen(true);
     
-    // Try to play music
-    const audio = document.getElementById('wedding-music') as HTMLAudioElement;
-    if (audio) {
-      audio.play()
-        .then(() => setMusicPlaying(true))
-        .catch(err => console.log('Audio play failed:', err));
-    }
+    // Play music on user interaction
+    setTimeout(() => {
+      const audio = document.getElementById('wedding-music') as HTMLAudioElement;
+      if (audio) {
+        // Set volume first
+        audio.volume = 0.5;
+        
+        // Try to play
+        const playPromise = audio.play();
+        
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              setMusicPlaying(true);
+              console.log('Music playing');
+            })
+            .catch(err => {
+              console.log('Audio play failed:', err);
+              // If failed, try with user interaction
+              document.addEventListener('click', () => {
+                audio.play()
+                  .then(() => setMusicPlaying(true))
+                  .catch(e => console.log('Retry failed:', e));
+              }, { once: true });
+            });
+        }
+      }
+    }, 100); // Small delay to ensure DOM is ready
   };
 
   if (!isOpen) {
