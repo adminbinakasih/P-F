@@ -5,5 +5,6 @@ export { default as EventBoardingPass } from './EventBoardingPass';
 export { default as StoryBoardingPass } from './StoryBoardingPass';
 export { default as GalleryBoardingPass } from './GalleryBoardingPass';
 export { default as RSVPBoardingPass } from './RSVPBoardingPass';
+export { default as WishesBoardingPass } from './WishesBoardingPass';
 export { default as GiftBoardingPass } from './GiftBoardingPass';
 export { default as FooterBoardingPass } from './FooterBoardingPass';

@@ -8,6 +8,7 @@ import EventBoardingPass from './EventBoardingPass';
 import StoryBoardingPass from './StoryBoardingPass';
 import GalleryBoardingPass from './GalleryBoardingPass';
 import RSVPBoardingPass from './RSVPBoardingPass';
+import WishesBoardingPass from './WishesBoardingPass';
 import GiftBoardingPass from './GiftBoardingPass';
 import FooterBoardingPass from './FooterBoardingPass';
 import BarcodePattern from './BarcodePattern';
@@ -205,6 +206,7 @@ export default function BoardingPassInvitation({ data, guestName }: BoardingPass
         <StoryBoardingPass data={data} />
         <GalleryBoardingPass data={data} />
         <RSVPBoardingPass guestName={guestName} />
+        <WishesBoardingPass />
         <GiftBoardingPass data={data} />
         <FooterBoardingPass />
       </div>
