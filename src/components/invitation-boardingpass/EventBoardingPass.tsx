@@ -197,8 +197,8 @@ export default function EventBoardingPass({ data }: EventBoardingPassProps) {
           </h4>
           <ul className="text-sm text-amber-800 space-y-1">
             <li>• Mohon hadir tepat waktu sesuai jadwal boarding</li>
-            <li>• Pakaian: {venue.dresscode || 'Formal/Semi Formal'}</li>
-            <li>• Protokol kesehatan tetap diterapkan</li>
+            <li>• Pakaian: Formal — Putih & Gold</li>
+            <li>• Protokol Kesehatan tetap diterapkan</li>
             <li>• Konfirmasi kehadiran melalui RSVP sangat membantu kami</li>
           </ul>
         </div>
