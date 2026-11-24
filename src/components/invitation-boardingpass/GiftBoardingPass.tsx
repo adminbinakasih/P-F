@@ -70,14 +70,15 @@ export default function GiftBoardingPass({ data }: GiftBoardingPassProps) {
               <div className={`p-6 relative overflow-hidden text-white min-h-[200px] flex flex-col justify-between`}
                 style={{
                   backgroundImage: account.name.toLowerCase().includes('mandiri')
-                    ? 'url(/bank/mandiri.jpeg)'
+                    ? 'url(/bank/mandiri.jpeg?v=2)'
                     : account.name.toLowerCase().includes('bca')
-                    ? 'url(/bank/bca.jpeg)'
+                    ? 'url(/bank/bca.jpeg?v=2)'
                     : account.name.toLowerCase().includes('dana')
-                    ? 'url(/bank/dana.jpeg)'
+                    ? 'url(/bank/dana.jpeg?v=2)'
                     : 'linear-gradient(135deg, #D4AF37 0%, #AA8C30 100%)',
                   backgroundSize: 'cover',
-                  backgroundPosition: 'center'
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
                 }}>
                 {/* Dark overlay for better text readability */}
                 <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/50"></div>
