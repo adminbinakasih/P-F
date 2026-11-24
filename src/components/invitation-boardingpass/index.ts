@@ -1,0 +1,9 @@
+export { default as BoardingPassInvitation } from './BoardingPassInvitation';
+export { default as HeroBoardingPass } from './HeroBoardingPass';
+export { default as CoupleBoardingPass } from './CoupleBoardingPass';
+export { default as EventBoardingPass } from './EventBoardingPass';
+export { default as StoryBoardingPass } from './StoryBoardingPass';
+export { default as GalleryBoardingPass } from './GalleryBoardingPass';
+export { default as RSVPBoardingPass } from './RSVPBoardingPass';
+export { default as GiftBoardingPass } from './GiftBoardingPass';
+export { default as FooterBoardingPass } from './FooterBoardingPass';

@@ -1,0 +1,211 @@
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { InvitationData } from '@/lib/types';
+import HeroBoardingPass from './HeroBoardingPass';
+import CoupleBoardingPass from './CoupleBoardingPass';
+import EventBoardingPass from './EventBoardingPass';
+import StoryBoardingPass from './StoryBoardingPass';
+import GalleryBoardingPass from './GalleryBoardingPass';
+import RSVPBoardingPass from './RSVPBoardingPass';
+import GiftBoardingPass from './GiftBoardingPass';
+import FooterBoardingPass from './FooterBoardingPass';
+
+interface BoardingPassInvitationProps {
+  data: InvitationData;
+  guestName?: string;
+}
+
+export default function BoardingPassInvitation({ data, guestName }: BoardingPassInvitationProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [musicPlaying, setMusicPlaying] = useState(false);
+
+  useEffect(() => {
+    // Prevent scrolling when invitation is not opened
+    if (!isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  const handleOpen = () => {
+    setIsOpen(true);
+    
+    // Try to play music
+    const audio = document.getElementById('wedding-music') as HTMLAudioElement;
+    if (audio) {
+      audio.play()
+        .then(() => setMusicPlaying(true))
+        .catch(err => console.log('Audio play failed:', err));
+    }
+  };
+
+  if (!isOpen) {
+    return (
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 flex items-center justify-center p-4 z-50">
+        {/* Boarding Pass Cover */}
+        <div className="max-w-md w-full">
+          {/* Ticket Design */}
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-slate-200">
+            {/* Ticket Header - Gold Band */}
+            <div className="bg-gradient-to-r from-rose-gold via-gold to-amber-500 p-6 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+              <div className="relative z-10 text-center">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <span className="text-xs font-mono opacity-80">FLIGHT-INV-2026</span>
+                </div>
+                <h3 className="text-2xl font-bold uppercase tracking-wider">Wedding Invitation</h3>
+                <div className="flex items-center justify-center gap-2 mt-2">
+                  <span className="text-2xl">✈️</span>
+                  <span className="text-sm">Boarding Pass</span>
+                  <span className="text-2xl">🎫</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Perforation Line */}
+            <div className="relative h-6 bg-white">
+              <div className="absolute inset-0 flex justify-between px-3">
+                {[...Array(18)].map((_, i) => (
+                  <div key={i} className="w-1 h-full bg-slate-200"></div>
+                ))}
+              </div>
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full -ml-3"></div>
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full -mr-3"></div>
+            </div>
+
+            {/* Ticket Body */}
+            <div className="p-8 space-y-6">
+              {/* Couple Names */}
+              <div className="text-center space-y-2">
+                <p className="text-xs text-slate-500 uppercase tracking-widest">The Wedding of</p>
+                <h1 className="text-3xl font-serif font-bold text-slate-800">
+                  {data.couple.groom.name} & {data.couple.bride.name}
+                </h1>
+                <div className="flex items-center justify-center gap-2 text-sm text-slate-600">
+                  <span className="font-mono">{data.couple.groom.fullName.split(' ')[0]}</span>
+                  <span className="text-rose-gold">❤️</span>
+                  <span className="font-mono">{data.couple.bride.fullName.split(' ')[0]}</span>
+                </div>
+              </div>
+
+              {/* Flight Details */}
+              <div className="grid grid-cols-2 gap-4 py-4 border-y border-slate-200">
+                <div className="text-center">
+                  <p className="text-xs text-slate-500 uppercase mb-1">Departure</p>
+                  <p className="text-lg font-bold text-slate-800">12</p>
+                  <p className="text-xs text-slate-600">December</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-xs text-slate-500 uppercase mb-1">Year</p>
+                  <p className="text-lg font-bold text-slate-800">2026</p>
+                  <p className="text-xs text-slate-600">Destination</p>
+                </div>
+              </div>
+
+              {/* Guest Name */}
+              {guestName && (
+                <div className="bg-slate-50 rounded-lg p-4 border-2 border-dashed border-slate-200">
+                  <p className="text-xs text-slate-500 uppercase tracking-wide mb-1">Passenger Name</p>
+                  <p className="font-semibold text-slate-800">{guestName}</p>
+                </div>
+              )}
+
+              {/* Open Button */}
+              <button
+                onClick={handleOpen}
+                className="w-full py-4 bg-gradient-to-r from-rose-gold via-gold to-amber-500 text-white rounded-xl font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+              >
+                <span>✈️</span>
+                <span>Buka Undangan</span>
+                <span>🎫</span>
+              </button>
+
+              {/* Barcode */}
+              <div className="pt-4">
+                <div className="flex justify-center gap-[2px] h-16 items-end">
+                  {[...Array(30)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="w-1 bg-slate-800"
+                      style={{ height: `${Math.random() * 60 + 40}%` }}
+                    ></div>
+                  ))}
+                </div>
+                <p className="text-center text-xs text-slate-500 mt-2 font-mono">
+                  INV-{data.couple.groom.name.toUpperCase()}-{data.couple.bride.name.toUpperCase()}-2026
+                </p>
+              </div>
+            </div>
+
+            {/* Ticket Footer */}
+            <div className="bg-slate-100 px-8 py-4 text-center border-t-2 border-dashed border-slate-300">
+              <p className="text-xs text-slate-600">
+                Please keep this boarding pass until the end of the journey
+              </p>
+            </div>
+          </div>
+
+          {/* Bottom Note */}
+          <p className="text-center text-white/70 text-sm mt-6">
+            Tap the button above to view your invitation
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      {/* Background Music */}
+      <audio
+        id="wedding-music"
+        src="/musik.mp3"
+        loop
+        preload="auto"
+      />
+
+      {/* Main Invitation Content */}
+      <div className="min-h-screen bg-white">
+        <HeroBoardingPass couple={data.couple} guestName={guestName || ''} onOpen={() => {}} />
+        <CoupleBoardingPass couple={data.couple} />
+        <EventBoardingPass data={data} />
+        <StoryBoardingPass data={data} />
+        <GalleryBoardingPass data={data} />
+        <RSVPBoardingPass guestName={guestName} />
+        <GiftBoardingPass data={data} />
+        <FooterBoardingPass />
+      </div>
+
+      {/* Music Control Button */}
+      <button
+        onClick={() => {
+          const audio = document.getElementById('wedding-music') as HTMLAudioElement;
+          if (audio) {
+            if (musicPlaying) {
+              audio.pause();
+              setMusicPlaying(false);
+            } else {
+              audio.play();
+              setMusicPlaying(true);
+            }
+          }
+        }}
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-rose-gold to-gold text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center z-40 hover:scale-110"
+        aria-label="Toggle music"
+      >
+        {musicPlaying ? (
+          <span className="text-2xl">🔊</span>
+        ) : (
+          <span className="text-2xl">🔇</span>
+        )}
+      </button>
+    </>
+  );
+}
