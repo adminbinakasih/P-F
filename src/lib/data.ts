@@ -9,7 +9,7 @@ export const elianserEsraData: InvitationData = {
   couple: {
     groom: {
       name: 'Elianser',
-      fullName: 'Elianser Sihombing, S.SI',
+      fullName: 'Elianser Sihombing, S.S.I',
       photo: '/prawedd/WhatsApp Image 2026-11-19 at 09.31.35.jpeg',
       father: 'Bapak T. Sihombing',
       mother: 'Ibu R. Br. Pardosi',
